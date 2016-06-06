@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name=viewport content="width=device-width, initial-scale=1">
+
+   <title>Deven Blackburn | Developer</title>
+   <!--Stylesheets-->
+   <link href="content/bootstrap/bootstrap/css/bootstrap.min.css"        property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link href="content/bootstrap/fontawesome/css/font-awesome.min.css"   property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link href="content/bootstrap/flaticons/flaticon.css"                 property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link href="content/bootstrap/hover/css/hover-min.css"                property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link href="content/bootstrap/wow/animate.css"                        property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+   <link href="content/bootstrap/mfp/css/magnific-popup.css"             property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link href="content/custom/css/deven.css"                          property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+
+   <style>
+      #preloader {
+         position: fixed;
+         left: 0;
+         top: 0;
+         z-index: 99999;
+         width: 100%;
+         height: 100%;
+         overflow: visible;
+         background: #666666 url("content/custom/images/loading-square-thing.gif") no-repeat center center; }
+   </style>
+
+</head>
+
+<body class="boxed">
+
+<!--Pre-Loader-->
+<div id="preloader"></div>
+
+<header>
+
+   <section id="top-navigation" class="container-fluid nopadding">
+
+      <div class="row nopadding ident e-bg-light-texture">
+
+         <!-- Photo -->
+         <a href="#!">
+            <div class="col-md-5 col-lg-4 vc-photo"></div>
+         </a>
+
+         <div class="col-md-7 col-lg-8 vc-name nopadding">
+            <!-- Name-Position -->
+            <div class="row nopadding name">
+               <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Deven Blackburn</h2></div>
+               <div class="col-md-2 nopadding name-pdf">
+                  <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download CV.pdf"></i></a>
+               </div>
+            </div>
+            <div class="row nopadding position">
+               <div class="col-md-10 position-title">
+
+                 <section class="cd-intro">
+                    <h4 class="cd-headline clip is-full-width font-accident-two-normal uppercase">
+                       <span>passionate </span>
+                       <span class="cd-words-wrapper">
+                          <b class="is-visible">Front End Developer</b>
+                          <b>Back End Developer</b>
+                          <b>Full Stack Developer</b>
+                          <b>& Well-Rounded</b>
+                       </span>
+                    </h4>
+                 </section>
+
+               </div>
+               <div class="col-md-2 nopadding pdf">
+                  <a href="#" class="hvr-sweep-to-right"><br><img src="content/custom/images/github-logo.png" title="My Github Portfolio"></a>
+               </div>
+            </div>
+
+            <!-- Main Navigation -->
+
+            <ul id="nav" class="row nopadding cd-side-navigation">
+               <li class="col-xs-4 col-sm-2 nopadding menuitem green">
+                  <a href="deven.html" class="hvr-sweep-to-bottom"><i class="flaticon-insignia"></i><span>home</span></a>
+               </li>
+               <li class="col-xs-4 col-sm-2 nopadding menuitem blue">
+                  <a href="rhttps://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-bottom"><i class="flaticon-graduation61"></i><span>resume</span></a>
+               </li>
+               <li class="col-xs-4 col-sm-2 nopadding menuitem cyan">
+                  <a href="projects.html" class="hvr-sweep-to-bottom"><i class="flaticon-book-bag2"></i><span>projects</span></a>
+               </li>
+               <li class="col-xs-4 col-sm-2 nopadding menuitem orange">
+                  <a href="contact.html" class="hvr-sweep-to-bottom"><i class="flaticon-placeholders4"></i><span>contact</span></a>
+               </li>
+               <li class="col-xs-4 col-sm-2 nopadding menuitem red">
+                  <a href="blog.html" class="hvr-sweep-to-bottom"><i class="flaticon-pens15"></i><span>blog</span></a>
+               </li>
+               <li class="col-xs-4 col-sm-2 nopadding menuitem yellow github">
+                  <a href="blog.html" class="hvr-sweep-to-bottom"><br>
+                    <%= image_tag "github-white.png", :size => '54x54' %>
+                    <span>github</span></a>
+               </li>
+            </ul>
+
+         </div>
+      </div>
+   </section>
+
+</header>
+
+<!-- Container -->
+<div class="content-wrap">
+   <section id="homesection" class="container-fluid nopadding">
+      <div class="m-details row nopadding skin">
+
+          <%= yield %>
+
+      </div>
+   </section>
+</div>
+
+<!--Footer-->
+<footer class="padding-50 e-bg-light-texture">
+   <div class="container-fluid nopadding">
+      <div class="row wow fadeInDown" data-wow-delay=".2s" data-wow-offset="10">
+         <div class="col-md-3">
+            <h4 class="font-accident-two-bold uppercase">Deven Blackburn</h4>
+            <p class="inline-block">
+               Passionate and determined Full Stack Developer available for hire.
+            </p>
+            <div class="divider-dynamic"></div>
+         </div>
+         <div class="col-md-3 cv-link">
+            <h4 class="font-accident-two-bold uppercase">Download My Resume</h4>
+            <div class="dividewhite1"></div>
+            <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>English</a>
+            <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>Spanish</a>
+            <div class="divider-dynamic"></div>
+         </div>
+
+         <div class="col-md-3">
+            <h4 class="font-accident-two-bold uppercase">Follow me at</h4>
+            <div class="inline-block"><a href="https://www.facebook.com/hkdeven"><i class="flaticon-facebook45"></i></a></div>
+            <div class="inline-block"><a href="https://twitter.com/MakeCodeNotWar"><i class="flaticon-twitter39"></i></a></div>
+            <div class="inline-block"><a href="https://www.pinterest.com/devenblackburn/"><i class="flaticon-pinterest28"></i></a></div>
+            <div class="inline-block"><a href="https://www.linkedin.com/in/devenblackburn"><i class="flaticon-linkedin22"></i></a></div>
+            <div class="divider-dynamic"></div>
+         </div>
+        </div>
+      </div>
+      <div class="dividewhite1"></div>
+      <div class="row wow fadeInDown" data-wow-delay=".4s" data-wow-offset="10">
+         <div class="col-md-12 copyrights">
+            <p>© 2016 CODEFLL, Inc.</p>
+         </div>
+      </div>
+   </div>
+</footer>
+
+<div id="image-cache" class="hidden"></div>
+
+<!-- JS -->
+<script src="content/bootstrap/jquery/js/jquery-2.2.0.min.js"            type="text/javascript"></script>
+<script src="content/bootstrap/bootstrap/js/bootstrap.min.js"            type="text/javascript"></script>
+<script src="content/bootstrap/imagesloaded/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="content/bootstrap/isotope/js/isotope.pkgd.min.js"           type="text/javascript"></script>
+<script src="content/bootstrap/mfp/js/jquery.magnific-popup.min.js"      type="text/javascript"></script>
+<script src="content/bootstrap/circle-progress/circle-progress.js"       type="text/javascript"></script>
+<script src="content/bootstrap/waypoints/waypoints.min.js"               type="text/javascript"></script>
+<script src="content/bootstrap/anicounter/jquery.counterup.min.js"       type="text/javascript"></script>
+<script src="content/bootstrap/wow/wow.min.js"                           type="text/javascript"></script>
+<script src="content/bootstrap/pjax/jquery.pjax.js"                      type="text/javascript"></script>
+<script src="https://maps.google.com/maps/api/js"                    type="text/javascript"></script>
+<script src="content/custom/js/deven.js"                             type="text/javascript"></script>
+
+</body>
+
+</html>
+
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* =================================================================== */
+/* Styles Switcher
+====================================================================== */
+
+#style-switcher h3 {
+    color: #666;
+    font-size: 13px;
+    margin: 5px 0 5px 1px;
+    font-family: 'Oxygen', sans-serif;
+    letter-spacing: 0px;
+    /*color: #313131 !important;*/
+}
+#style-switcher h5 {
+    letter-spacing: 0px;
+    font-size: 11px;
+}
+
+#style-switcher ul {
+    padding-left: 0;
+}
+
+#style-switcher p {
+    color: #999;
+    line-heihgt: 20px;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0px;
+}
+
+#style-switcher {
+    background-color: #fff;
+    width: 205px;
+    position:fixed;
+    top: 100px;
+    z-index: 9999;
+    border-radius: 0 0 3px 0;
+    left: -206px;
+    border-left: 0;
+    border-top: 0;
+    box-shadow: -3px 0px 50px -2px rgba(0, 0, 0, 0.14)
+}
+
+#style-switcher div {
+    padding: 2px 18px 10px 18px;
+}
+
+#style-switcher h2 {
+    background-color: #3498db;
+    font-family: 'Novecentosanswide-Medium', sans-serif;
+    color: #fff;
+    font-size: 19px;
+    text-transform: uppercase;
+    padding: 14px 0 16px 20px;
+    margin: 0 0 18px 0;
+}
+
+#style-switcher h2 a {
+    background-color: #3498db;
+    display: block;
+    height: 50px;
+    position: absolute;
+    right: -49px;
+    padding: 14px;
+    /*text-indent: -9999px;*/
+    top: 0;
+    width: 49px;
+    border-radius: 0 2px 2px 0;
+}
+#style-switcher h2 a i:before {
+    font-size: 22px;
+    color: #f2f2f2;
+    margin: 0;
+    /*line-height: 1.6;*/
+}
+
+.colors {
+    list-style:none;
+    margin: 0 0px 24px 0;
+    overflow: hidden;
+}
+
+.colors li {
+    float:left;
+    margin: 4px 2px 0 2px;
+}
+
+.colors li a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.layout-style select,
+.footer-style select {
+    width: 164px;
+    height: 33px;
+    padding: 5px;
+    color: #888;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 13px;
+    margin: 2px 0 10px 2px;
+}
+
+.layout-style {
+    margin: 0 0px 24px 0;
+}
+
+.layout-style,
+.footer-style { padding: 0 !important; }
+
+
+
+.checkbox-group {
+    position:relative
+}
+
+/* Hide Checkbox Input */
+.checkbox-group input[type=checkbox] {
+    display:none
+}
+
+/* Style Label */
+.checkbox-group label {
+    padding-left:9px;
+    cursor:pointer;
+    font-family: 'Oxygen', sans-serif;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+/* Style span tag */
+.checkbox-group label span {
+    display:block;
+    position:absolute;
+    left:0;
+    -webkit-transition-duration:.3s;
+    -moz-transition-duration:.3s;
+    transition-duration:.3s
+}
+/* Style box */
+.checkbox-group label .box {
+    background:#d9e1e7;
+    height:18px;
+    width:18px;
+    border-radius: 2px;
+    z-index:9;
+    -webkit-transition-delay:.2s;
+    -moz-transition-delay:.2s;
+    transition-delay:.2s
+}
+
+/* Style check icon. give it a border on the bottom and right only and then rotate */
+.checkbox-group label .check {
+    top:3px;
+    left:7px;
+    width:5px;
+    height:13px;
+    border:2px solid #fff;
+    border-top:none;
+    border-left:none;
+    opacity:0;
+    z-index:10;
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    transform:rotate(180deg);
+    -webkit-transition-delay:.3s;
+    -moz-transition-delay:.3s;
+    transition-delay:.3s
+}
+
+/* Change color of box when checkbox is checked */
+input[type=checkbox]:checked ~ label .box {
+    background:#129fdd
+}
+
+/* Rotate and show check icon when checkbox is checked */
+input[type=checkbox]:checked ~ label .check {
+    opacity:1;
+    -webkit-transform:scale(1) rotate(45deg);
+    -moz-transform:scale(1) rotate(45deg);
+    transform:scale(1) rotate(45deg);
+}
+
+@media only screen and (max-width: 1023px) { #style-switcher { display: none; } }
