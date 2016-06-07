@@ -5,7 +5,7 @@
 [Color Scheme / Colors, textures]
 */
 .e-bg-light-texture {
-  background: url("dark_fish_skin.png"); }
+  background: image-url("dark_fish_skin.png"); }
 
 .color01 {
   background-color: #f2f2f2 !important; }
@@ -340,7 +340,7 @@ body {
   font: 13px/1.7 "Raleway", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  background-image: url("grey_wash_wall.png");
+  background-image: image-url("grey_wash_wall.png");
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -558,7 +558,7 @@ i {
   width: 30%; }
 
 #back-top a {
-  background: #404040 url('back_top.png') no-repeat 50% 50%;
+  background: #404040 image-url('back_top.png') no-repeat 50% 50%;
   border: 1px solid #f2f2f2;
   bottom: 60px;
   display: block;
@@ -573,7 +573,7 @@ i {
   -o-transition: all 0.35s ease-in-out;
   -ms-transition: all 0.35s ease-in-out; }
   #back-top a:hover {
-    background: #e74c3c url('back_top.png') no-repeat 50% 50%;
+    background: #e74c3c image-url('back_top.png') no-repeat 50% 50%;
     border-color: #e74c3c; }
 
 input, textarea {
@@ -757,7 +757,7 @@ button, input, select, textarea {
     color: #a7a7a7; }
     #top-navigation .ident .vc-photo {
       min-height: 360px;
-      background: url("IMG_0792.jpg");
+      background: image-url("IMG_0792.jpg");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -766,7 +766,7 @@ button, input, select, textarea {
       -ms-filter: grayscale(100%);
       -o-filter: grayscale(100%);
       filter: grayscale(100%);
-      filter: url('grayscale.svg#greyscale');
+      filter: image-url('grayscale.svg#greyscale');
       /* Firefox 4+ */
       filter: gray;
       /* IE 6-9 */
@@ -1244,7 +1244,7 @@ button, input, select, textarea {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
-  filter: url(grayscale.svg#greyscale);
+  filter: asset-url('grayscale.svg#greyscale');
   /* Firefox 4+ */
   filter: gray;
   /* IE 6-9 */
@@ -1253,42 +1253,42 @@ button, input, select, textarea {
   transition: all .5s ease-in-out; }
 
 .timeline-bg01 {
-  background: url("timeline-1.jpg");
+  background: image-url("timeline-1.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-bg01-01 {
-  background: url("timeline-1-01.jpg");
+  background: image-url("timeline-1-01.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-bg02 {
-  background: url("timeline-2.jpg");
+  background: image-url("timeline-2.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-bg02-01 {
-  background: url("timeline-2-01.jpg");
+  background: image-url("timeline-2-01.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-bg03 {
-  background: url("timeline-3.jpg");
+  background: image-url("timeline-3.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-bg03-01 {
-  background: url("timeline-3-01.jpg");
+  background: image-url("timeline-3-01.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-bg04 {
-  background: url("timeline-4.jpg");
+  background: image-url("timeline-4.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-bg04-01 {
-  background: url("timeline-4-01.jpg");
+  background: image-url("timeline-4-01.jpg");
   background-position: center;
   background-size: cover; }
 
@@ -1335,7 +1335,7 @@ button, input, select, textarea {
         cursor: pointer; }
 
 #counts-dark-bg {
-  background: url("dark_wood.png"); }
+  background: image-url("dark_wood.png"); }
   #counts-dark-bg .count-container .count-icon i::before {
     color: #f2f2f2; }
   #counts-dark-bg .count-container .count .digit {
