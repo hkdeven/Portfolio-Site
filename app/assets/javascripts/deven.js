@@ -298,6 +298,7 @@
         })();
 
         /* Circle Progress */
+
         (function () {
             function animateElements() {
                 $('.progressbar').each(function () {
@@ -410,38 +411,7 @@
                     }
                 ];
 
-                // Create a new StyledMapType object, passing it the array of styles,
-                // as well as the name to be displayed on the map type control.
-                var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
-
-                // Create a map object, and include the MapTypeId to add
-                // to the map type control.
-                var $latlng = new google.maps.LatLng(52.5075419, 13.4261419),
-                    $mapOptions = {
-                        zoom: 13,
-                        center: $latlng,
-                        panControl: false,
-                        zoomControl: true,
-                        scaleControl: false,
-                        mapTypeControl: false,
-                        scrollwheel: false,
-                        mapTypeControlOptions: {
-                            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                        }
-                    };
-                var map = new google.maps.Map(document.getElementById('google-map'), $mapOptions);
-
-                google.maps.event.trigger(map, 'resize');
-
-                //Associate the styled map with the MapTypeId and set it to display.
-                map.mapTypes.set('map_style', styledMap);
-                map.setMapTypeId('map_style');
-
-                var marker = new google.maps.Marker({
-                    position: $latlng,
-                    map: map,
-                    title: ""
-                });
+                ;
 
             }
 
@@ -452,20 +422,5 @@
 
     /* Wow */
     new WOW().init();
-
-    /* Google Analytics */
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)};
-        i[r].l = 1 * new Date();
-        a = s.createElement(o);
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-40696437-13', 'auto');
-    ga('send', 'pageview');
 
 })(jQuery);
