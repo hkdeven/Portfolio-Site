@@ -12,13 +12,12 @@
  *
  *= require bootstrap.css
  *= require bootstrap-theme.css
- *= require flaticon.css
  *= require hover.css
  *= require animate.css
  *= require styleselector.css
  *= require jquery.progresstracker.css
  *= require magnific-popup.css
- *= require deven.css
+ *= require deven.scss
  *= require_tree .
  *= require_self
  */
