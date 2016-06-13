@@ -6,7 +6,6 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <title>Deven Blackburn | Developer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <script src="https://use.fontawesome.com/25cf044918.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
    <style>
@@ -128,17 +127,31 @@
          <div class="col-md-3 cv-link">
             <h4 class="font-accident-two-bold uppercase">Download My Resume</h4>
             <div class="dividewhite1"></div>
-            <a href="<%= asset_path('deven_blackburn_cv.pdf') %>"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>English</a>
-            <a href="<%= asset_path('deven_blackburn_cv.pdf') %>"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>Spanish</a>
+            <a href="<%= asset_path('deven_blackburn_cv.pdf') %>">
+            <%= image_tag "download.png", :size => '13x13' %>
+            English</a>
+            <a href="<%= asset_path('deven_blackburn_cv.pdf') %>">
+            <%= image_tag "download.png", :size => '13x13' %>
+            Spanish</a>
             <div class="divider-dynamic"></div>
          </div>
-
          <div class="col-md-3">
             <h4 class="font-accident-two-bold uppercase">Follow me at</h4>
-            <div class="inline-block"><a href="https://www.facebook.com/hkdeven"><i class="flaticon-facebook45"></i></a></div>
-            <div class="inline-block"><a href="https://twitter.com/MakeCodeNotWar"><i class="flaticon-twitter39"></i></a></div>
-            <div class="inline-block"><a href="https://www.pinterest.com/devenblackburn/"><i class="flaticon-pinterest28"></i></a></div>
-            <div class="inline-block"><a href="https://www.linkedin.com/in/devenblackburn"><i class="flaticon-linkedin22"></i></a></div>
+            <div class="inline-block"><a href="https://www.facebook.com/hkdeven" target="_blank">
+            <%= image_tag "social-facebook.png" %>
+            </a></div>
+            <div class="inline-block"><a href="https://twitter.com/MakeCodeNotWar" target="_blank">
+            <%= image_tag "social-twitter.png" %>
+            </a></div>
+            <div class="inline-block"><a href="https://www.instagram.com/deven.b/" target="_blank">
+            <%= image_tag "social-instagram.png" %>
+            </a></div>
+            <div class="inline-block"><a href="https://www.linkedin.com/in/devenblackburn" target="_blank">
+            <%= image_tag "social-linkedin.png" %>
+            </a></div>
+            <div class="inline-block"><a href="https://github.com/hkdeven" target="_blank">
+            <%= image_tag "social-github.png" %>
+            </a></div>
             <div class="divider-dynamic"></div>
          </div>
         </div>

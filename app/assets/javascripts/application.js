@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require circle-progress.js
 //= require jquery-2.2.0.min.js
 //= require bootstrap.js
 //= require imagesloaded.pkgd.min.js
