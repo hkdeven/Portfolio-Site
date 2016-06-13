@@ -6,6 +6,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <title>Deven Blackburn | Developer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/elusive-icons/2.0.0/css/elusive-icons.min.css">
   <script src="https://use.fontawesome.com/25cf044918.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -43,9 +44,6 @@
             <!-- Name-Position -->
             <div class="row nopadding name">
                <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Deven Blackburn</h2></div>
-               <!-- <div class="col-md-2 nopadding name-pdf">
-                  <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download CV.pdf"></i></a>
-               </div> -->
             </div>
             <div class="row nopadding position">
                <div class="col-md-10 position-title">
@@ -63,12 +61,13 @@
                  </section>
 
                </div>
-               <div class="col-md-2 nopadding pdf">
-                  <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" target="_blank" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download CV.pdf"></i></a>
-               </div>
-               <!-- <div class="col-md-2 nopadding pdf">
-
-               </div> -->
+               <ul id="nav" class="row nopadding cd-side-navigation">
+               <li class="col-md-2 nopadding pdf menuitem github">
+                  <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" target="_blank" class="hvr-sweep-to-right"><br>
+                  <%= image_tag "icon-resume.png", :size => '44x44', title: "Download Resume"%>
+                  <span>resume</span></a>
+               </li>
+             </ul>
             </div>
 
             <!-- Main Navigation -->
@@ -78,7 +77,9 @@
                   <a href="deven.html" class="hvr-sweep-to-bottom"><i class="fa fa-home fa-pull-center"></i><span>home</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem blue">
-                  <a href="rhttps://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-bottom"><i class="flaticon-graduation61"></i><span>resume</span></a>
+                  <a href="rhttps://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-bottom">
+                  <i class="el el-camera-retro"></i>
+                  <span>resume</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem cyan">
                   <a href="projects.html" class="hvr-sweep-to-bottom"><i class="flaticon-book-bag2"></i><span>projects</span></a>
