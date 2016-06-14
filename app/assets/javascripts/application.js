@@ -9,7 +9,6 @@
 //= require jquery.counterup.min.js
 //= require wow.min.js
 //= require waypoints.min.js
-//= require styleselector.js
 //= require jquery.pjax.js
 //= require deven.js
 //= require turbolinks
