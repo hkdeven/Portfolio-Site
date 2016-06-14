@@ -1255,8 +1255,25 @@ figure {
     letter-spacing: 1px;
     font-size: 68.5%; }
 
-figure.effect-goliath {
-  background: #9b59b6; }
+figure.effect-goliath.purple {
+  background: #9b59b6;
+}
+figure.effect-goliath.cyan {
+  background: #3498db;
+}
+figure.effect-goliath.yellow {
+  background: #d9a81d;
+}
+figure.effect-goliath.red {
+  background: #e74c3c;
+}
+figure.effect-goliath.orange {
+  background: #e67e22;
+}
+figure.effect-goliath.green {
+  background: #1abc9c;
+}
+
   figure.effect-goliath .popup-call {
     position: absolute;
     top: 30px;

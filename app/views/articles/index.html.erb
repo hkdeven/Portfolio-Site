@@ -13,14 +13,18 @@
          </div>
       </section>
 
-      <!-- Projects Block -->
+      <!-- Projects -->
       <section class="inner-section">
 
          <div id="isotope-filters" class="port-filter port-filter-light text-center wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="10">
             <ul>
                <li><a href="#all" data-filter="*">All Categories</a></li>
                <li><a href="#design" data-filter=".design">Design</a></li>
+               <li><a href="#news" data-filter=".news">News</a></li>
+               <li><a href="#rss" data-filter=".rss">RSS</a></li>
+               <li><a href="#rss" data-filter=".responsive">Responsive</a></li>
                <li><a href="#branding" data-filter=".branding">Branding</a></li>
+               <li><a href="#rss" data-filter=".api">API</a></li>
             </ul>
          </div>
 
@@ -30,198 +34,308 @@
 
             <div id="posts" class="row popup-container">
 
-                  <div class="grid-item branding design col-md-4 col-sm-6">
+                  <div class="grid-item branding news rss design col-md-4 col-sm-6">
                      <div class="item-wrap">
                         <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/01.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/01.jpg" class="img-responsive" alt="img11"/>
+                          <figure class="effect-goliath green">
+                             <img src="<%= image_path "project-huffpost.png" %>" class="img-responsive hvr-grow" alt=""/>
+                             <figcaption>
+                                <div class="fig-description">
+                                   <h3>Huffington <span>Post</span></h3>
+                                   <p></p>
+                                   <p>#news #rss #design #branding</p>
+                                </div>
+                             </figcaption>
+                           </figure>
+                         <div class="dividewhite1"></div>
                            <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
+                            <div class="post-meta">
+                              <span>by <a href="#!">Deven Blackburn</a>,</span> <span>25 March, 2016</span></div>
+                                <div class="post-header">
+                                  <h5><a href="#">News Feed Integration</a></h5>
+                                </div>
+                                <div class="post-entry">
+                                  <p>Coding and tech news served via Huffington Posts's Huffpost Code news feed using a RSS reader.  Shows current news relevant to the tech community.</p>
+                                </div>
+                                <div class="post-tag pull-left">
+                                  <span><a href="#news" data-filter=".news">News</a>,</span>
+                                  <span><a href="#rss" data-filter=".rss">RSS</a>,</span>
+                                  <span><a href="#design" data-filter=".design">Design</a></span>
+                                </div>
+                                <div class="post-more-link pull-right">
+                                  <a href="#">More</a>
+                                </div>
+                             </figcaption>
+                        </figure>
+                      </div>
+                  </div>
+                  <div class="grid-item responsive design api branding col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath blue">
+                           <img src="<%= image_path "project-expatik.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>EXPATik <span>App</span></h3>
+                                <p></p>
+                                <p>#responsive #design #branding #API</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>30 April, 2016</span></div>
                               <div class="post-header">
-                                 <h5><a href="blogpost.html">My Friend's new album design</a></h5>
+                                 <h5><a href="#">EXPATik Application</a></h5>
                               </div>
                               <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
+                                 <p>A city resource for the expat community. An in-depth resource of the top ranked cities for expats, based on affordability, healthcare, economic stability, and safety.</p>
                               </div>
                               <div class="post-tag pull-left">
-                                 <span><a href="#branding" data-filter=".branding">Branding</a>,</span><span><a href="#design" data-filter=".design">Design</a></span>
+                                <span><a href="#responsive" data-filter=".responsive">Responsive</a>,</span>
+                                <span><a href="#api" data-filter=".api">API</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
                               </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="grid-item news rss blog design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath purple">
+                           <img src="<%= image_path "project-suavedeveloper.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>The Suave <span>Developer</span></h3>
+                                <p></p>
+                                <p>#news #blog #design #branding</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>16 March, 2016</span></div>
+                              <div class="post-header">
+                                 <h5><a href="#">The Suave Developer/a></h5>
+                              </div>
+                              <div class="post-entry">
+                                 <p>Curated design and frontend content for the suave developer.  Originally launched as part of a design-learning tool for coding bootcamp students.  Hone your UX skills at <i>The Suave Developer</i>.</p>
+                              </div>
+                              <div class="post-tag pull-left">
+                                <span><a href="#news" data-filter=".news">News</a>,</span>
+                                <span><a href="#blog" data-filter=".blog">Blog</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
+                                <span><a href="#branding" data-filter=".branding">Branding</a></span>
+                              </div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="grid-item news rss design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath orange">
+                           <img src="<%= image_path "project-huffpost.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>Huffington <span>Post</span></h3>
+                                <p></p>
+                                <p>#news #rss #design #branding</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
+                              <div class="post-header">
+                                 <h5><a href="#">RSS News Integration</a></h5>
+                              </div>
+                              <div class="post-entry">
+                                 <p>Coding and tech news served via Huffington Posts's Huffpost Code news feed using a RSS reader.  Shows current news relevant to the tech community.</p>
+                              </div>
+                              <div class="post-tag pull-left">
+                                <span><a href="#news" data-filter=".news">News</a>,</span>
+                                <span><a href="#rss" data-filter=".rss">RSS</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
+                              </div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="grid-item news rss design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath red">
+                           <img src="<%= image_path "project-huffpost.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>Huffington <span>Post</span></h3>
+                                <p></p>
+                                <p>#news #rss #design #branding</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
+                              <div class="post-header">
+                                 <h5><a href="#">RSS News Integration</a></h5>
+                              </div>
+                              <div class="post-entry">
+                                 <p>Coding and tech news served via Huffington Posts's Huffpost Code news feed using a RSS reader.  Shows current news relevant to the tech community.</p>
+                              </div>
+                              <div class="post-tag pull-left">
+                                <span><a href="#news" data-filter=".news">News</a>,</span>
+                                <span><a href="#rss" data-filter=".rss">RSS</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
+                              </div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="grid-item news rss design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath yellow">
+                           <img src="<%= image_path "project-huffpost.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>Huffington <span>Post</span></h3>
+                                <p></p>
+                                <p>#news #rss #design #branding</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
+                              <div class="post-header">
+                                 <h5><a href="#">RSS News Integration</a></h5>
+                              </div>
+                              <div class="post-entry">
+                                 <p>Coding and tech news served via Huffington Posts's Huffpost Code news feed using a RSS reader.  Shows current news relevant to the tech community.</p>
+                              </div>
+                              <div class="post-tag pull-left">
+                                <span><a href="#news" data-filter=".news">News</a>,</span>
+                                <span><a href="#rss" data-filter=".rss">RSS</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
+                              </div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="grid-item news rss design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath green">
+                           <img src="<%= image_path "project-huffpost.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>Huffington <span>Post</span></h3>
+                                <p></p>
+                                <p>#news #rss #design #branding</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
+                              <div class="post-header">
+                                 <h5><a href="#">RSS News Integration</a></h5>
+                              </div>
+                              <div class="post-entry">
+                                 <p>Coding and tech news served via Huffington Posts's Huffpost Code news feed using a RSS reader.  Shows current news relevant to the tech community.</p>
+                              </div>
+                              <div class="post-tag pull-left">
+                                <span><a href="#news" data-filter=".news">News</a>,</span>
+                                <span><a href="#rss" data-filter=".rss">RSS</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
+                              </div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="grid-item news rss design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath blue">
+                           <img src="<%= image_path "project-huffpost.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>Huffington <span>Post</span></h3>
+                                <p></p>
+                                <p>#news #rss #design #branding</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
+                              <div class="post-header">
+                                 <h5><a href="#">RSS News Integration</a></h5>
+                              </div>
+                              <div class="post-entry">
+                                 <p>Coding and tech news served via Huffington Posts's Huffpost Code news feed using a RSS reader.  Shows current news relevant to the tech community.</p>
+                              </div>
+                              <div class="post-tag pull-left">
+                                <span><a href="#news" data-filter=".news">News</a>,</span>
+                                <span><a href="#rss" data-filter=".rss">RSS</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
+                              </div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="grid-item news rss design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                        <figure class="effect-goliath purple">
+                           <img src="<%= image_path "project-huffpost.png" %>" class="img-responsive hvr-grow" alt=""/>
+                           <figcaption>
+                              <div class="fig-description">
+                                <h3>Huffington <span>Post</span></h3>
+                                <p></p>
+                                <p>#news #rss #design #branding</p>
+                              </div>
+                           </figcaption>
+                         </figure>
+                         <div class="dividewhite1"></div>
+                         <figcaption>
+                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
+                              <div class="post-header">
+                                 <h5><a href="#">RSS News Integration</a></h5>
+                              </div>
+                              <div class="post-entry">
+                                 <p>Coding and tech news served via Huffington Posts's Huffpost Code news feed using a RSS reader.  Shows current news relevant to the tech community.</p>
+                              </div>
+                              <div class="post-tag pull-left">
+                                <span><a href="#news" data-filter=".news">News</a>,</span>
+                                <span><a href="#rss" data-filter=".rss">RSS</a>,</span>
+                                <span><a href="#design" data-filter=".design">Design</a></span>
+                              </div>
+                              <div class="post-more-link pull-right"><a href="#">More<i class="fa fa-long-arrow-right right"></i></a></div>
                            </figcaption>
                         </figure>
                      </div>
                   </div>
                   <div class="grid-item grid-sizer branding col-md-4 col-sm-6">
-                     <div class="item-wrap">
-                        <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/02.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/02.jpg" class="img-responsive" alt="img03"/>
-                           <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
-                              <div class="post-header">
-                                 <h5><a href="blogpost.html">Funny Things done</a></h5>
-                              </div>
-                              <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
-                              </div>
-                              <div class="post-tag pull-left">
-                                 <span><a href="#branding" data-filter=".branding">Branding</a></span>
-                              </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
-                           </figcaption>
-                        </figure>
-                     </div>
                   </div>
-                  <div class="grid-item branding col-md-4 col-sm-6">
-                     <div class="item-wrap">
-                        <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/03.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/03.jpg" class="img-responsive" alt="img11"/>
-                           <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
-                              <div class="post-header">
-                                 <h5><a href="blogpost.html">Crazy Frod needs help</a></h5>
-                              </div>
-                              <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
-                              </div>
-                              <div class="post-tag pull-left">
-                                 <span><a href="#branding" data-filter=".branding">Branding</a></span>
-                              </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
-                           </figcaption>
-                        </figure>
-                     </div>
-                  </div>
-                  <div class="grid-item branding design col-md-4 col-sm-6">
-                     <div class="item-wrap">
-                        <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/04.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/04.jpg" class="img-responsive" alt="img03"/>
-                           <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
-                              <div class="post-header">
-                                 <h5><a href="blogpost.html">Old man crying</a></h5>
-                              </div>
-                              <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
-                              </div>
-                              <div class="post-tag pull-left">
-                                 <span><a href="#branding" data-filter=".branding">Branding</a>,</span><span><a href="#design" data-filter=".design">Design</a></span>
-                              </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
-                           </figcaption>
-                        </figure>
-                     </div>
-                  </div>
-                  <div class="grid-item branding col-md-4 col-sm-6">
-                     <div class="item-wrap">
-                        <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/05.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/05.jpg" class="img-responsive" alt="img11"/>
-                           <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
-                              <div class="post-header">
-                                 <h5><a href="blogpost.html">The rusted cars bumping</a></h5>
-                              </div>
-                              <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
-                              </div>
-                              <div class="post-tag pull-left">
-                                 <span><a href="#branding" data-filter=".branding">Branding</a></span>
-                              </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
-                           </figcaption>
-                        </figure>
-                     </div>
-                  </div>
-                  <div class="grid-item design col-md-4 col-sm-6">
-                     <div class="item-wrap">
-                        <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/06.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/06.jpg" class="img-responsive" alt="img03"/>
-                           <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
-                              <div class="post-header">
-                                 <h5><a href="blogpost.html">Turn on the equalizer</a></h5>
-                              </div>
-                              <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
-                              </div>
-                              <div class="post-tag pull-left">
-                                 </span><span><a href="#design" data-filter=".design">Design</a></span>
-                              </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
-                           </figcaption>
-                        </figure>
-                     </div>
-                  </div>
-                  <div class="grid-item design col-md-4 col-sm-6">
-                     <div class="item-wrap">
-                        <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/07.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/07.jpg" class="img-responsive" alt="img03"/>
-                           <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
-                              <div class="post-header">
-                                 <h5><a href="blogpost.html">Commando shoots the boy</a></h5>
-                              </div>
-                              <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
-                              </div>
-                              <div class="post-tag pull-left">
-                                 </span><span><a href="#design" data-filter=".design">Design</a></span>
-                              </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
-                           </figcaption>
-                        </figure>
-                     </div>
-                  </div>
-                  <div class="grid-item branding design col-md-4 col-sm-6">
-                     <div class="item-wrap">
-                        <figure class="">
-                           <div class="popup-call">
-                              <a href="assets/custom/images/blog/08.jpg" class="gallery-item"><i class="flaticon-arrows-4"></i></a>
-                           </div>
-                           <img src="assets/custom/images/blog/thumbs/08.jpg" class="img-responsive" alt="img03"/>
-                           <figcaption>
-                              <div class="post-meta"><span>by <a href="#!">Deven Blackburn</a>,</span> <span>March 16, 2015</span></div>
-                              <div class="post-header">
-                                 <h5><a href="blogpost.html">Little girl beats the dog</a></h5>
-                              </div>
-                              <div class="post-entry">
-                                 <p>Aliquam gravida tincidunt congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
-                              </div>
-                              <div class="post-tag pull-left">
-                                 <span><a href="#branding" data-filter=".branding">Branding</a>,</span><span><a href="#design" data-filter=".design">Design</a></span>
-                              </div>
-                              <div class="post-more-link pull-right"><a href="blogpost.html">More<i class="fa fa-long-arrow-right right"></i></a></div>
-                           </figcaption>
-                        </figure>
-                     </div>
-                  </div>
+
 
                </div>
             </div>
 
-         <div class="dividewhite8"></div>
+         <div class="dividewhite3"></div>
 
       </section>
-      <!-- /Blog Block -->
 
    </div>
 

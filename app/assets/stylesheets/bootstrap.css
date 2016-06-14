@@ -1124,6 +1124,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
 }
 .img-rounded {
   border-radius: 6px;
