@@ -8,24 +8,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-   <style>
-      #preloader {
-         position: fixed;
-         left: 0;
-         top: 0;
-         z-index: 99999;
-         width: 100%;
-         height: 100%;
-         overflow: visible;
-         background: #666666 url(<%= asset_path 'loading-square-thing.gif' %>) no-repeat center center; }
-   </style>
 
 </head>
 
 <body class="boxed nopadding">
-
-<!--Pre-Loader-->
-<div id="preloader"></div>
 
 <header>
 
@@ -34,7 +20,7 @@
       <div class="row nopadding ident e-bg-light-texture">
 
          <!-- Photo -->
-         <a href="http://codefll.org">
+         <a href="<%= root_path %>">
             <div class="col-md-5 col-lg-4 vc-photo"></div>
          </a>
 
@@ -64,36 +50,36 @@
             <!-- Main Navigation -->
 
             <ul id="nav" class="row nopadding cd-side-navigation">
-               <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                 <a href="http://codefll.org" class="hvr-sweep-to-bottom"><br>
-                   <%= image_tag "icon-home.png", :size => '54x54' %>
-                   <span>home</span></a>
-               </li>
-               <li class="col-xs-4 col-sm-2 nopadding menuitem blue">
-                    <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-bottom"><br>
-                      <%= image_tag "icon-resume2.png", :size => '54x54' %>
-                      <span>resume</span></a>
-               </li>
-               <li class="col-xs-4 col-sm-2 nopadding menuitem cyan">
-                 <a href="<%= projects_path %>" class="hvr-sweep-to-bottom"><br>
-                   <%= image_tag "icon-projects3.png", :size => '54x54' %>
-                   <span>projects</span></a>
-               </li>
-               <li class="col-xs-4 col-sm-2 nopadding menuitem orange">
-                 <a href="<%= contact_path %>" class="hvr-sweep-to-bottom"><br>
-                   <%= image_tag "icon-contact.png", :size => '54x54' %>
-                   <span>contact</span></a>
-               </li>
-               <li class="col-xs-4 col-sm-2 nopadding menuitem red">
-                 <a href="/projects" class="hvr-sweep-to-bottom"><br>
-                   <%= image_tag "icon-blog.png", :size => '54x54' %>
-                   <span>blog</span></a>
-               </li>
-               <li class="col-xs-4 col-sm-2 nopadding menuitem yellow github">
-                  <a href="https://github.com/hkdeven" target="_blank" class="hvr-sweep-to-bottom"><br>
-                    <%= image_tag "icon-github.png", :size => '54x54' %>
-                    <span>github</span></a>
-               </li>
+              <li class="col-xs-4 col-sm-2 nopadding menuitem green">
+                <a href="<%= root_path %>" class="hvr-sweep-to-bottom"><br>
+                <%= image_tag "icon-home.png", :size => '54x54' %>
+                <span>home</span></a>
+              </li>
+              <li class="col-xs-4 col-sm-2 nopadding menuitem blue">
+                <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-bottom" target="_blank"><br>
+                <%= image_tag "icon-resume2.png", :size => '54x54' %>
+                <span>resume</span></a>
+              </li>
+              <li class="col-xs-4 col-sm-2 nopadding menuitem cyan">
+                <a href="<%= projects_path %>" class="hvr-sweep-to-bottom"><br>
+                <%= image_tag "icon-projects3.png", :size => '54x54' %>
+                <span>projects</span></a>
+              </li>
+              <li class="col-xs-4 col-sm-2 nopadding menuitem orange">
+                <a href="<%= contact_path %>" class="hvr-sweep-to-bottom"><br>
+                <%= image_tag "icon-contact.png", :size => '54x54' %>
+                <span>contact</span></a>
+              </li>
+              <li class="col-xs-4 col-sm-2 nopadding menuitem red">
+                <a href="<%= projects_path %>" class="hvr-sweep-to-bottom"><br>
+                <%= image_tag "icon-blog.png", :size => '54x54' %>
+                <span>blog</span></a>
+              </li>
+              <li class="col-xs-4 col-sm-2 nopadding menuitem yellow github">
+                <a href="https://github.com/hkdeven" target="_blank" class="hvr-sweep-to-bottom"><br>
+                <%= image_tag "icon-github.png", :size => '54x54' %>
+                <span>github</span></a>
+              </li>
             </ul>
 
          </div>

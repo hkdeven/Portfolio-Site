@@ -1,21 +1,103 @@
-<!-- Container -->
-<div class="content-wrap">
+<!-- Intro Header -->
 
-   <div id="feedback" class="inner-content">
+<div id="feedback" class="inner-content">
 
-      <section id="page-title" class="inner-section">
-         <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
-            <h2 class="font-accident-two-normal uppercase">Contact</h2>
-            <h5 class="font-accident-one-bold hovercolor uppercase">information and details</h5>
-            <p class="small fontcolor-medium">
-               Interesting in collaborating on an upcoming project?  Email me directly for fastest response time or via the form below.
-            </p>
+    <section id="page-title" class="inner-section">
+       <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+          <h2 class="font-accident-two-normal uppercase">Contact</h2>
+          <h5 class="font-accident-one-bold hovercolor uppercase">information and details</h5>
+          <p class="small fontcolor-medium">
+          Interesting in collaborating on an upcoming project?  Email me directly for fastest response time or via the form below.
+          </p>
+      </div>
+    </section>
+
+<!-- Contact Links -->
+
+   <section id="contacts-data" class="inner-block">
+      <div class="container-fluid nopadding">
+         <div class="row">
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="10">
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Location:</span></div>
+                  <div class="col-sm-10"><p class="small">Fort Lauderdale, FL USA</p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Phone:</span></div>
+                  <div class="col-sm-10"><p class="small">+1.954.348.7293</p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Skype:</span></div>
+                  <div class="col-sm-10"><p class="small">@deven.blackburn</p></div>
+               </div>
+            </div>
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="10">
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Twitter:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://twitter.com/makecodenotwar">twitter.com/MakeCodeNotWar</a></p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Facbook:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://www.facebook.com/hkdeven">facebook.com/hkdeven</a></p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Linkedin:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://www.linkedin.com/in/devenblackburn">linkedin.com/in/devenblackburn</a></p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Github:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://github.com/hkdeven">github.com/hkdeven</a></p></div>
+               </div>
+            </div>
          </div>
-      </section>
+      </div>
+
+      <!-- Contact Form -->
+          <section class="inner-section feedback feedback-light">
+             <div class="container-fluid nopadding">
+                <div class="row">
+
+                   <div class="col-md-2">&nbsp;</div>
+                   <div class="col-md-8 e-centered wow fadeInDown" data-wow-delay="0.6s" data-wow-offset="10">
+                      <div class="dividewhite1"></div>
+                      <div id="form-messages"></div>
+                      <form id="ajax-contact" method="post" action="assets/custom/php/form.php" class="wpcf7-form">
+                         <div class="field">
+                            <!--<label for="name">Name:</label>-->
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                         </div>
+
+                         <div class="field">
+                            <!--<label for="email">Email:</label>-->
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                         </div>
+
+                         <div class="field">
+                            <!--<label for="message">Message:</label>-->
+                            <textarea id="message" name="message" placeholder="Message" rows="7" cols="30"  required></textarea>
+                         </div>
+
+                         <div class="dividewhite2"></div>
+
+                         <div class="field text-center">
+                            <button type="submit" class="btn btn-lg btn-lgr-str">Send Message</button>
+                         </div>
+                      </form>
+                   </div>
+                   <div class="col-md-2">&nbsp;</div>
+                   <div class="col-md-12 divider-dynamic"></div>
+                </div>
+             </div>
+          </section>
+
+   </section>
+
+   <div class="dividewhite1"></div>
 
       <!-- Testmonials -->
       <section id="testmonials" class="inner-section color01">
          <div class="container-fluid nopadding">
+           <div class="dividewhite2"></div>
 
             <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
                <h3 class="font-accident-two-normal uppercase text-center">Testmonials</h3>
@@ -77,52 +159,9 @@
                </div>
             </div>
 
-            <div class="dividewhite6"></div>
+            <div class="dividewhite4"></div>
 
          </div>
-      </section>
-
-      <!-- Contact Form -->
-      <section class="inner-section feedback feedback-light">
-
-         <div class="container-fluid nopadding">
-
-            <div class="row">
-
-               <div class="col-md-2">&nbsp;</div>
-               <div class="col-md-8 e-centered wow fadeInDown" data-wow-delay="0.6s" data-wow-offset="10">
-                  <div class="dividewhite2"></div>
-                  <div id="form-messages"></div>
-                  <form id="ajax-contact" method="post" action="assets/custom/php/form.php" class="wpcf7-form">
-                     <div class="field">
-                        <!--<label for="name">Name:</label>-->
-                        <input type="text" id="name" name="name" placeholder="Name" required>
-                     </div>
-
-                     <div class="field">
-                        <!--<label for="email">Email:</label>-->
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                     </div>
-
-                     <div class="field">
-                        <!--<label for="message">Message:</label>-->
-                        <textarea id="message" name="message" placeholder="Message" rows="7" cols="30"  required></textarea>
-                     </div>
-
-                     <div class="dividewhite2"></div>
-
-                     <div class="field text-center">
-                        <button type="submit" class="btn btn-lg btn-lgr-str">Send Message</button>
-                     </div>
-                  </form>
-               </div>
-               <div class="col-md-2">&nbsp;</div>
-               <div class="col-md-12 divider-dynamic"></div>
-            </div>
-         </div>
-
-         <div class="dividewhite6"></div>
-
       </section>
 
    </div>
