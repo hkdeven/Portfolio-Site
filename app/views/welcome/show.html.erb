@@ -9,6 +9,55 @@
           <p class="small fontcolor-medium">
           Interesting in collaborating on an upcoming project?  Email me directly for fastest response time or via the form below.
           </p>
+
+      <!-- Google Maps -->
+      <div class="dividewhite1"></div>
+        <div class="container-fluid nopadding wow fadeInLeft img-responsive" data-wow-delay="0.4s" data-wow-offset="10">
+          <div id="map"></div>
+        </div>
+
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnevA6XkR3QwkolBDRvehGc3x3eDY71OI&callback=initMap">
+          </script>
+
+          <script>
+                function initMap() {
+                  var customMapType = new google.maps.StyledMapType([
+                      {
+                        stylers: [
+                          {hue: '#e74c3c'},
+                          {visibility: 'simplified'},
+                          {gamma: 0.6},
+                          {weight: 0.5}
+                        ]
+                      },
+                      {
+                        elementType: 'labels',
+                        stylers: [{visibility: 'simplified'}]
+                      },
+                      {
+                        featureType: 'water',
+                        stylers: [{color: '#e74c3c'}]
+                      }
+                    ], {
+                      name: 'Custom Style'
+                  });
+                  var customMapTypeId = 'custom_style';
+
+                  var map = new google.maps.Map(document.getElementById('map'),
+                  {
+                    center: {lat: 26.122438, lng: -80.137314},
+                    zoom: 14,
+
+
+                    mapTypeId: google.maps.MapTypeId.TERRAIN
+                  });
+
+                  map.mapTypes.set(customMapTypeId, customMapType);
+                  map.setMapTypeId(customMapTypeId);
+                }
+              </script>
+
       </div>
     </section>
 
@@ -53,6 +102,7 @@
       </div>
 
       <!-- Contact Form -->
+
           <section class="inner-section feedback feedback-light">
              <div class="container-fluid nopadding">
                 <div class="row">
@@ -80,7 +130,7 @@
                          <div class="dividewhite2"></div>
 
                          <div class="field text-center">
-                            <button type="submit" class="btn btn-lg btn-lgr-str">Send Message</button>
+                            <button type="#" class="btn btn-lg btn-lgr-str">Send Message</button>
                          </div>
                       </form>
                    </div>
@@ -94,7 +144,8 @@
 
    <div class="dividewhite1"></div>
 
-      <!-- Testmonials -->
+    <!-- Testmonials -->
+
       <section id="testmonials" class="inner-section color01">
          <div class="container-fluid nopadding">
            <div class="dividewhite2"></div>
