@@ -10,6 +10,7 @@
 //= require wow.min.js
 //= require waypoints.min.js
 //= require jquery.pjax.js
+//= require jquery.turbolinks
 //= require deven.js
 //= require turbolinks
 //= require_tree .

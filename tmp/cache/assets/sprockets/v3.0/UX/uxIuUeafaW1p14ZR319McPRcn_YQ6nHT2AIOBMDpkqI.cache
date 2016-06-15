@@ -1,0 +1,40 @@
+{:uriI"€file://app/assets/images/manifest.json?type=application/json&id=de3149970fa1421cf96e44549f40ba51c51b6a9397b7eff08e3c3262e52aa77d:ET:load_pathI"app/assets/images;T:filenameI"$app/assets/images/manifest.json;T:	nameI"manifest;T:logical_pathI"manifest.json;T:content_typeI"application/json;T:sourceI"Y{
+	"name": "testme",
+	"icons": [
+		{
+			"src": "\/android-chrome-36x36.png",
+			"sizes": "36x36",
+			"type": "image\/png",
+			"density": 0.75
+		},
+		{
+			"src": "\/android-chrome-48x48.png",
+			"sizes": "48x48",
+			"type": "image\/png",
+			"density": 1
+		},
+		{
+			"src": "\/android-chrome-72x72.png",
+			"sizes": "72x72",
+			"type": "image\/png",
+			"density": 1.5
+		},
+		{
+			"src": "\/android-chrome-96x96.png",
+			"sizes": "96x96",
+			"type": "image\/png",
+			"density": 2
+		},
+		{
+			"src": "\/android-chrome-144x144.png",
+			"sizes": "144x144",
+			"type": "image\/png",
+			"density": 3
+		}
+	]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"2file-digest://app/assets/images/manifest.json;TTF:charsetI"
+utf-8;F:digest"%1ø…ºP·)!:ÂiXú8!Q//«	üWuÅ~-’æ’:lengthiY:dependencies_digest"%ËZrâ“v‹şÍø¥¡,û{ÇBáæBuúü–ğ:idI"Ede3149970fa1421cf96e44549f40ba51c51b6a9397b7eff08e3c3262e52aa77d;F:
+mtimel+\W
