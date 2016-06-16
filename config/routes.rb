@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :projects, controller: 'articles'
   get 'projects', to: 'articles#index'
   get 'contact', to: 'welcome#show'
+  get 'github', to: 'articles#show'
 end
