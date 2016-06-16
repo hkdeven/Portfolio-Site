@@ -3,6 +3,6 @@ class ArticlesController < ApplicationController
   def index
   end
 
-  def show
+  def github
   end
 end
