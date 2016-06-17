@@ -74,7 +74,7 @@
             </a>
           </li>
           <li class="col-xs-4 col-sm-2 nopadding menuitem misted-guava">
-            <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf" class="hvr-sweep-to-bottom" target="_blank"><br>
+            <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" class="hvr-sweep-to-bottom" target="_blank"><br>
               <%= image_tag "icon-resume2.png", :size => '54x54' %>
               <span>resume</span>
             </a>
@@ -138,11 +138,11 @@
           <!-- Resume download -->
             <div class="col-md-3 cv-link">
               <h4 class="font-accident-two-bold uppercase">Download My Resume</h4>
-                  <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf">
+                  <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>">
                     <%= image_tag "download.png", :size => '13x13' %>
                     English
                   </a>
-                  <a href="https://deven-blackburn.herokuapp.com/Deven_Blackburn_CV.pdf">
+                  <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>">
                     <%= image_tag "download.png", :size => '13x13' %>
                     Spanish
                   </a>
