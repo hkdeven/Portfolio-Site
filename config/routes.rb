@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'projects', to: 'articles#index'
   get 'contact', to: 'welcome#contact'
   get 'github', to: 'articles#github'
+  get 'blog', to: 'articles#blog'
 end
