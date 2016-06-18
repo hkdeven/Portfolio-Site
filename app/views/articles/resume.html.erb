@@ -7,7 +7,6 @@
           <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
              <h3 class="font-accident-two-normal uppercase text-center">RESUME</h3>
              <div class="dividewhite1"></div>
-
           </div>
 
 <!-- Headshot with Bio -->
@@ -32,11 +31,10 @@
         </div>
 
         <div class="divider-dynamic"></div>
-
         <div class="dividewhite1"></div>
 
       </div>
-      </div>
+    </div>
 
 <!-- Stats (Education, Skills, Expertise) -->
     <div id="blog" class="inner-content skin">
@@ -55,7 +53,7 @@
       <div class="col-sm-4 col-md-4 wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
          <h3 class="font-accident-two-normal uppercase"></h3>
             <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="_blank">
-              <%= image_tag "resume-skills.png", alt: "Skills", class: "img-responsive center-block" %></a>
+            <%= image_tag "resume-skills.png", alt: "Skills", class: "img-responsive center-block" %></a>
          <div class="dividewhite1"></div>
       </div>
 
@@ -66,20 +64,24 @@
          <div class="dividewhite1"></div>
       </div>
 
-    <%= image_tag "bar.png", class: "img-responsive center-block" %>
+    <!-- Line -->
+      <%= image_tag "bar.png", class: "img-responsive center-block" %>
 
-    <div class="dividewhite2"></div>
-    <div class="divider-dynamic"></div>
+      <div class="dividewhite2"></div>
+      <div class="divider-dynamic"></div>
 
       <div class="col-sm-12 col-md-12 wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
         <%= image_tag "resume-header-experience.png", class: "img-responsive center-block" %>
       </div>
+
       <div class="col-sm-12 col-md-12">
-        <%= image_tag "dotted-bar.png", class: "img-responsive center-block" %></div>
+        <%= image_tag "dotted-bar.png", class: "img-responsive center-block" %>
+      </div>
 
-        <div class="dividewhite1"></div>
-        <div class="divider-dynamic"></div>
+      <div class="dividewhite1"></div>
+      <div class="divider-dynamic"></div>
 
+    <!-- List of companies -->
       <section id="testmonials" class="inner-section">
         <div class="container-fluid nopadding">
 
@@ -90,21 +92,21 @@
 
                    <!-- Company Logo -->
                       <div class="col-xs-3">
-                                    <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="_blank">
+                        <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="_blank">
                         <%= image_tag "resume-company1.png", alt: "IGLTA", class: "img-responsive pull-right" %></a>
                       </div>
 
-                      <!-- Positon Date and Description -->
+                    <!-- Positon Date and Description -->
                       <div class="col-xs-9">
                         <h5 class="font-accident-one-bold text-left uppercase">project manager</h5>
                         <p class="small hovercolor">International Gay & Lesbian Travel Association, Inc. (IGLTA)</p>
                         <div class"experience date"><p>2009 - 2016</p></div>
-                        <p class="text-left small">
-                        Job role grew exponentially from start date with only two employees to having full and part-time staff of 30+.  Primary duties included extensive convention and board meeting planning, employee training and hiring, unofficial tech department, primary contact for large sponsors.
-                        </p>
+                          <p class="text-left small">
+                          Job role grew exponentially from start date with only two employees to having full and part-time staff of 30+.  Primary duties included extensive convention and board meeting planning, employee training and hiring, unofficial tech department, primary contact for large sponsors.
+                          </p>
                       </div>
 
-                </div>
+              </div>
               <div class="divider-dynamic"></div>
             </div>
           </div>
@@ -120,17 +122,17 @@
                       <%= image_tag "resume-company2.png", alt: "Rainbow Realty", class: "img-responsive pull-right" %></a>
                     </div>
 
-                    <!-- Positon Date and Description -->
-                    <div class="col-xs-9">
-                      <h5 class="font-accident-one-bold text-left uppercase">Realtor</h5>
-                      <p class="small hovercolor">Rainbow Realty, Inc.</p>
-                      <div class"experience date"><p>2012-2014</p></div>
+                <!-- Positon Date and Description -->
+                  <div class="col-xs-9">
+                    <h5 class="font-accident-one-bold text-left uppercase">Realtor</h5>
+                    <p class="small hovercolor">Rainbow Realty,Inc.</p>
+                    <div class"experience date"><p>2012-2014</p></div>
                       <p class="text-left small">
                       Small business owner / Licensed Realtor® - second full time job alongside IGLTA. Specialized in green, eco-friendly homes. Emphasized innovative/new marketing/tech with tracked results.
                       </p>
                     </div>
 
-              </div>
+            </div>
             <div class="divider-dynamic"></div>
           </div>
         </div>
@@ -146,17 +148,17 @@
                     <%= image_tag "resume-company3.png", size: "125x125", alt: "Santa Barbara Bank & Trust", class: "img-responsive pull-right" %></a>
                   </div>
 
-                  <!-- Positon Date and Description -->
+                <!-- Positon Date and Description -->
                   <div class="col-xs-9">
                     <h5 class="font-accident-one-bold text-left uppercase">merchant services manager</h5>
                     <p class="small hovercolor">Santa Barbara Bank & Trust (SBB&T)</p>
                     <div class"experience date"><p>2004 - 2008</p></div>
-                    <p class="text-left small">
-                    Concierge bank cashier for business accounts, mostly service and retail clients.
-                    </p>
+                      <p class="text-left small">
+                      Concierge bank cashier for business accounts, mostly service and retail clients.
+                      </p>
                   </div>
 
-            </div>
+          </div>
           <div class="divider-dynamic"></div>
         </div>
       </div>
@@ -166,61 +168,63 @@
           <div class="col-md-10 wow fadeInLeft" data-wow-delay="0.5s" data-wow-offset="10">
              <div class="row">
 
-             <!-- Company Logo -->
+              <!-- Company Logo -->
                 <div class="col-xs-3">
                   <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="_blank">
                   <%= image_tag "resume-company4.png", alt: "Santa Barbara Foundation", class: "img-responsive pull-right" %></a>
                 </div>
 
                 <!-- Positon Date and Description -->
-                <div class="col-xs-9">
-                  <h5 class="font-accident-one-bold text-left uppercase">donor volunteer outreach</h5>
-                  <p class="small hovercolor">Santa Barbara Foundation</p>
-                  <div class"experience date"><p>2004 - 2007</p></div>
-                  <p class="text-left small">
-                  Worked as liaison between community businesses and local non-profits to find synergy and advance common goals.  Organized private fundraisers, point of contact for major donors, created, sought/trained/managed intern program.
-                  </p>
-                </div>
+                  <div class="col-xs-9">
+                    <h5 class="font-accident-one-bold text-left uppercase">donor volunteer outreach</h5>
+                    <p class="small hovercolor">Santa Barbara Foundation</p>
+                    <div class"experience date"><p>2004 - 2007</p></div>
+                    <p class="text-left small">
+                    Worked as liaison between community businesses and local non-profits to find synergy and advance common goals.  Organized private fundraisers, point of contact for major donors, created, sought/trained/managed intern program.
+                    </p>
+                  </div>
 
+              </div>
+              <div class="divider-dynamic"></div>
+            </div>
           </div>
-        <div class="divider-dynamic"></div>
-      </div>
-    </div>
-
 
         </div>
-      </section>
-                <div class="dividewhite1"></div>
+      </section> <!-- Company block end -->
 
-              </div>
-              </div>
+      <div class="dividewhite1"></div>
+
+    </div> <!-- Stats end -->
 
 </div>
 
-<!-- Contact Details -->
-  <section id="m-details" class="inner-section skin">
-     <div class="container-fluid nopadding">
+    <!-- Contact Details -->
+      <section id="m-details" class="inner-section skin">
+        <div class="container-fluid nopadding">
 
-      <div class="col-sm-4 col-md-4 wow fadeInLeft" data-wow-delay="0.4s" data-wow-offset="10">
-         <h3 class="font-accident-two-normal uppercase"></h3>
-         <%= image_tag "resume-location.png", alt: "Fort Lauderdale, USA", class: "img-responsive center-block" %>
-         <div class="dividewhite1"></div>
-      </div>
+          <!-- Location -->
+            <div class="col-sm-4 col-md-4 wow fadeInLeft" data-wow-delay="0.4s" data-wow-offset="10">
+               <h3 class="font-accident-two-normal uppercase"></h3>
+               <%= image_tag "resume-location.png", alt: "Fort Lauderdale, USA", class: "img-responsive center-block" %>
+               <div class="dividewhite1"></div>
+            </div>
 
-      <div class="col-sm-4 col-md-4 wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
-         <h3 class="font-accident-two-normal uppercase"></h3>
-         <%= image_tag "resume-phone.png", alt: "My Cell", class: "img-responsive center-block" %>
-         <div class="dividewhite1"></div>
-      </div>
+          <!-- Phone -->
+            <div class="col-sm-4 col-md-4 wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
+               <h3 class="font-accident-two-normal uppercase"></h3>
+               <%= image_tag "resume-phone.png", alt: "My Cell", class: "img-responsive center-block" %>
+               <div class="dividewhite1"></div>
+            </div>
 
-      <div class="col-sm-4 col-md-4 wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
-         <h3 class="font-accident-two-normal uppercase"></h3>
-         <%= image_tag "resume-web.png", alt: "Email and Website", class: "img-responsive center-block" %>
-         <div class="dividewhite1"></div>
-      </div>
+          <!-- Web -->
+            <div class="col-sm-4 col-md-4 wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+               <h3 class="font-accident-two-normal uppercase"></h3>
+               <%= image_tag "resume-web.png", alt: "Email and Website", class: "img-responsive center-block" %>
+               <div class="dividewhite1"></div>
+            </div>
 
-    </div>
-</section>
+        </div>
+      </section>
 
     <div class="dividewhite2"></div>
 
