@@ -1,8 +1,8 @@
 
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'welcome#home'
   resources :articles
-  get 'projects', to: 'articles#index'
+  get 'projects', to: 'articles#projects'
   get 'contact', to: 'welcome#contact'
   get 'github', to: 'articles#github'
   get 'blog', to: 'articles#blog'
