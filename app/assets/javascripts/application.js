@@ -12,5 +12,6 @@
 //= require jquery.pjax.js
 //= require jquery.turbolinks
 //= require deven.js
+//= require github.js
 //= require turbolinks
 //= require_tree .

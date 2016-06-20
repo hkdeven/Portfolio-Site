@@ -17,6 +17,7 @@
  *= require jquery.progresstracker.css
  *= require magnific-popup.css
  *= require deven.scss
+ *= require github.css
  *= require_tree .
  *= require_self
  */
