@@ -13,4 +13,6 @@ If you want to run this site locally:
 - Party. Like it's 1999.
 
 ## Who This Repo is For
-This repo is mostly for me. I, like many of you, host my code on GitHub for reasons of portability, ease of work, and peace of mind. Beyond my own needs, I have also open-sourced this repo for you, the reader (and most likely developer), to explore the things that make my site tick and hoepfully pass along some inspirational nugget.
+This repo is mostly for me. I, like many of you, host my code on GitHub for reasons of portability, ease of work, and peace of mind. Beyond my own needs, I have also open-sourced this repo for you, the reader (and most likely developer), to explore the things that make my site tick and hopefully pass along some inspirational nuggets.    
+
+[![Twitter](https://d1a6a9r46cnyll.cloudfront.net/316fd24e6853113d6382aebf3a3a254f6c47e167/687474703a2f2f636f646574696465732e636f6d2f656e7661746f2d627574746f6e2d747769747465722e6a7067)](https://twitter.com/MakeCodeNotWar)    
