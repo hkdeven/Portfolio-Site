@@ -1,0 +1,3 @@
+#Ignore production config file
+
+/config/environments/production.rb
