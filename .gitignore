@@ -1,3 +1,8 @@
-#Ignore production config file
-
+# Ignore production config file #
+#################################
 config/environments/production.rb
+
+# OS Generated Files #
+#################################
+.DS_Store
+.DS_Store?
