@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'github', to: 'articles#github'
   get 'blog', to: 'articles#blog'
   get 'resume', to: 'articles#resume'
+  get 'demos', to: 'articles#demos'
 end
