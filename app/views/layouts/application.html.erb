@@ -22,8 +22,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!-- stylesheets -->
+    <!-- stylesheets and js -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -209,8 +210,4 @@
     <div id="image-cache" class="hidden"></div>
 
   </body>
-
-  <!-- js -->
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
 </html>
