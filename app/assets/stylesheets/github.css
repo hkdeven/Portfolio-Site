@@ -30,7 +30,7 @@
   height: 21px;
   padding: 0 5px 0 23px;
   line-height: 21px;
-  background: transparent url('repostat.png') no-repeat 0 0;
+  background: transparent url('https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/repostat.png') no-repeat 0 0;
 }
 .gw-watchers {
   background-position: 5px -2px;
