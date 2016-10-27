@@ -23,7 +23,7 @@
 [Color Scheme / Colors, textures]
 */
 .e-bg-light-texture {
-  background: image-url("https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/dark_fish_skin.png"); }
+  background: image-url("dark_fish_skin.png"); }
 
 .color01 {
   background-color: #f2f2f2 !important; }
@@ -361,7 +361,7 @@ body {
   font: 13px/1.7 "Raleway", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  background-image: image-url("https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/grey_wash_wall.png");
+  background-image: image-url("grey_wash_wall.png");
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -778,7 +778,7 @@ button, input, select, textarea {
     color: #a7a7a7; }
     #top-navigation .ident .vc-photo {
       min-height: 360px;
-      background: image-url("https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/moi-artistic.jpg");
+      background: image-url("moi-artistic.jpg");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1084,7 +1084,7 @@ button, input, select, textarea {
         cursor: pointer; }
 
 #counts-dark-bg {
-  background: image-url("https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/dark_wood.png"); }
+  background: image-url("dark_wood.png"); }
   #counts-dark-bg .count-container .count-icon i::before {
     color: #f2f2f2; }
   #counts-dark-bg .count-container .count .digit {
