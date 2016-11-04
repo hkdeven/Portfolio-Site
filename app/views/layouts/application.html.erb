@@ -28,7 +28,11 @@
     <%= csrf_meta_tags %>
   </head>
 
-<body class="boxed nopadding cd-index cd-main-content">
+<body class="boxed nopadding">
+
+  <!--Transition Affect -->
+    <maintransition>
+      <div class="cd-index cd-main-content">
 
 <header>
    <section id="top-navigation" class="container-fluid nopadding">
@@ -208,6 +212,9 @@
     </footer>
 
     <div id="image-cache" class="hidden"></div>
+
+      </div>
+    </maintransition>
 
     <div class="cd-cover-layer"></div> <!-- this is the transition cover layer -->
     <div class="cd-loading-bar"></div> <!-- this is the transition loading bar -->
