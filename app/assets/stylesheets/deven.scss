@@ -23,34 +23,24 @@
  /*------------------------------------------------------------------
  [Animated Name Intro]
  */
-.cd-intro-content h1,
-.cd-intro-content p,
-.cd-intro-content .cd-btn {
+.cd-intro-content h2,
+.cd-intro-content{
   opacity: 0;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
 
-.bouncy.cd-intro-content h1 {
+.bouncy.cd-intro-content h2 {
   animation-name: cd-bounce-right;
 }
 
-.bouncy.cd-intro-content p {
-  animation-name: cd-bounce-left;
+.bouncy.cd-intro-content h2 {
+  animation-duration: 1.5s;
 }
 
-.bouncy.cd-intro-content h1,
-.bouncy.cd-intro-content p {
-  animation-duration: 0.6s;
-}
-
-.bouncy.cd-intro-content .cd-btn {
+.bouncy.cd-intro-content{
   animation-name: cd-bounce-rotate;
   animation-duration: 0.5s;
-}
-
-.bouncy.cd-intro-content .cd-btn.main-action {
-  animation-delay: 0.4s;
 }
 
 @keyframes cd-bounce-right {
