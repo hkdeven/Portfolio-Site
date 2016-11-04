@@ -30,10 +30,6 @@
 
 <body class="boxed nopadding">
 
-  <!--Transition Affect -->
-    <maintransition>
-      <div class="cd-index cd-main-content">
-
 <header>
    <section id="top-navigation" class="container-fluid nopadding">
       <div class="row nopadding ident e-bg-light-texture">
@@ -51,6 +47,17 @@
             <h2 class="font-accident-two-light uppercase">Deven Blackburn</h2>
           </div>
         </div>
+
+        <section class="cd-intro">
+        	<div class="cd-intro-content bouncy">
+        		<h1>Animated Intro Section</h1>
+        		<p>A collection of text effects for the intro section of your website</p>
+        		<div class="action-wrapper">
+        			<a href="#0" class="cd-btn main-action">Get started</a>
+        			<a href="#0" class="cd-btn">Learn More</a>
+        		</div>
+        	</div>
+        </section>
 
       <!-- Name positioning -->
         <div class="row nopadding position">
@@ -142,11 +149,11 @@
           <!-- Resume download -->
             <div class="col-md-3 cv-link">
               <h4 class="font-accident-two-bold uppercase">Download My Resume</h4>
-                  <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>">
+                  <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="blank_">
                     <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/download.png", :size => '13x13' %>
                     English
                   </a>
-                  <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>">
+                  <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="blank_">
                     <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/download.png", :size => '13x13' %>
                     Spanish
                   </a>
@@ -212,12 +219,6 @@
     </footer>
 
     <div id="image-cache" class="hidden"></div>
-
-      </div>
-    </maintransition>
-
-    <div class="cd-cover-layer"></div> <!-- this is the transition cover layer -->
-    <div class="cd-loading-bar"></div> <!-- this is the transition loading bar -->
 
   </body>
 </html>

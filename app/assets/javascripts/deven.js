@@ -8,36 +8,6 @@
             $(this).remove();
         });
 
-        /* Transition affects */
-        $('maintransition').on('click', '[data-type="page-transition"]', function(event){
-            event.preventDefault();
-            //detect which page has been selected
-            var newPage = $(this).attr('href');
-            //if the page is not animating - trigger animation
-            if( !isAnimating ) changePage(newPage, true);
-        });
-            function changePage(url, bool) {
-                isAnimating = true;
-                // trigger page animation
-                $('body').addClass('page-is-changing');
-                loadNewContent(url, bool);
-            }
-            function loadNewContent(url, bool) {
-              	var newSectionName = 'cd-'+url.replace('.html', ''),
-              		section = $('<div class="cd-main-content '+newSectionName+'"></div>');
-
-              	section.load(url+' .cd-main-content > *', function(event){
-                	  // load new content and replace <maintransition> content with the new one
-                  	$('main').html(section);
-                  	//...
-                  	$('body').removeClass('page-is-changing');
-                  	if(url != window.location){
-                      	//add the new page to the window.history
-                      	window.history.pushState({path: url},'',url);
-                  	}
-            	});
-            }
-
         /* Background loading full-size images */
         $('.gallery-item').each(function() {
             var src = $(this).attr('href');
