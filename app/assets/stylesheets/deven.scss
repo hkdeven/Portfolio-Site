@@ -598,55 +598,77 @@ button, input, select, textarea {
 
 @media (max-width: 1200px) {
   .boxed .content-wrap {
-    margin: 0; }
-
+    margin: 0;
+  }
   footer {
-    margin: 0; } }
+    margin: 0;
+  }
+}
+
 @media (max-width: 992px) {
   .count {
-    margin-bottom: 32px !important; }
-
+    margin-bottom: 32px !important;
+  }
   ul.timeline-vert:before {
-    left: 40px !important; }
-
+    left: 40px !important;
+  }
   ul.timeline-vert > li > .timeline-panel {
     width: calc(100% - 90px) !important;
     width: -moz-calc(100% - 90px) !important;
-    width: -webkit-calc(100% - 90px) !important; }
-
+    width: -webkit-calc(100% - 90px) !important;
+  }
   ul.timeline-vert > li > .timeline-badge {
     left: 15px !important;
     margin-left: 0 !important;
-    top: 16px !important; }
-
+    top: 16px !important;
+  }
   ul.timeline-vert > li > .timeline-panel {
-    float: right !important; }
-
+    float: right !important;
+  }
   ul.timeline-vert > li > .timeline-panel:before {
     border-left-width: 0 !important;
     border-right-width: 15px !important;
     left: -15px !important;
-    right: auto !important; }
-
+    right: auto !important;
+  }
   ul.timeline-vert > li > .timeline-panel:after {
     border-left-width: 0 !important;
     border-right-width: 14px !important;
     left: -14px !important;
-    right: auto !important; }
-
+    right: auto !important;
+  }
   .divider-dynamic {
-    height: 40px; }
-
+    height: 40px;
+  }
   #top-navigation .ident .vc-name .position .pdf,
   #top-navigation .ident .vc-name .name .name-pdf {
-    display: none; } }
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #footer {
+    text-align: center !important;
+  }
+}
+
 @media (max-width: 801px) {
   .boxed header {
-    margin: 0; }
-
+    margin: 0;
+  }
   footer {
-    margin: 0 !important; } }
+    margin: 0 !important;
+  }
+}
+
 @media (max-width: 768px) {
+  #homesection, 
+  #homesection .seaweed,
+  #homesection .circle-skills .progressbar .circle,
+  #homesection .circle-skills .progressbar .circle div {
+    margin-left: 0;
+    text-align: center !important;
+  }
   .divider-dynamic {
     height: 60px; }
 
@@ -682,6 +704,7 @@ button, input, select, textarea {
   #top-navigation .ident .vc-name .position .position-title {
     padding-top: 30px;
     text-align: center; } }
+
 @media (max-width: 600px) {
   .grid .row .grid-item {
     padding-right: 0 !important;
@@ -689,6 +712,7 @@ button, input, select, textarea {
 
   .media-body, .media-left, .media-right {
     display: initial; } }
+
 @media (max-width: 400px) {
   h5 {
     letter-spacing: 0; }
