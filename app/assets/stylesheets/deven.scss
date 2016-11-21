@@ -662,12 +662,15 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-  #homesection, 
+  #homesection,
   #homesection .seaweed,
   #homesection .circle-skills .progressbar .circle,
   #homesection .circle-skills .progressbar .circle div {
-    margin-left: 0;
     text-align: center !important;
+  }
+  #homesection .circle-skills .progressbar .circle div {
+    margin-left: 0 !important;
+    text-align: left !important;
   }
   .divider-dynamic {
     height: 60px; }
