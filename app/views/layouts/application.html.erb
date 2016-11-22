@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Deven Blackburn | Developer</title>
+        <title>Deven Blackburn | Developer | HTML5, CSS3, ReactJS, JavaScript</title>
         <meta name="description" content="Developer, proficient in HTML, CSS and JavaScript. Skilled at Frontend and Backend web development." />
-        <meta name="keywords" content="HTML, CSS, JavaScript, HTML5, CSS3, JS, jQuery, React, Web Development, Web Design, Development, Frontend" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, HTML5, CSS3, JS, jQuery, React, ReactJS, Web Design, Development, Frontend" />
         <meta name="author" content="Deven Blackburn" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name=viewport content="width=device-width, initial-scale=1">
@@ -29,13 +29,17 @@
 
     </head>
 
-<body class="boxed nopadding">
+    <body class="boxed nopadding">
+
+      <!-- stylesheets and js -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
     <header>
        <section id="top-navigation" class="container-fluid nopadding">
           <div class="row nopadding ident dark-fish-skin-texture">
 
-          <!-- Photo -->
+            <!-- Main Photo -->
             <a href="<%= root_path %>">
               <div class="col-md-5 col-lg-4 vc-photo"></div>
             </a>
@@ -49,7 +53,7 @@
               </div>
             </div>
 
-          <!-- Name positioning -->
+          <!-- Description positioning -->
             <div class="row nopadding position">
               <div class="col-md-10 position-title">
                 <section class="cd-intro">
@@ -114,7 +118,7 @@
       </section>
     </header>
 
-      <!-- Container -->
+      <!-- Page Content Container -->
         <div class="content-wrap">
            <section id="homesection" class="container-fluid nopadding">
               <div class="m-details row nopadding">
@@ -127,86 +131,82 @@
 
       <!--Footer-->
         <footer id="footer" class="padding-50 dark-fish-skin-texture">
-           <div class="container-fluid nopadding">
-              <div class="row wow fadeInUp" data-wow-delay=".2s" data-wow-offset="40" data-wow-duration="2s">
+               <div class="container-fluid nopadding">
+                  <div class="row wow fadeInUp" data-wow-delay=".2s" data-wow-offset="40" data-wow-duration="2s">
 
-              <!-- Name and call to action -->
-                <div class="col-md-3">
-                  <h4 class="font-accident-two-bold uppercase">Deven Blackburn</h4>
-                  <p class="inline-block">Your full service, full stack<br>
-                    Developer.  <i>How can I help?</i></p>
-                  <div class="divider-dynamic"></div>
+                  <!-- Name and call to action -->
+                    <div class="col-md-3">
+                      <h4 class="font-accident-two-bold uppercase">Deven Blackburn</h4>
+                      <p class="inline-block">Your full service, full stack<br>
+                        Developer.  <i>How can I help?</i></p>
+                      <div class="divider-dynamic"></div>
+                    </div>
+
+                  <!-- Resume download -->
+                    <div class="col-md-3 cv-link">
+                      <h4 class="font-accident-two-bold uppercase">Download My Resume</h4>
+                          <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="blank_">
+                            <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/download.png", :size => '13x13' %>
+                            English
+                          </a>
+                          <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="blank_">
+                            <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/download.png", :size => '13x13' %>
+                            Spanish
+                          </a>
+                        <div class="divider-dynamic"></div>
+                    </div>
+
+                  <!-- Social links -->
+                    <div class="col-md-3">
+                      <h4 class="font-accident-two-bold uppercase">Follow me at</h4>
+                        <div class="inline-block">
+                          <a href="https://www.facebook.com/makecodenotwar" target="_blank">
+                            <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-facebook.png" %>
+                          </a>
+                        </div>
+                        <div class="inline-block">
+                          <a href="https://twitter.com/MakeCodeNotWar" target="_blank">
+                            <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-twitter.png" %>
+                          </a>
+                        </div>
+                        <div class="inline-block">
+                          <a href="https://www.instagram.com/deven.b/" target="_blank">
+                            <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-instagram.png" %>
+                          </a>
+                        </div>
+                        <div class="inline-block">
+                          <a href="https://www.linkedin.com/in/devenblackburn" target="_blank">
+                            <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-linkedin.png" %>
+                          </a>
+                        </div>
+                        <div class="inline-block">
+                          <a href="https://github.com/hkdeven" target="_blank">
+                            <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-github.png" %>
+                          </a>
+                        </div>
+                        <div class="divider-dynamic"></div>
+                     </div>
+
+                     <!-- Handmade -->
+                       <div class="col-md-2">
+                         <h4 class="font-accident-two-bold uppercase">#madeinFLL</h4>
+                         <p class="inline-block">
+                           <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-coded-left.png", :size => '15x15', alt: "Coded" %><%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-coded-right.png", :size => '15x15', alt: "Coded" %>
+                           with
+                           <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-heart.png", :size => '15x15', alt: "Love" %>
+                           <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-coffee.png", :size => '18x18', alt: "LOTS of coffee" %>
+                           <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-wine.png", :size => '15x15', alt: "Wine" %>
+                         </p>
+                         <div class="divider-dynamic"></div>
+                       </div>
+
+                  </div>
                 </div>
-
-              <!-- Resume download -->
-                <div class="col-md-3 cv-link">
-                  <h4 class="font-accident-two-bold uppercase">Download My Resume</h4>
-                      <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="blank_">
-                        <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/download.png", :size => '13x13' %>
-                        English
-                      </a>
-                      <a href="<%= asset_path "Deven_Blackburn_CV.pdf" %>" target="blank_">
-                        <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/download.png", :size => '13x13' %>
-                        Spanish
-                      </a>
-                    <div class="divider-dynamic"></div>
-                </div>
-
-              <!-- Social links -->
-                <div class="col-md-3">
-                  <h4 class="font-accident-two-bold uppercase">Follow me at</h4>
-                    <div class="inline-block">
-                      <a href="https://www.facebook.com/makecodenotwar" target="_blank">
-                        <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-facebook.png" %>
-                      </a>
-                    </div>
-                    <div class="inline-block">
-                      <a href="https://twitter.com/MakeCodeNotWar" target="_blank">
-                        <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-twitter.png" %>
-                      </a>
-                    </div>
-                    <div class="inline-block">
-                      <a href="https://www.instagram.com/deven.b/" target="_blank">
-                        <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-instagram.png" %>
-                      </a>
-                    </div>
-                    <div class="inline-block">
-                      <a href="https://www.linkedin.com/in/devenblackburn" target="_blank">
-                        <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-linkedin.png" %>
-                      </a>
-                    </div>
-                    <div class="inline-block">
-                      <a href="https://github.com/hkdeven" target="_blank">
-                        <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/social-github.png" %>
-                      </a>
-                    </div>
-                    <div class="divider-dynamic"></div>
-                 </div>
-
-                 <!-- Handmade -->
-                   <div class="col-md-2">
-                     <h4 class="font-accident-two-bold uppercase">#madeinFLL</h4>
-                     <p class="inline-block">
-                       <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-coded-left.png", :size => '15x15', alt: "Coded" %><%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-coded-right.png", :size => '15x15', alt: "Coded" %>
-                       with
-                       <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-heart.png", :size => '15x15', alt: "Love" %>
-                       <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-coffee.png", :size => '18x18', alt: "LOTS of coffee" %>
-                       <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/icon-wine.png", :size => '15x15', alt: "Wine" %>
-                     </p>
-                     <div class="divider-dynamic"></div>
-                   </div>
 
               </div>
-            </div>
-
-          </div>
         </footer>
 
         <div id="image-cache" class="hidden"></div>
-
-        <!-- stylesheets and js -->
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   </body>
 </html>
