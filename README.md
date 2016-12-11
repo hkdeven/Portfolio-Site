@@ -10,6 +10,8 @@ If you want to run this site locally:
   production: false
   ```
 - Run `bundle install`
+- Run `bundle exec rake db:create`
+- Run `bundle exec rake db:migrate`
 - Party. Like it's 1999.
 
 ## Who This Repo is For
