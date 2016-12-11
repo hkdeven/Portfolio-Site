@@ -1,0 +1,29 @@
+<!-- Intro and header -->
+  <div id="blog" class="inner-content">
+
+      <section id="page-title" class="inner-section">
+        <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+            <h2 class="font-accident-two-normal uppercase">COMING SOON</h2>
+            <h5 class="font-accident-one-bold hovercolor uppercase">Curated design-content for the suave developer.</h5>
+        </div>
+
+      <!-- Blog Image Placeholder -->
+        <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Text</th>
+            </tr>
+
+            <% @articles.each do |article| %>
+              <tr>
+                <td><%= article.title %></td>
+                <td><%= article.text %></td>
+                <td><%= link_to 'Show', article_path(article) %></td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+
+      </section>
+  </div>

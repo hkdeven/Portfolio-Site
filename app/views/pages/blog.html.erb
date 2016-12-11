@@ -3,13 +3,95 @@
 
       <section id="page-title" class="inner-section">
         <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
-            <h2 class="font-accident-two-normal uppercase">COMING SOON</h2>
-            <h5 class="font-accident-one-bold hovercolor uppercase">Curated design-content for the suave developer.</h5>
+          <h5 class="uppercase">latest articles</h5>
         </div>
 
-      <!-- Blog Image Placeholder -->
-        <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
-          <%= image_tag "https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/blog-suave.png", class: "img-responsive-bordered" %>
+        <hr />
+
+          <section id="testmonials" class="inner-section skin">
+             <div class="container-fluid nopadding">
+               <div class="dividewhite2"></div>
+
+                <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
+                  <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
+                    <h3 class="font-accident-two-normal uppercase text-center">Bourbon is good for you</h3>
+                     <h5 class="font-accident-one-bold uppercase hovercolor text-center">Become a better developer using Bourbon.</h5>
+                     <p class="small font-color-medium text-center post-meta">Published on 21 June, 2016</p>
+                    <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAg3AAAAJGVhNDM2MmQxLTg1NDctNGQxYi04YzA3LWYxNmIzNzk0YTEzZg.png" class="img-responsive-bordered center-block" />
+                  </div>
+                </div>
+              </section>
+
+              <div class="blog-article">
+
+                <p>Bourbon is an open-source semantic framework and mixin library from Thoughtbot.   Neat is a Sass grid system.  Bitters is a kind of scaffold project with some sensible default styles.  Refills is a collection of common components (think Bootstrap).  Together they form the Bourbon family.</p>
+
+                <div class="dividewhite2"></div>
+                <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAfSAAAAJDY5YTY5OWY4LTZiMTItNDk1NC1hNDg1LTQ5YmQ2YWQ4OGRkNw.jpg" class="img-responsive-bordered center-block" />
+                <div class="dividewhite2"></div>
+
+                <div class="dividewhite1"></div>
+                <h5 class="font-accident-one-bold uppercase">What is it exactly?</h5>
+
+                <p>Bourbon itself is basically a bunch of mixins and functions which allow you to write DRY-er, browser-independent code. The official website is a pretty good example. It shows a very common use of their mixins, which is easily outputting valid vendor-prefixed properties. It also features thepositionmixin which expands into several positioning-related properties and the golden-ratio function (which is deprecated in favour of modular scale).</p>
+
+                <div class="dividewhite1"></div>
+                <h4 class="font-accident-one-bold hovercolor uppercase">Neat</h4>
+
+                <p>The reason I choose this grid framework over other popular options like Bootstrap is because Neat is a semantic grid framework built on top of Bourbon. This means that my html markup doesn’t get cluttered with non-semantic div’s when defining my grid.  Instead, I can define my grid system directly in the CSS file.  Take a closer look at the Neat docs.</p>
+
+                <div class="dividewhite1"></div>
+                <h4 class="font-accident-one-bold hovercolor uppercase">Bitters</h4>
+
+                <p>Bitters is a collection of base styles, typography, form styles, variables, and includes error message modules.  Bitters is not a library - consider it more of a starting point.  It's definitely worth using and easy enough to edit to your liking.</p>
+
+                <div class="dividewhite1"></div>
+                <h4 class="font-accident-one-bold hovercolor uppercase">Refills</h4>
+
+                <p>Refills is a collection of UI components built using The Bourbon Family.  It's good to have in your toolbox even if it isn’t exactly what you want.</p>
+
+                <div class="dividewhite1"></div>
+                <h5 class="font-accident-one-bold uppercase">Example</h5>
+
+                <p>Let’s compare the Bourbon workflow with the one from Bootstrap.  If we wanted a grid, we’d most likely use Bootstrap with the following markup:</p>
+
+                <div class="dividewhite1"></div>
+                <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAhWAAAAJDc5MjM2Y2YwLTcwYzYtNDk2OS1hOTk2LTY0ZWM4OGZhMjIzZQ.png" class="img-responsive-bordered center-block" />
+                <div class="dividewhite2"></div>
+
+                <p>Using Bourbon is similar:</p>
+
+                <div class="dividewhite1"></div>
+                <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAd7AAAAJDQyMzc3YWYwLWM4NzctNDIzYi05YWZjLWJiNDRhZmI2NWE0Mw.png" class="img-responsive-bordered center-block" />
+                <div class="dividewhite2"></div>
+
+                <p>We are not done yet, but you can see that we must define our own classes, this forces us to add purposeful code. When you read it you know it probably displays news, and that it displays “hot news” and “latest news”.  In the HTML we don’t care how they are drawn, they might be in a two-columns layout, or stacked. But just by reading it you can tell a lot from the content itself.  This also applies to the CSS:</p>
+
+                <div class="dividewhite1"></div>
+                <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAfqAAAAJGVjMDU0MmI1LTAzM2EtNGUyYi05OTgwLTViZTgwNTYyZjM3Zg.png" class="img-responsive-bordered center-block" />
+                <div class="dividewhite2"></div>
+
+                <p>Now that’s cleaner!  It’s really easy to identify the behavior of the news component, a two column grid.  It makes sense to put that in the CSS doesn’t it?</p>
+
+                <div class="dividewhite1"></div>
+
+                <p>“But wait, what if I want something complex, like a modal window?” — You might ask.</p>
+
+                <div class="dividewhite1"></div>
+
+                <p>How would we do it in Bootstrap? Go to Bootstrap website, copy the code, and customize.  In Bourbon?  It's the same process: go to the Refills site, copy the code and customize.  Easy.</p>
+
+                <div class="dividewhite1"></div>
+                <h5 class="font-accident-one-bold uppercase">Conclusion</h5>
+
+                <p>Bourbon gives you the choice to bundle everything, but it encourages you to be thoughtful and efficient with your code and only include what you need, as you need it.  Overall, Bourbon makes for a more efficient, powerful code with greater control.</p>
+
+                <div class="dividewhite3"></div>
+                <div class="dividewhite3"></div>
+
+          </div>
+          </div>
+
         </div>
 
       </section>
