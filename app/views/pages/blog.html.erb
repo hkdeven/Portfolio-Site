@@ -8,6 +8,108 @@
 
         <hr />
 
+        <section id="testmonials" class="inner-section skin">
+           <div class="container-fluid nopadding">
+
+              <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
+                <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
+                  <h3 class="font-accident-two-normal uppercase text-center">What is JXS, ES5, ES6?</h3>
+                   <h5 class="font-accident-one-bold uppercase hovercolor text-center">Syntactic sugar clearly explained</h5>
+                   <p class="small font-color-medium text-center post-meta">Published on 11 December, 2016</p>
+                  <img src="http://seanamarasinghe.com/wp-content/uploads/2016/10/es6-recursion-600x360.png" class="img-responsive-bordered center-block" >
+                </div>
+              </div>
+            </section>
+
+            <div class="blog-article">
+
+              <p>It goes by many names: ES5, JSX (JavaScript eXtension), Harmony, ECMAScript, and most recently ES6.  To clear up some of the confusion, the governing body ECMA has (finally) decided to standardize the name of new releases.  So rather than naming the current release ES6.2, the official name (at this moment) is "ECMAScript 6."</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>But put quite simply, if HTML5 and Javascript had a baby that new, evolved progeny would be named ECMAScript 6.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>It makes code clearer and easier to express without fundamentally changing how the language works.  Simplified one way, it's the newest version of Javascript.  And you're going to love it.  <i class="fa fa-heart-o" aria-hidden="true"></i></p>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">Iterations</h5>
+
+              <p>ES5 (the ES stands for ECMAScript) is basically "regular JavaScript." The 5th update to JavaScript, ES5 was finalized in 2009. It has been supported by all major browsers for several years. Therefore, if you've written or seen any JavaScript in the recent past, chances are it was ES5.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>ES6, finalized in 2015, is the last version of JavaScript that included some syntactical and functional additions. ES6 is almost fully supported by all major browsers. But it will be some time until older versions of web browsers are phased out of use. For instance, IE 11 does not support ES6 but has about 12% of the browser market share.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>I may have oversimplified when I said that the current release would be ES7; it would be closer to ES6.2.  But who really cares?  Already ECMAScript 6 is <a href="https://kangax.github.io/compat-table/es6/" target="_blank" />widely supported</a> across modern browsers. So it should come as no surprise that ECMAScript 6 is ranked as the number one language of interest by developers; it will become the future language of the web.</p>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">Common Misconceptions</h5>
+
+              <p>It may come as a surprise to both React developers like myself and everyone else, but ECMAScript 6 (JSX) is <b>not</b> a requirement for or when using React. I repeat, you <b>DO NOT</b> have to use <code>jsx</code> extensions in your React ecosystem. In fact, using React without <code>jsx</code> is especially convenient when you don't want to set up compilation in your build environment.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>Each <code>jsx</code> element is just <a href="https://en.wikipedia.org/wiki/Syntactic_sugar" target="_blank">syntactic sugar</a> for calling <code>React.createElement(component, props, ...children)</code>. So, anything you can do with <code>jsx</code> can also be done with just plain JavaScript.</p>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">But why use it?</h5>
+
+              <p>In a React environment, <code>jsx</code> can be thought of as a dialect of Javascript that allows you to write HTML directly into your code. Without <code>jsx</code>, to create and return a complex HTML element your <a href="https://api.jquery.com/jQuery/#jQuery2" target="_blank">only option is jQuery</a>:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/c9bfc3d8c94c6d1b28f70cb27c5e1273.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <p>Incidentally, most people don't know that you can use jQuery to create structured HTML elements. But it's not as legible or elegant as written <code>jsx</code>:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/356be3fa6b922764d13b01dc3b1ebfbd.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">Example</h5>
+
+              <p>A great example is writing an embeded interactive map onto a webpage. Before React, you had to create a Frankenstein-like-monster as shown in the offical Google Maps documentation:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/ff801c78a63e9ba80b83989523fa99a1.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <p>While we can certainly tell what's going on, it's a stark contrast to the <code>jsx</code> copy:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/be838ee47afd440072a1c243596ef95c.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">No Comprendo</h5>
+
+              <p>While this is all very fascinating, it's important to note that in order for a wider range of browsers to understand and render <code>jsx</code>, we have to transpile our javascript into ES5 JavaScript. As a React developer, I use Babel to transpile my <code>jsx</code>.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>More on Babel, Webpack, and Redux usage with React coming soon!</p>
+
+              <div class="dividewhite1"></div>
+              <img src="https://www.bram.us/wordpress/wp-content/uploads/2016/04/es6-webpack-react-babel.png" class="img-responsive center-block" width="800" />
+              <div class="dividewhite2"></div>
+
+          </div>
+
+          <hr />
+
           <section id="testmonials" class="inner-section skin">
              <div class="container-fluid nopadding">
                <div class="dividewhite2"></div>
@@ -15,7 +117,7 @@
                 <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
                   <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
                     <h3 class="font-accident-two-normal uppercase text-center">Bourbon is good for you</h3>
-                     <h5 class="font-accident-one-bold uppercase hovercolor text-center">Become a better developer using Bourbon.</h5>
+                     <h5 class="font-accident-one-bold uppercase hovercolor text-center">Become a better developer using Bourbon</h5>
                      <p class="small font-color-medium text-center post-meta">Published on 21 June, 2016</p>
                     <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAg3AAAAJGVhNDM2MmQxLTg1NDctNGQxYi04YzA3LWYxNmIzNzk0YTEzZg.png" class="img-responsive-bordered center-block" />
                   </div>
@@ -86,13 +188,15 @@
 
                 <p>Bourbon gives you the choice to bundle everything, but it encourages you to be thoughtful and efficient with your code and only include what you need, as you need it.  Overall, Bourbon makes for a more efficient, powerful code with greater control.</p>
 
-                <div class="dividewhite3"></div>
-                <div class="dividewhite3"></div>
+              <div class="dividewhite2"></div>
+              <div class="dividewhite2"></div>
+
+            </div>
 
           </div>
-          </div>
-
         </div>
 
-      </section>
+      </div>
+
+    </section>
   </div>

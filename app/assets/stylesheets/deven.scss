@@ -20,6 +20,12 @@
   text-align: left;
 }
 
+.code-block {
+  max-width: 800px;
+  position: relative;
+  text-align: center;
+}
+
 @media only screen and (max-width: 500px) {
   #blog .blog-article {
       margin: 0 0 10px !important;
