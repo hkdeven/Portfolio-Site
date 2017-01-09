@@ -3,6 +3,36 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*------------------------------------------------------------------
+[Blog Style]
+------------------------------------------------------------------*/
+
+.blog-article {
+  margin: 0 40px 10px !important;
+}
+
+.blog-article a {
+  color: #f86584 !important;
+}
+
+.blog-article p {
+  font-size: 18px;
+  line-height: 24px !important;
+  text-align: left;
+}
+
+.code-block {
+  max-width: 800px;
+  position: relative;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  #blog .blog-article {
+      margin: 0 0 10px !important;
+  }
+}
+
+/*------------------------------------------------------------------
 [Google Maps Style]
 ------------------------------------------------------------------*/
 

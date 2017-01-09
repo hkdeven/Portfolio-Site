@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  root 'welcome#home'
-  resources :articles
-  get 'projects', to: 'articles#projects'
-  get 'contact', to: 'welcome#contact'
-  get 'github', to: 'articles#github'
-  get 'blog', to: 'articles#blog'
-  get 'resume', to: 'articles#resume'
-  get 'demos', to: 'articles#demos'
+  root 'pages#home'
+  get 'projects', to: 'pages#projects'
+  get 'contact', to: 'pages#contact'
+  get 'github', to: 'pages#github'
+  get 'blog', to: 'pages#blog'
+  get 'resume', to: 'pages#resume'
+  get 'demos', to: 'pages#demos'
+  resources :articles do
+    resources :commments
+  end
 end

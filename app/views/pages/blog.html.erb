@@ -1,0 +1,208 @@
+<!-- Intro and header -->
+  <div id="blog" class="inner-content">
+
+      <section id="page-title" class="inner-section">
+        <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+          <h5 class="uppercase">latest articles</h5>
+        </div>
+
+        <hr />
+
+        <section id="testmonials" class="inner-section skin">
+           <div class="container-fluid nopadding">
+
+              <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
+                <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
+                  <h3 class="font-accident-two-normal uppercase text-center">What is JXS, ES5, ES6?</h3>
+                   <h5 class="font-accident-one-bold uppercase hovercolor text-center">Syntactic sugar clearly explained</h5>
+                   <p class="small font-color-medium text-center post-meta">Published on 11 December, 2016</p>
+                  <img src="http://seanamarasinghe.com/wp-content/uploads/2016/10/es6-recursion-600x360.png" class="img-responsive-bordered center-block" >
+                </div>
+              </div>
+            </section>
+
+            <div class="blog-article">
+
+              <p>It goes by many names: ES5, JSX (JavaScript eXtension), Harmony, ECMAScript, and most recently ES6.  To clear up some of the confusion, the governing body ECMA has (finally) decided to standardize the name of new releases.  So rather than naming the current release ES7, the official name (at this moment) is "ECMAScript 6."</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>But put quite simply, if HTML5 and Javascript had a baby that new, evolved progeny would be named ECMAScript 6.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>It makes code clearer and easier to express without fundamentally changing how the language works.  Simplified another way, it's the newest version of Javascript.  And you're going to love it.  <i class="fa fa-heart-o"></i></p>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">Iterations</h5>
+
+              <p>ES5 (ES representing the 'e' and 's' in <i>ECMAScript</i>) is basically "regular JavaScript." The 5th update to JavaScript, finalized in 2009, has been supported by all major browsers for several years. Therefore, if you've written or seen any JavaScript since then, chances are it was ES5.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>ES6, finalized in 2015, was the last version of JavaScript. ES6 is almost fully supported by all major browsers. But it will be some time until older versions of web browsers are phased out of use. For instance IE 11, which only accounts for 12% of the world's browsers, does not support ES6... yet.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>I may have oversimplified when I said that the current release would be ES7; it would be closer to ES6.2.  But who really cares?  Already ECMAScript 6 is <a href="https://kangax.github.io/compat-table/es6/" target="_blank" />widely supported</a> across modern browsers. So it should come as no surprise that ECMAScript 6 is ranked as the number one language of interest by developers; it will become the future language of the web.</p>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">Common Misconceptions</h5>
+
+              <p>It may come as a surprise to both React developers like myself and everyone else, but ECMAScript 6 (JSX) is <b>not</b> a requirement for or when using React. I repeat, you <b>DO NOT</b> have to use <code>jsx</code> extensions in your React ecosystem. In fact, using React without <code>jsx</code> is especially convenient when you don't want to set up compilation in your build environment.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>Each <code>jsx</code> element is just <a href="https://en.wikipedia.org/wiki/Syntactic_sugar" target="_blank">syntactic sugar</a> for calling <code>React.createElement(component, props, ...children)</code>. So, anything you can do with <code>jsx</code> can also be done with just plain JavaScript.</p>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">But why use it?</h5>
+
+              <p>In a React environment, <code>jsx</code> can be thought of as a dialect of Javascript that allows you to write HTML directly into your code. Without <code>jsx</code>, to create and return a complex HTML element your <a href="https://api.jquery.com/jQuery/#jQuery2" target="_blank">only option is jQuery</a>:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/c9bfc3d8c94c6d1b28f70cb27c5e1273.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <p>But let's be real, who knew that?!  Yeah, no one.  But again, it isn't as legible or elegant as written <code>jsx</code>:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/356be3fa6b922764d13b01dc3b1ebfbd.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">Example</h5>
+
+              <p>An embeded interactive map is a great example to illustrate the benefits of <code>jsx</code>. Before React, a Frankenstein-like-monster was recommended by Google Maps documentation:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/ff801c78a63e9ba80b83989523fa99a1.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <p>While we can certainly tell what's going on, it's a stark contrast to the <code>jsx</code> copy:</p>
+
+              <div class="dividewhite2"></div>
+              <figure class="code-block center-block">
+                <script src="https://gist.github.com/hkdeven/be838ee47afd440072a1c243596ef95c.js"></script>
+              </figure>
+              <div class="dividewhite2"></div>
+
+              <div class="dividewhite1"></div>
+              <h5 class="font-accident-one-bold uppercase">No Entiende</h5>
+
+              <p>While this is all very fascinating, it's important to note that in order for a wider range of browsers to understand and render <code>jsx</code>, we have to transpile our javascript into ES5 JavaScript. As a React developer, I use Babel to transpile my <code>jsx</code>.</p>
+
+              <div class="dividewhite1"></div>
+
+              <p>More on Babel, Webpack, and Redux usage with React coming soon!</p>
+
+              <div class="dividewhite1"></div>
+              <img src="https://www.bram.us/wordpress/wp-content/uploads/2016/04/es6-webpack-react-babel.png" class="img-responsive center-block" width="800" />
+              <div class="dividewhite2"></div>
+
+          </div>
+
+          <hr />
+
+          <section id="testmonials" class="inner-section skin">
+             <div class="container-fluid nopadding">
+               <div class="dividewhite2"></div>
+
+                <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
+                  <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
+                    <h3 class="font-accident-two-normal uppercase text-center">Bourbon is good for you</h3>
+                     <h5 class="font-accident-one-bold uppercase hovercolor text-center">Become a better developer using Bourbon</h5>
+                     <p class="small font-color-medium text-center post-meta">Published on 21 June, 2016</p>
+                    <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAg3AAAAJGVhNDM2MmQxLTg1NDctNGQxYi04YzA3LWYxNmIzNzk0YTEzZg.png" class="img-responsive-bordered center-block" />
+                  </div>
+                </div>
+              </section>
+
+              <div class="blog-article">
+
+                <p><a href="http://bourbon.io/" target="_blank">Bourbon</a> is an open-source semantic framework and mixin library from <a href="https://thoughtbot.com/">Thoughtbot</a>.   <a href="http://neat.bourbon.io/" target="_blank">Neat</a> is a Sass grid system.  <a href="http://bitters.bourbon.io/" target="_blank">Bitters</a> is a kind of scaffold project with some sensible default styles.  <a href="http://refills.bourbon.io/" target="_blank">Refills</a> is a collection of common components (think Bootstrap).  Together they form the Bourbon family.</p>
+
+                <div class="dividewhite2"></div>
+                <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAfSAAAAJDY5YTY5OWY4LTZiMTItNDk1NC1hNDg1LTQ5YmQ2YWQ4OGRkNw.jpg" class="img-responsive-bordered center-block" />
+                <div class="dividewhite2"></div>
+
+                <div class="dividewhite1"></div>
+                <h5 class="font-accident-one-bold uppercase">What is it exactly?</h5>
+
+                <p>Bourbon itself is basically a bunch of mixins and functions which allow you to write <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a>-er, browser-independent code. The <a href="http://bourbon.io/" target="_blank">official website</a> is a pretty good example. It shows a very common use of their mixins, which is easily outputting valid vendor-prefixed properties. It also features thepositionmixin which expands into several positioning-related properties and the golden-ratio function (which is deprecated in favour of modular scale).</p>
+
+                <div class="dividewhite1"></div>
+                <h4 class="font-accident-one-bold hovercolor uppercase">Neat</h4>
+
+                <p>The reason I choose this grid framework over other popular options like Bootstrap is because Neat is a semantic grid framework built on top of Bourbon. This means that my html markup doesn’t get cluttered with non-semantic div’s when defining my grid.  Instead, I can define my grid system directly in the CSS file.  Take a closer look at the <a href="http://thoughtbot.github.io/neat-docs/latest/" target="_blank">Neat docs</a>.</p>
+
+                <div class="dividewhite1"></div>
+                <h4 class="font-accident-one-bold hovercolor uppercase">Bitters</h4>
+
+                <p><a href="http://bitters.bourbon.io/" target="_blank">Bitters</a> is a collection of base styles, typography, form styles, variables, and includes error message modules.  Bitters is not a library - consider it more of a starting point.  It's definitely worth using and easy enough to edit to your liking.</p>
+
+                <div class="dividewhite1"></div>
+                <h4 class="font-accident-one-bold hovercolor uppercase">Refills</h4>
+
+                <p><a href="http://refills.bourbon.io/" target="_blank">Refills</a> is a collection of UI components built using The Bourbon Family.  It's good to have in your toolbox even if it isn’t exactly what you want.</p>
+
+                <div class="dividewhite1"></div>
+                <h5 class="font-accident-one-bold uppercase">Example</h5>
+
+                <p>Let’s compare the Bourbon workflow with the one from Bootstrap.  If we wanted a grid, we’d most likely use Bootstrap with the following markup:</p>
+
+                <div class="dividewhite1"></div>
+                  <figure class="code-block center-block">
+                    <script src="https://gist.github.com/hkdeven/83547e32444ce47448193eec50493f74.js"></script>
+                  </figure>
+                <div class="dividewhite2"></div>
+
+                <p>Using Bourbon is similar:</p>
+
+                <div class="dividewhite1"></div>
+                  <figure class="code-block center-block">
+                    <script src="https://gist.github.com/hkdeven/c8e992c3285e3095627960dda838f806.js"></script>
+                  </figure>
+                <div class="dividewhite2"></div>
+
+                <p>We are not done yet, but you can see that we must define our own classes, this forces us to add purposeful code. When you read it you know it probably displays news, and that it displays “hot news” and “latest news”.  In the HTML we don’t care how they are drawn, they might be in a two-columns layout, or stacked. But just by reading it you can tell a lot from the content itself.  This also applies to the CSS:</p>
+
+                <div class="dividewhite1"></div>
+                  <figure class="code-block center-block">
+                    <script src="https://gist.github.com/hkdeven/ab75b01e845844404293ba9426a478f5.js"></script>
+                  </figure>
+                <div class="dividewhite2"></div>
+
+                <p>Now that’s cleaner!  It’s really easy to identify the behavior of the news component, a two column grid.  It makes sense to put that in the CSS doesn’t it?</p>
+
+                <div class="dividewhite1"></div>
+
+                <p>“But wait, what if I want something complex, like a modal window?” — You might ask.</p>
+
+                <div class="dividewhite1"></div>
+
+                <p>How would we do it in Bootstrap? Go to Bootstrap website, copy the code, and customize.  In Bourbon?  It's the same process: go to the Refills site, copy the code and customize.  Easy.</p>
+
+                <div class="dividewhite1"></div>
+                <h5 class="font-accident-one-bold uppercase">Conclusion</h5>
+
+                <p>Bourbon gives you the choice to bundle everything, but it encourages you to be thoughtful and efficient with your code and only include what you need, as you need it.  Overall, Bourbon makes for a more efficient, powerful code with greater control.</p>
+
+              <div class="dividewhite2"></div>
+              <div class="dividewhite2"></div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
