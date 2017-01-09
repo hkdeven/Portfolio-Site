@@ -265,36 +265,47 @@
             }
         });
 
-        /* Isotope Portfolio */
+        /** Script for Portfolio section **/
         (function () {
-            var grid = $('.grid').isotope({
-                itemSelector: '.grid-item',
-                percentPosition: true,
-                masonry: {
-                    // use outer width of grid-sizer for columnWidth
-                    columnWidth: '.grid-sizer'
-                }
-            });
+            if ($('[data-section="portfolio"], [data-section="blog"]').length) {
 
-            grid.imagesLoaded(function () {
-                grid.isotope();
-            });
+                // Magnific Popup
+                $('.gallery-item').magnificPopup({
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    }
+                });
 
-            grid.isotope({filter: '*'});
+                // Isotope Portfolio
+                var grid = $('.grid').isotope({
+                    itemSelector: '.grid-item',
+                    percentPosition: true,
+                    masonry: {
+                        // use outer width of grid-sizer for columnWidth
+                        columnWidth: '.grid-sizer'
+                    }
+                });
 
-            // filter items on button click
-            $('#isotope-filters').on('click', 'a', function () {
-                var filterValue = $(this).attr('data-filter');
-                grid.isotope({filter: filterValue});
-            });
+                grid.imagesLoaded(function () {
+                    grid.isotope();
+                });
 
-            // filter items on tag click
-            $('.post-tag').on('click', 'a', function () {
-                var filterValue = $(this).attr('data-filter');
-                grid.isotope({filter: filterValue});
-                $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
-            });
+                grid.isotope({filter: '*'});
 
+                // filter items on button click
+                $('#isotope-filters').on('click', 'a', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    grid.isotope({filter: filterValue});
+                });
+
+                // filter items on tag click
+                $('.post-tag').on('click', 'a', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    grid.isotope({filter: filterValue});
+                    $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
+                });
+            }
         })();
 
         /* Circle Progress */
