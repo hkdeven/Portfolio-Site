@@ -43,20 +43,9 @@ $font_4: Helvetica Neue;
 $font_5: Helvetica;
 $font_6: Arial;
 
-//urls
-$url_0: url(https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,500,700);
-$url_1: url(https://fonts.googleapis.com/css?family=Dosis:300,400,500,700);
-$url_2: url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-$url_3: url(../assets/bg-img.jpg);
-$url_4: url(dark_fish_skin.png);
-$url_5: url(grey_wash_wall.png);
-$url_6: url(https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/back_top.png);
-$url_7: url(moi-artistic.jpg);
-$url_8: url(grayscale.svg#greyscale);
-
-@import $url_0;
-@import $url_1;
-@import $url_2;
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,500,700);
+@import url(https://fonts.googleapis.com/css?family=Dosis:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .blog-article {
 	margin: 0 40px 10px !important;
 	a {
@@ -153,7 +142,7 @@ $url_8: url(grayscale.svg#greyscale);
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: $url_3 no-repeat center center;
+	background: url(../assets/bg-img.jpg) no-repeat center center;
 	background-size: cover;
 	video {
 		display: block;
@@ -182,7 +171,7 @@ $url_8: url(grayscale.svg#greyscale);
 	}
 }
 .dark-fish-skin-texture {
-	background: image-$url_4;
+	background: image-url(dark_fish_skin.png);
 }
 .inner-page-color {
 	background-color: $concrete !important;
@@ -362,7 +351,7 @@ body {
 	font: 13px/1.7 "Raleway", sans-serif;
 	font-weight: 400;
 	letter-spacing: 1px;
-	background-image: image-$url_5;
+	background-image: image-url(grey_wash_wall.png);
 }
 .boxed {
 	display: block;
@@ -768,12 +757,12 @@ select {
 		color: $color_shady_lady_approx;
 		.vc-photo {
 			min-height: 360px;
-			background: image-$url_7;
+			background: image-url(moi-artistic.jpg);
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
 			filter: grayscale(100%);
-			filter: image-$url_8;
+			filter: image-url(grayscale.svg#greyscale);
 			filter: $gray;
 			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 			transition: all .5s ease-in-out;
@@ -1337,9 +1326,8 @@ figure {
 			position: relative;
 			ul {
 				margin-bottom: 18px;
-        li.position strong {
-          color: #efce4a !important;
-        }
+				li.position strong {
+					color: #efce4a !important;
 			}
 		}
 		li {
@@ -1883,7 +1871,7 @@ footer {
 	display: block;
 }
 #back-top a {
-	background: $color_cape_cod_approx image-$url_6 no-repeat 50% 50%;
+	background: $color_cape_cod_approx image-url(https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/back_top.png) no-repeat 50% 50%;
 	border: 1px solid $concrete;
 	bottom: 60px;
 	display: block;
@@ -1895,7 +1883,7 @@ footer {
 	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 	transition: all 0.35s ease-in-out;
 	&:hover {
-		background: $color_radical_red_approx image-$url_6 no-repeat 50% 50%;
+		background: $color_radical_red_approx image-url(https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/back_top.png) no-repeat 50% 50%;
 		border-color: $color_radical_red_approx;
 	}
 }
