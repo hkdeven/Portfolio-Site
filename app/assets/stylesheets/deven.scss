@@ -1,1790 +1,2006 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,500,700);
-@import url(https://fonts.googleapis.com/css?family=Dosis:300,400,500,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+//colors
+$color_brink_pink_approx: #f86584;
+$concrete: #f2f2f2;
+$color_ming_approx: #2b747d;
+$color_keppel_approx: #3fb0ac;
+$color_cosmic_approx: #734663;
+$color_chathams_blue_approx: #1c4a6c;
+$color_golden_glow_approx: #fae596;
+$color_te_papa_green_approx: #173e43;
+$color_mountain_mist_approx: #999;
+$color_westar_approx: #dddfd4;
+$white: #fff;
+$color_tapa_approx: #737373;
+$color_radical_red_approx: #fa455f;
+$white_30: rgba(255, 255, 255, 0.3);
+$black_10: rgba(0, 0, 0, 0.1);
+$color_shady_lady_approx: #a7a7a7;
+$color_cape_cod_approx: #404040;
+$color_mine_shaft_approx: #303030;
+$color_ironside_gray_approx: #676767;
+$seashell: #f1f1f1;
+$color_stack_approx: #8e8e8e;
+$color_alto_approx: #dadada;
+$color_deep_cerulean_approx: #007ea7;
+$gray: gray;
+$color_silver_approx: #c1c1c1;
+$black_20: rgba(0, 0, 0, 0.2);
+$black_30: rgba(0, 0, 0, 0.3);
+$color_axolotl_approx: #546543;
+$white_10: rgba(255, 255, 255, 0.1);
+$color_chicago_approx: #5d5d5d;
+$color_silver_chalice_approx: #aaa;
+$color_gravel_approx: #4a4a4a;
+$color_trendy_pink_approx: #9260a2;
+$black_7: rgba(0, 0, 0, 0.07);
 
-/*------------------------------------------------------------------
-[Blog Style]
-------------------------------------------------------------------*/
+//fonts
+$font_0: Montserrat;
+$font_1: sans-serif;
+$font_2: Dosis;
+$font_3: Raleway;
+$font_4: Helvetica Neue;
+$font_5: Helvetica;
+$font_6: Arial;
 
+//urls
+$url_0: url(https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,500,700);
+$url_1: url(https://fonts.googleapis.com/css?family=Dosis:300,400,500,700);
+$url_2: url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+$url_3: url(../assets/bg-img.jpg);
+$url_4: url(dark_fish_skin.png);
+$url_5: url(grey_wash_wall.png);
+$url_6: url(https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/back_top.png);
+$url_7: url(moi-artistic.jpg);
+$url_8: url(grayscale.svg#greyscale);
+
+@import $url_0;
+@import $url_1;
+@import $url_2;
 .blog-article {
-  margin: 0 40px 10px !important;
+	margin: 0 40px 10px !important;
+	a {
+		color: $color_brink_pink_approx !important;
+	}
+	p {
+		font-size: 18px;
+		line-height: 24px !important;
+		text-align: left;
+	}
 }
-
-.blog-article a {
-  color: #f86584 !important;
-}
-
-.blog-article p {
-  font-size: 18px;
-  line-height: 24px !important;
-  text-align: left;
-}
-
 .code-block {
-  max-width: 800px;
-  position: relative;
-  text-align: center;
+	max-width: 800px;
+	position: relative;
+	text-align: center;
 }
-
-@media only screen and (max-width: 500px) {
-  #blog .blog-article {
-      margin: 0 0 10px !important;
-  }
+@media only screen and(max-width: 500px) {
+	#blog .blog-article {
+		margin: 0 0 10px !important;
+	}
 }
-
-/*------------------------------------------------------------------
-[Google Maps Style]
-------------------------------------------------------------------*/
-
 #map {
- height: 175px;
- width: 100%;
+	height: 175px;
+	width: 100%;
 }
-
- /*------------------------------------------------------------------
- [Animated Name Intro]
- ------------------------------------------------------------------*/
-
-.cd-intro-content h2,
-.cd-intro-content{
-  opacity: 0;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
+.cd-intro-content {
+	opacity: 0;
+	animation-delay: 0.3s;
+	animation-fill-mode: forwards;
+	h2 {
+		opacity: 0;
+		animation-delay: 0.3s;
+		animation-fill-mode: forwards;
+	}
 }
-
-.bouncy.cd-intro-content h2 {
-  animation-name: cd-bounce-right;
-}
-
-.bouncy.cd-intro-content h2 {
-  animation-duration: 1.5s;
-}
-
-.bouncy.cd-intro-content{
-  animation-name: cd-bounce-rotate;
-  animation-duration: 0.5s;
-}
-
 @keyframes cd-bounce-right {
-  0% {
-    opacity: .2;
-    transform: translateX(-200px);
-  }
-  60% {
-    opacity: .7;
-    transform: translateX(15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+	0% {
+		opacity: .2;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(-200px);
+	}
+	60% {
+		opacity: .7;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(15px);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(0);
+	}
 }
-
 @keyframes cd-bounce-left {
-  0% {
-    opacity: .2;
-    transform: translateX(200px);
-  }
-  60% {
-    opacity: .7;
-    transform: translateX(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+	0% {
+		opacity: .2;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(200px);
+	}
+	60% {
+		opacity: .7;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(-15px);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(0);
+	}
 }
-
 @keyframes cd-bounce-rotate {
-  0% {
-    opacity: .2;
-    transform: perspective(800px) rotateX(-80deg);
-  }
-  20% {
-    opacity: 1;
-  }
-  60% {
-    transform: perspective(800px) rotateX(20deg);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(800px) rotateX(0);
-  }
+	0% {
+		opacity: .2;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: perspective(800px) rotateX(-80deg);
+	}
+	20% {
+		opacity: 1;
+	}
+	60% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: perspective(800px) rotateX(20deg);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: perspective(800px) rotateX(0);
+	}
 }
 .cd-bg-video-wrapper {
-  /* background cover video */
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: url(../assets/bg-img.jpg) no-repeat center center;
-  background-size: cover;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: $url_3 no-repeat center center;
+	background-size: cover;
+	video {
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		bottom: auto;
+		right: auto;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(-50%) translateY(-50%);
+		min-height: 100%;
+		min-width: 100%;
+		max-width: none;
+		height: auto;
+		width: auto;
+	}
 }
-.cd-bg-video-wrapper video {
-  /* you won't see this element in the html, but it will be injected using js */
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  transform: translateX(-50%) translateY(-50%);
-  min-height: 100%;
-  min-width: 100%;
-  max-width: none;
-  height: auto;
-  width: auto;
+@media only screen and(min-width: 768px) {
+	.video.cd-intro-content svg {
+		&.svg-mask-mobile {
+			display: none;
+		}
+		&.svg-mask {
+			display: block;
+		}
+	}
 }
-
-.video.cd-intro-content svg {
-  position: absolute;
-  z-index: 2;
-  /* center the svg inside its parent */
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0.8;
-}
-.video.cd-intro-content svg.svg-mask {
-  /* this is the svg mask used on desktop version */
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  .video.cd-intro-content svg.svg-mask-mobile {
-    display: none;
-  }
-  .video.cd-intro-content svg.svg-mask {
-    display: block;
-  }
-}
-
-/*------------------------------------------------------------------
-[Color Scheme / Colors, textures]
-------------------------------------------------------------------*/
-
 .dark-fish-skin-texture {
-  background: image-url("dark_fish_skin.png");
+	background: image-$url_4;
 }
-
 .inner-page-color {
-  background-color: #f2f2f2 !important;
+	background-color: $concrete !important;
 }
-
 .succulent {
-  background-color: #2b747d !important;
+	background-color: $color_ming_approx !important;
 }
-
 .aqua {
-  background-color: #3fb0ac !important;
+	background-color: $color_keppel_approx !important;
 }
-
 .eggplant {
-  background-color: #734663 !important;
+	background-color: $color_cosmic_approx !important;
 }
-
 .misted-guava {
-  background-color: #f86584 !important;
+	background-color: $color_brink_pink_approx !important;
 }
-
 .darkblue {
-  background-color: #1c4a6c !important;
+	background-color: $color_chathams_blue_approx !important;
 }
-
 .dusted-lemon {
-  background-color: #fae596 !important;
+	background-color: $color_golden_glow_approx !important;
 }
-
 .seaweed {
-  background-color: #173e43 !important;
+	background-color: $color_te_papa_green_approx !important;
 }
-
 .l-grey {
-  background-color: #f2f2f2 !important;
+	background-color: $concrete !important;
 }
-
 .grey {
-  background-color: #999 !important;
+	background-color: $color_mountain_mist_approx !important;
 }
-
 .sand {
-  background-color: #dddfd4 !important;
+	background-color: $color_westar_approx !important;
 }
-
 .skin {
-  background-color: #fff !important;
+	background-color: $white !important;
 }
-
-.font-color-invert, .font-color-invert a {
-  color: #f2f2f2 !important;
+.font-color-invert {
+	color: $concrete !important;
+	a {
+		color: $concrete !important;
+	}
 }
-
-.font-color-medium, .font-color-medium a {
-  color: #737373 !important;
+.font-color-medium {
+	color: $color_tapa_approx !important;
+	a {
+		color: $color_tapa_approx !important;
+	}
 }
-
-.hovercolor, .hovercolor a {
-  color: #fa455f !important;
+.hovercolor {
+	color: $color_radical_red_approx !important;
+	a {
+		color: $color_radical_red_approx !important;
+	}
 }
-
-/*------------------------------------------------------------------
-[Typography]
-------------------------------------------------------------------*/
-
-/* Heading fonts */
 .font-accident-one-bold {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+	font-family: $font_0, $font_1;
+	font-weight: 700;
+	font-style: normal;
 }
-
 .font-accident-one-normal {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: $font_0, $font_1;
+	font-weight: 400;
+	font-style: normal;
 }
-
 .font-accident-two-light {
-  font-family: "Dosis", sans-serif;
-  font-weight: 300;
+	font-family: $font_2, $font_1;
+	font-weight: 300;
 }
-
 .font-accident-two-normal {
-  font-family: "Dosis", sans-serif;
-  font-weight: 400;
+	font-family: $font_2, $font_1;
+	font-weight: 400;
 }
-
 .font-accident-two-medium {
-  font-family: "Dosis", sans-serif;
-  font-weight: 500;
+	font-family: $font_2, $font_1;
+	font-weight: 500;
 }
-
 .font-accident-two-bold {
-  font-family: "Dosis", sans-serif;
-  font-weight: 700;
+	font-family: $font_2, $font_1;
+	font-weight: 700;
 }
-
-/* Regular font */
 .font-regular-light {
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+	font-family: $font_3, $font_1;
+	font-weight: 300;
+	font-style: normal;
 }
-
 .font-regular-normal {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: $font_3, $font_1;
+	font-weight: 400;
+	font-style: normal;
 }
-
 .font-regular-normal-italic {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-style: oblique;
+	font-family: $font_3, $font_1;
+	font-weight: 400;
+	font-style: oblique;
 }
-
 .font-regular-medium {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+	font-family: $font_3, $font_1;
+	font-weight: 500;
+	font-style: normal;
 }
-
 .font-regular-bold {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+	font-family: $font_3, $font_1;
+	font-weight: 700;
+	font-style: normal;
 }
-
 h2 {
-  font-size: 48px;
+	font-size: 48px;
 }
-
 h3 {
-  line-height: 1.2em;
-  font-size: 32px;
+	line-height: 1.2em;
+	font-size: 32px;
 }
-
-h4, h5 {
-  letter-spacing: 3px;
+h4 {
+	letter-spacing: 3px;
+	a {
+		color: $color_radical_red_approx;
+	}
 }
-
+h5 {
+	letter-spacing: 3px;
+	a {
+		color: $color_radical_red_approx;
+	}
+}
 h6 {
-  font-size: 11px;
-  letter-spacing: 3px;
+	font-size: 11px;
+	letter-spacing: 3px;
+	a {
+		color: $color_radical_red_approx;
+	}
 }
-
-h4 a, h5 a, h6 a {
-  color: #fa455f;
-}
-
 .title {
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  display: initial;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $white_30;
+	display: initial;
 }
-
 .title-light {
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  display: initial;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $black_10;
+	display: initial;
 }
-
-/* Paragraphs */
 .small {
-  font-size: 12px;
+	font-size: 12px;
 }
-
 .extrasmall {
-  font-size: 10px;
+	font-size: 10px;
 }
-
 .superheading {
-  font-size: 48px;
+	font-size: 48px;
 }
-
-/*------------------------------------------------------------------
-[Customized Buttons]
-------------------------------------------------------------------*/
-
 .btn-lgr-str {
-  font-size: 15px;
-  letter-spacing: 0;
-  border-radius: 24px;
-  font-weight: 600;
-  font-family: "Raleway", sans-serif;
-  margin-right: 12px;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out;
-  background: none;
-  border: 2px solid #a7a7a7;
-  color: #a7a7a7 !important;
+	font-size: 15px;
+	letter-spacing: 0;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 24px;
+	font-weight: 600;
+	font-family: $font_3, $font_1;
+	margin-right: 12px;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.35s ease-in-out;
+	background: none;
+	border: 2px solid $color_shady_lady_approx;
+	color: $color_shady_lady_approx !important;
+	&:hover {
+		background: none;
+		border: 2px solid $color_radical_red_approx;
+		color: $color_radical_red_approx !important;
+	}
 }
-
-.btn-lgr-str:hover {
-  background: none;
-  border: 2px solid #fa455f;
-  color: #fa455f !important;
-}
-
-/*------------------------------------------------------------------
-[Basic Styles]
-*/
 body {
-  display: block;
-  background-color: #404040;
-  overflow-x: hidden;
-  overflow-y: auto;
-  color: #303030;
-  font: 13px/1.7 "Raleway", sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  background-image: image-url("grey_wash_wall.png");
-  -webkit-font-smoothing: antialiased;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
+	display: block;
+	background-color: $color_cape_cod_approx;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: $color_mine_shaft_approx;
+	font: 13px/1.7 "Raleway", sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	background-image: image-$url_5;
 }
-
 .boxed {
-  display: block;
-  background-color: #676767;
-  position: relative;
-  width:100%;
-  margin-right: 0;
-  margin-left: 0;
+	display: block;
+	background-color: $color_ironside_gray_approx;
+	position: relative;
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+	header {
+		margin: 0;
+	}
 }
-
-.boxed header {
-  margin: 0;
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: $color_cape_cod_approx;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.25s ease 0s;
+	i {
+		cursor: pointer;
+		text-decoration: none;
+		color: $color_cape_cod_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.25s ease 0s;
+	}
+	&:hover {
+		text-decoration: none;
+		outline: none;
+	}
+	&:focus {
+		text-decoration: none;
+		outline: none;
+	}
 }
-
-.clearfix:after {
-  content: ".";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-a,
-a i {
-  cursor: pointer;
-  text-decoration: none;
-  color: #404040;
-  transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -webkit-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
-}
-
-a:hover,
-a:focus {
-  text-decoration: none;
-  outline: none;
-}
-
 p {
-  line-height: 20px;
-  font-size: 13px;
-  font-weight: 400;
-  margin: 0 0 10px 0;
-  color: #303030;
-  letter-spacing: 1px;
+	line-height: 20px;
+	font-size: 13px;
+	font-weight: 400;
+	margin: 0 0 10px 0;
+	color: $color_mine_shaft_approx;
+	letter-spacing: 1px;
 }
-
 hr {
-  margin-bottom: 0;
-  margin-top: 0;
-  border-top: 1px solid #f1f1f1;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	border-top: 1px solid $seashell;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
 }
-
 ul {
-  padding-left: 0;
-  list-style: none;
-  margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+	margin-left: 0;
+	li {
+		padding: 0;
+		font-size: 13px;
+		a {
+			cursor: pointer;
+			color: $color_mine_shaft_approx;
+			font-size: 13px;
+		}
+	}
 }
-
-ul li {
-  padding: 0;
-}
-
-ul li a {
-  cursor: pointer;
-  color: #303030;
-}
-
-ul li, ul li a {
-  font-size: 13px;
-}
-
 .dividewhite1 {
-  height: 10px;
+	height: 10px;
 }
-
 .dividewhite2 {
-  height: 20px;
+	height: 20px;
 }
-
 .dividewhite3 {
-  height: 30px;
+	height: 30px;
 }
-
 .divider-dynamic {
-  height: 10px;
+	height: 10px;
 }
-
 .padding-50 {
-  overflow: hidden;
-  padding: 35px 50px 40px 50px;
+	overflow: hidden;
+	padding: 35px 50px 40px;
 }
-
-.row-no-padding [class*="col-"] {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
 .nopadding {
-  padding: 0 !important;
-  margin: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
 }
-
 .e-absolute {
-  position: absolute !important;
+	position: absolute !important;
 }
-
 .e-relative {
-  position: relative !important;
+	position: relative !important;
 }
-
 .e-fixed {
-  position: fixed !important;
+	position: fixed !important;
 }
-
 .inline {
-  display: inline;
+	display: inline;
 }
-
 .block {
-  display: block;
+	display: block;
 }
-
 .inline-block {
-  display: inline-block;
+	display: inline-block;
 }
-
 .e-centered {
-  margin: 0 auto;
+	margin: 0 auto;
 }
-
 .table {
-  display: table;
+	display: table;
 }
-
 .table-row {
-  display: table-row;
+	display: table-row;
 }
-
 .table-cell {
-  display: table-cell;
+	display: table-cell;
 }
-
 .uppercase {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
-
 i {
-  color: #8e8e8e;
+	color: $color_stack_approx;
 }
-
 .hidden {
-  display: none;
+	display: none;
 }
-
-.respon-wrap img {
-  max-width: 100% !important;
-  height: auto;
-  display: block;
-}
-
 .fullwidth {
-  width: 100% !important;
+	width: 100% !important;
 }
-
-#back-top a {
-  background: #404040 image-url('https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/back_top.png') no-repeat 50% 50%;
-  border: 1px solid #f2f2f2;
-  bottom: 60px;
-  display: block;
-  height: 40px;
-  position: fixed;
-  right: 30px;
-  width: 40px;
-  z-index: 10;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out;
+input {
+	border: 0;
+	background: none !important;
+	border: 1px solid $color_alto_approx;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-indent: 5px;
+	color: $white;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s;
+	color: $color_tapa_approx;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-family: $font_3, $font_4, $font_5, $font_6, $font_1;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin: 0;
+	max-width: 100%;
+	vertical-align: baseline;
+	font-size: 100%;
+	&:focus {
+		border-color: $color_deep_cerulean_approx;
+	}
 }
-  #back-top a:hover {
-    background: #fa455f image-url('https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/portfolio/back_top.png') no-repeat 50% 50%;
-    border-color: #fa455f;
-  }
-
-input, textarea {
-  border: 0;
-  background: none !important;
-  border: 1px solid #dadada;
-  width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-indent: 5px;
-  color: #fff;
-  transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
+textarea {
+	border: 0;
+	background: none !important;
+	border: 1px solid $color_alto_approx;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-indent: 5px;
+	color: $white;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s;
+	color: $color_tapa_approx;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-family: $font_3, $font_4, $font_5, $font_6, $font_1;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin: 0;
+	max-width: 100%;
+	vertical-align: baseline;
+	font-size: 100%;
+	&:focus {
+		border-color: $color_deep_cerulean_approx;
+	}
 }
-
-input:focus, textarea:focus {
-  border-color: #007EA7;
+button {
+	color: $color_tapa_approx;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-family: $font_3, $font_4, $font_5, $font_6, $font_1;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin: 0;
+	max-width: 100%;
+	vertical-align: baseline;
+	font-size: 100%;
 }
-
-input, textarea, button {
-  color: #777;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+select {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin: 0;
+	max-width: 100%;
+	vertical-align: baseline;
+	font-size: 100%;
 }
-
-button, input, select, textarea {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  max-width: 100%;
-  vertical-align: baseline;
-  font-size: 100%;
-}
-
 :focus {
-  outline: 0;
+	outline: 0;
 }
-
-/*------------------------------------------------------------------
-[Media Queries]
-------------------------------------------------------------------*/
-
-@media (max-width: 1200px) {
-  .boxed .content-wrap {
-    margin: 0;
-  }
-  footer {
-    margin: 0;
-  }
+@media(max-width: 1200px) {
+	footer {
+		margin: 0;
+	}
+	.boxed .content-wrap {
+		margin: 0;
+	}
 }
-
-@media (max-width: 992px) {
-  .count {
-    margin-bottom: 32px !important;
-  }
-  ul.timeline-vert:before {
-    left: 40px !important;
-  }
-  ul.timeline-vert > li > .timeline-panel {
-    width: calc(100% - 90px) !important;
-    width: -moz-calc(100% - 90px) !important;
-    width: -webkit-calc(100% - 90px) !important;
-  }
-  ul.timeline-vert > li > .timeline-badge {
-    left: 15px !important;
-    margin-left: 0 !important;
-    top: 16px !important;
-  }
-  ul.timeline-vert > li > .timeline-panel {
-    float: right !important;
-  }
-  ul.timeline-vert > li > .timeline-panel:before {
-    border-left-width: 0 !important;
-    border-right-width: 15px !important;
-    left: -15px !important;
-    right: auto !important;
-  }
-  ul.timeline-vert > li > .timeline-panel:after {
-    border-left-width: 0 !important;
-    border-right-width: 14px !important;
-    left: -14px !important;
-    right: auto !important;
-  }
-  .divider-dynamic {
-    height: 40px;
-  }
-  #top-navigation .ident .vc-name .position .pdf,
-  #top-navigation .ident .vc-name .name .name-pdf {
-    display: none;
-  }
+@media(max-width: 992px) {
+	.count {
+		margin-bottom: 32px !important;
+	}
+	.divider-dynamic {
+		height: 40px;
+	}
+	#footer {
+		text-align: center !important;
+	}
+	ul.timeline-vert {
+		&:before {
+			left: 40px !important;
+		}
+		> li > {
+			.timeline-panel {
+				width: calc(100% - 90px) !important;
+				float: right !important;
+				&:before {
+					border-left-width: 0 !important;
+					border-right-width: 15px !important;
+					left: -15px !important;
+					right: auto !important;
+				}
+				&:after {
+					border-left-width: 0 !important;
+					border-right-width: 14px !important;
+					left: -14px !important;
+					right: auto !important;
+				}
+			}
+			.timeline-badge {
+				left: 15px !important;
+				margin-left: 0 !important;
+				top: 16px !important;
+			}
+		}
+	}
+	#top-navigation .ident .vc-name {
+		.position .pdf {
+			display: none;
+		}
+		.name .name-pdf {
+			display: none;
+		}
+	}
 }
-
-@media (max-width: 992px) {
-  #footer {
-    text-align: center !important;
-  }
+@media(max-width: 801px) {
+	footer {
+		margin: 0 !important;
+	}
+	.boxed header {
+		margin: 0;
+	}
 }
-
-@media (max-width: 801px) {
-  .boxed header {
-    margin: 0;
-  }
-  footer {
-    margin: 0 !important;
-  }
+@media(max-width: 768px) {
+	#homesection {
+		text-align: center !important;
+		margin-left: 0 !important;
+		.m-details {
+			p {
+				text-align: left !important;
+			}
+			.quote {
+				margin: 14px 0;
+				padding-left: 0 !important;
+				border-left: none !important;
+			}
+		}
+		.seaweed {
+			text-align: center !important;
+			margin-left: 0 !important;
+		}
+		.circle-skills .progressbar .circle {
+			text-align: center !important;
+			margin-left: 0 !important;
+			div {
+				text-align: center !important;
+				margin-left: 0 !important;
+			}
+		}
+	}
+	.divider-dynamic {
+		height: 60px;
+	}
+	.cd-intro {
+		width: 100% !important;
+		max-width: 768px;
+	}
+	.progressbar {
+		width: 100% !important;
+	}
+	.circle {
+		width: 90% !important;
+	}
+	margin-left: 0 !important; .divider-dynamic {
+		height: 15px !important;
+	}
+	.port-filter ul li {
+		display: block;
+		margin-bottom: 24px;
+	}
+	#top-navigation .ident .vc-name {
+		.name {
+			h2 {
+				font-size: 36px;
+			}
+			.name-title {
+				padding-top: 24px;
+				text-align: center;
+			}
+		}
+		.position {
+			h4 {
+				font-size: 18px;
+			}
+			.position-title {
+				padding-top: 30px;
+				text-align: center;
+			}
+		}
+	}
 }
-
-@media (max-width: 768px) {
-  #homesection .m-details p {
-    text-align: left !important;
-  }
-  #homesection,
-  #homesection .seaweed,
-  #homesection .circle-skills .progressbar .circle,
-  #homesection .circle-skills .progressbar .circle div {
-    text-align: center !important;
-    margin-left: 0 !important;
-  }
-  margin-left: 0 !important;
-  .divider-dynamic {
-    height: 15px !important;
-  }
-  .divider-dynamic {
-    height: 60px; }
-
-  .cd-intro {
-    width: 100% !important;
-    max-width: 768px; }
-
-  .port-filter ul li {
-    display: block;
-    margin-bottom: 24px; }
-
-  #homesection .m-details .quote {
-    margin: 14px 0;
-    padding-left: 0 !important;
-    border-left: none !important; }
-
-  .progressbar {
-    width: 100% !important; }
-
-  .circle {
-    width: 90% !important; }
-
-  #top-navigation .ident .vc-name .name h2 {
-    font-size: 36px; }
-
-  #top-navigation .ident .vc-name .name .name-title {
-    padding-top: 24px;
-    text-align: center; }
-
-  #top-navigation .ident .vc-name .position h4 {
-    font-size: 18px; }
-
-  #top-navigation .ident .vc-name .position .position-title {
-    padding-top: 30px;
-    text-align: center; } }
-
-@media (max-width: 600px) {
-  .grid .row .grid-item {
-    padding-right: 0 !important;
-    padding-left: 0 !important; }
-
-  .media-body, .media-left, .media-right {
-    display: initial; } }
-
-@media (max-width: 400px) {
-  h5 {
-    letter-spacing: 0; }
-
-  .divider-dynamic {
-    height: 40px; }
-
-  .padding-50 {
-    padding: 30px 14px 35px 14px; }
-
-  .inner-content .inner-section {
-    padding: 30px 14px !important; }
-
-  ul.timeline-vert > li > .timeline-panel {
-    width: 100% !important; }
-
-  #timeline-vertical .timeline-vert .timeline-badge,
-  #timeline-vertical .timeline-vert:before {
-    display: none; }
-
-  #timeline-vertical .timeline-vert .timeline-panel:before {
-    border-color: transparent !important; }
-
-  .cd-headline.clip .cd-words-wrapper::after {
-    top: 2px !important; }
-
-  #top-navigation .ident .vc-name .name h2 {
-    font-size: 26px !important; }
-
-  #top-navigation .ident .vc-name .name .name-title {
-    padding-top: 34px !important; }
-
-  #top-navigation .ident .vc-name .position h4 {
-    font-size: 11px !important; }
-
-  #top-navigation .ident .vc-name .position .position-title {
-    padding-top: 40px !important;
-  }
+@media(max-width: 600px) {
+	.media-body {
+		display: initial;
+	}
+	.media-left {
+		display: initial;
+	}
+	.media-right {
+		display: initial;
+	}
+	.grid .row .grid-item {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
 }
-
-/*------------------------------------------------------------------
-[VCard Modules]
-------------------------------------------------------------------*/
-
+@media(max-width: 400px) {
+	h5 {
+		letter-spacing: 0;
+	}
+	.divider-dynamic {
+		height: 40px;
+	}
+	.padding-50 {
+		padding: 30px 14px 35px;
+	}
+	.inner-content .inner-section {
+		padding: 30px 14px !important;
+	}
+	ul.timeline-vert > li > .timeline-panel {
+		width: 100% !important;
+	}
+	#timeline-vertical .timeline-vert {
+		.timeline-badge {
+			display: none;
+		}
+		&:before {
+			display: none;
+		}
+		.timeline-panel:before {
+			border-color: transparent !important;
+		}
+	}
+	.cd-headline.clip .cd-words-wrapper::after {
+		top: 2px !important;
+	}
+	#top-navigation .ident .vc-name {
+		.name {
+			h2 {
+				font-size: 26px !important;
+			}
+			.name-title {
+				padding-top: 34px !important;
+			}
+		}
+		.position {
+			h4 {
+				font-size: 11px !important;
+			}
+			.position-title {
+				padding-top: 40px !important;
+			}
+		}
+	}
+}
 .content-wrap {
-  -webkit-overflow-scrolling: touch;
 }
-
 #top-navigation {
-  z-index: 3; }
-  #top-navigation .ident {
-    color: #a7a7a7; }
-    #top-navigation .ident .vc-photo {
-      min-height: 360px;
-      background: image-url("moi-artistic.jpg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-      filter: grayscale(100%);
-      filter: image-url('grayscale.svg#greyscale');
-      /* Firefox 4+ */
-      filter: gray;
-      /* IE 6-9 */
-      -moz-transition: all .5s ease-in-out;
-      -webkit-transition: all .5s ease-in-out;
-      transition: all .5s ease-in-out; }
-      #top-navigation .ident .vc-photo a {
-        width: 100%;
-        height: 100%; }
-    #top-navigation .ident:hover .vc-photo {
-      -webkit-filter: grayscale(0%);
-      -moz-filter: grayscale(0%);
-      -ms-filter: grayscale(0%);
-      -o-filter: grayscale(0%);
-      filter: none; }
-    #top-navigation .ident .vc-name .name .name-title {
-      padding: 17px 40px 18px 40px;
-      min-height: 120px;
-      max-height: 120px;
-      overflow: hidden; }
-    #top-navigation .ident .vc-name .name .name-pdf {
-      background: rgba(0, 0, 0, 0.1);
-      min-height: 120px;
-      max-height: 120px;
-      text-align: center; }
-      #top-navigation .ident .vc-name .name .name-pdf a {
-        width: 100%;
-        text-decoration: none;
-        color: #f2f2f2; }
-        #top-navigation .ident .vc-name .name .name-pdf a i {
-          padding-top: 24px;
-          display: block; }
-          #top-navigation .ident .vc-name .name .name-pdf a i:before {
-            width: 100%;
-            opacity: .6;
-            color: #c1c1c1;
-            font-size: 40px;
-            margin: 0;
-            transition: all 0.35s ease-in-out;
-            -moz-transition: all 0.35s ease-in-out;
-            -webkit-transition: all 0.35s ease-in-out;
-            -o-transition: all 0.35s ease-in-out;
-            -ms-transition: all 0.35s ease-in-out; }
-        #top-navigation .ident .vc-name .name .name-pdf a:hover i:before {
-          opacity: 1; }
-    #top-navigation .ident .vc-name .name h2 {
-      margin: 0;
-      font-size: 40px;
-      line-height: 2.1em; }
-    #top-navigation .ident .vc-name .position {
-      color: #c1c1c1; }
-      #top-navigation .ident .vc-name .position .position-title {
-        background: rgba(0, 0, 0, 0.2);
-        padding: 23px 40px 34px 40px;
-        min-height: 120px;
-        max-height: 120px; }
-      #top-navigation .ident .vc-name .position .pdf {
-        background: rgba(0, 0, 0, 0.3);
-        min-height: 120px;
-        max-height: 120px;
-        text-align: center; }
-        #top-navigation .ident .vc-name .position .pdf a {
-          width: 100%;
-          text-decoration: none;
-          color: #f2f2f2; }
-          #top-navigation .ident .vc-name .position .pdf a i {
-            padding-top: 24px;
-            display: block; }
-            #top-navigation .ident .vc-name .position .pdf a i:before {
-              width: 100%;
-              opacity: .6;
-              color: #c1c1c1;
-              font-size: 40px;
-              margin: 0;
-              transition: all 0.35s ease-in-out;
-              -moz-transition: all 0.35s ease-in-out;
-              -webkit-transition: all 0.35s ease-in-out;
-              -o-transition: all 0.35s ease-in-out;
-              -ms-transition: all 0.35s ease-in-out; }
-          #top-navigation .ident .vc-name .position .pdf a:hover i:before {
-            opacity: 1; }
-      #top-navigation .ident .vc-name .position h4 {
-        font-size: 24px;
-        line-height: 1.8em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        letter-spacing: 2px; }
-      #top-navigation .ident .vc-name .position p {
-        font-size: 12px; }
-  #top-navigation .menuitem {
-    min-height: 120px;
-    background: #546543;
-    text-align: center; }
-    #top-navigation .menuitem .github {
-      max-height: 120px;
-      background: #546543;
-      text-align: center; }
-    #top-navigation .menuitem a {
-      width: 100%;
-      text-decoration: none;
-      color: #f2f2f2; }
-      #top-navigation .menuitem a i {
-        padding-top: 10px;
-        display: block; }
-        #top-navigation .menuitem a i:before {
-          color: #f2f2f2;
-          font-size: 40px;
-          margin: 0; }
-      #top-navigation .menuitem a span {
-        display: block;
-        width: 100%;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: 600;
-      }
-
-.hvr-sweep-to-bottom:before,
-.hvr-sweep-to-right:before {
-  height: 120px;
+	z-index: 3;
+	.ident {
+		color: $color_shady_lady_approx;
+		.vc-photo {
+			min-height: 360px;
+			background: image-$url_7;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			filter: grayscale(100%);
+			filter: image-$url_8;
+			filter: $gray;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all .5s ease-in-out;
+			a {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.vc-name {
+			.name {
+				.name-title {
+					padding: 17px 40px 18px;
+					min-height: 120px;
+					max-height: 120px;
+					overflow: hidden;
+				}
+				.name-pdf {
+					background: $black_10;
+					min-height: 120px;
+					max-height: 120px;
+					text-align: center;
+					a {
+						width: 100%;
+						text-decoration: none;
+						color: $concrete;
+						i {
+							padding-top: 24px;
+							display: block;
+							&:before {
+								width: 100%;
+								opacity: .6;
+								color: $color_silver_approx;
+								font-size: 40px;
+								margin: 0;
+								//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+								transition: all 0.35s ease-in-out;
+							}
+						}
+						&:hover i:before {
+							opacity: 1;
+						}
+					}
+				}
+				h2 {
+					margin: 0;
+					font-size: 40px;
+					line-height: 2.1em;
+				}
+			}
+			.position {
+				color: $color_silver_approx;
+				.position-title {
+					background: $black_20;
+					padding: 23px 40px 34px;
+					min-height: 120px;
+					max-height: 120px;
+				}
+				.pdf {
+					background: $black_30;
+					min-height: 120px;
+					max-height: 120px;
+					text-align: center;
+					a {
+						width: 100%;
+						text-decoration: none;
+						color: $concrete;
+						i {
+							padding-top: 24px;
+							display: block;
+							&:before {
+								width: 100%;
+								opacity: .6;
+								color: $color_silver_approx;
+								font-size: 40px;
+								margin: 0;
+								//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+								transition: all 0.35s ease-in-out;
+							}
+						}
+						&:hover i:before {
+							opacity: 1;
+						}
+					}
+				}
+				h4 {
+					font-size: 24px;
+					line-height: 1.8em;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					letter-spacing: 2px;
+				}
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+		&:hover .vc-photo {
+			filter: none;
+		}
+	}
+	.menuitem {
+		min-height: 120px;
+		background: $color_axolotl_approx;
+		text-align: center;
+		.github {
+			max-height: 120px;
+			background: $color_axolotl_approx;
+			text-align: center;
+		}
+		a {
+			width: 100%;
+			text-decoration: none;
+			color: $concrete;
+			i {
+				padding-top: 10px;
+				display: block;
+				&:before {
+					color: $concrete;
+					font-size: 40px;
+					margin: 0;
+				}
+			}
+			span {
+				display: block;
+				width: 100%;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 600;
+			}
+		}
+	}
 }
-
-.hvr-sweep-to-bottom:before {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.hvr-sweep-to-right:before {
-  background: rgba(255, 255, 255, 0.1);
-}
-
 .cd-intro {
-  width: 90%;
-  max-width: 768px;
+	width: 90%;
+	max-width: 768px;
 }
-
 .cd-words-wrapper {
-  display: inline-block;
-  position: relative;
-  text-align: left; }
-  .cd-words-wrapper b {
-    display: inline-block;
-    position: absolute;
-    white-space: nowrap;
-    font-weight: 400;
-    left: 0;
-    top: 0; }
-  .cd-words-wrapper b.is-visible {
-    position: relative;
-  }
-
-.no-js .cd-words-wrapper b {
-  opacity: 0;
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	b {
+		display: inline-block;
+		position: absolute;
+		white-space: nowrap;
+		font-weight: 400;
+		left: 0;
+		top: 0;
+		&.is-visible {
+			position: relative;
+		}
+	}
 }
-
-.no-js .cd-words-wrapper b.is-visible {
-  opacity: 1;
+.mfp-arrow-right {
+	&:after {
+		position: absolute;
+		padding: 13px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 2px -2px 0 0 $white;
+		cursor: pointer;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: .15s;
+		margin-left: 0;
+		border-left: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(225deg);
+	}
+	.mfp-a {
+		position: absolute;
+		padding: 13px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 2px -2px 0 0 $white;
+		cursor: pointer;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: .15s;
+		margin-left: 0;
+		border-left: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(225deg);
+	}
+	&:before {
+		display: none;
+	}
 }
-
-.cd-headline.clip span {
-  display: inline-block;
-  padding: .2em 0;
+.mfp-arrow-left {
+	&:after {
+		position: absolute;
+		padding: 13px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 2px -2px 0 0 $white;
+		cursor: pointer;
+		left: 50px;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: .15s;
+		margin-left: 0;
+		border-right: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(45deg);
+	}
+	.mfp-a {
+		position: absolute;
+		padding: 13px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 2px -2px 0 0 $white;
+		cursor: pointer;
+		left: 50px;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: .15s;
+		margin-left: 0;
+		border-right: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(45deg);
+	}
+	&:before {
+		display: none;
+	}
 }
-
-.cd-headline.clip .cd-words-wrapper {
-  overflow: hidden;
-  vertical-align: top;
-}
-
-.cd-headline.clip .cd-words-wrapper::after {
-  /* line */
-  content: '';
-  position: absolute;
-  top: 6px;
-  right: 0;
-  width: 2px;
-  height: 80%;
-  background-color: #5d5d5d;
-}
-
-.cd-headline.clip b {
-  opacity: 0;
-}
-
-.cd-headline.clip b.is-visible {
-  opacity: 1;
-}
-
-.mfp-arrow-right:after,
-.mfp-arrow-right .mfp-a {
-  position: absolute;
-  padding: 13px;
-  box-shadow: inset 2px -2px 0 0 #fff;
-  cursor: pointer;
-  -moz-transition: .15s;
-  -o-transition: .15s;
-  -webkit-transition: .15s;
-  transition: .15s;
-  margin-left: 0;
-  border-left: 0;
-  -moz-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-
-.mfp-arrow-left:after,
-.mfp-arrow-left .mfp-a {
-  position: absolute;
-  padding: 13px;
-  box-shadow: inset 2px -2px 0 0 #fff;
-  cursor: pointer;
-  left: 50px;
-  -moz-transition: .15s;
-  -o-transition: .15s;
-  -webkit-transition: .15s;
-  transition: .15s;
-  margin-left: 0;
-  border-right: 0;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.mfp-arrow-right:before,
-.mfp-arrow-left:before {
-  display: none;
-}
-
 .progressbar {
-  display: inline-block;
-  width: 200px;
-  margin: 25px;
+	display: inline-block;
+	width: 200px;
+	margin: 25px;
 }
-
 .circle {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 10px;
-  display: inline-block;
-  position: relative;
-  text-align: center; }
-  .circle h5 {
-    margin-top: 18px;
-  }
-
-.circle canvas {
-  vertical-align: middle;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	h5 {
+		margin-top: 18px;
+	}
+	canvas {
+		vertical-align: middle;
+	}
+	div {
+		position: absolute;
+		top: 42px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		line-height: 40px;
+		font-size: 24px;
+	}
+	span {
+		display: block;
+		color: $color_silver_chalice_approx;
+		margin-top: 12px;
+	}
+	strong i {
+		font-style: normal;
+		font-size: 0.6em;
+		font-weight: normal;
+	}
 }
-
-.circle div {
-  position: absolute;
-  top: 42px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 24px;
-}
-
-.circle strong i {
-  font-style: normal;
-  font-size: 0.6em;
-  font-weight: normal;
-}
-
-.circle span {
-  display: block;
-  color: #aaa;
-  margin-top: 12px;
-}
-
-/* Counts Block */
-.bg-light .counts {
-  color: #f2f2f2;
-}
-
-.bg-dark .counts {
-  color: #f2f2f2;
-}
-
 .counts {
-  text-align: center; }
-  .counts i::before,
-  .counts .count, .counts .digit, .counts .count-text {
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    -ms-transition: all 0.35s ease-in-out;
-    transition-delay: .1s; }
-  .counts .count-container {
-    text-align: center; }
-    .counts .count-container .count-icon {
-      margin: 0;
-      padding: 0;
-      font-size: 25px; }
-      .counts .count-container .count-icon i::before {
-        font-size: 40px;
-        margin: 0; }
-    .counts .count-container .count {
-      text-align: center;
-      display: inline-block; }
-      .counts .count-container .count .digit {
-        font-size: 40px;
-        line-height: 64px;
-        margin: 0;
-        padding: 0; }
-      .counts .count-container .count .count-text {
-        margin-top: 8px;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 3px; }
-      .counts .count-container .count:hover {
-        cursor: pointer;
-      }
-
-.grid {
-  padding: 0; }
-  .grid .row {
-    margin-left: 0;
-    margin-right: 0; }
-    .grid .row .grid-item {
-      border: none;
-      padding-right: 5px;
-      padding-left: 5px;
-    }
-
-.grid {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  -ms-transition-property: height, width;
-  -o-transition-property: height, width;
-  transition-property: height, width;
+	text-align: center;
+	i::before {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.35s ease-in-out;
+		//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+		transition-delay: .1s;
+	}
+	.count {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.35s ease-in-out;
+		//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+		transition-delay: .1s;
+	}
+	.digit {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.35s ease-in-out;
+		//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+		transition-delay: .1s;
+	}
+	.count-text {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.35s ease-in-out;
+		//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+		transition-delay: .1s;
+	}
+	.count-container {
+		text-align: center;
+		.count-icon {
+			margin: 0;
+			padding: 0;
+			font-size: 25px;
+			i::before {
+				font-size: 40px;
+				margin: 0;
+			}
+		}
+		.count {
+			text-align: center;
+			display: inline-block;
+			.digit {
+				font-size: 40px;
+				line-height: 64px;
+				margin: 0;
+				padding: 0;
+			}
+			.count-text {
+				margin-top: 8px;
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
 }
-
-.port-filter ul {
-  list-style: none;
-  padding: 0; }
-  .port-filter ul li {
-    display: inline-block; }
-    .port-filter ul li a {
-      position: relative;
-      padding: 12px 24px;
-      margin-right: 1px;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 1px;
-      transition: all 0.35s ease-in-out;
-      -moz-transition: all 0.35s ease-in-out;
-      -webkit-transition: all 0.35s ease-in-out;
-      -o-transition: all 0.35s ease-in-out;
-      -ms-transition: all 0.35s ease-in-out; }
-      .port-filter ul li a:after {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 8px 8px 0;
-        opacity: 0;
-        display: block;
-        width: 0;
-        z-index: 1;
-        margin-left: -8px;
-        bottom: -8px;
-        left: 50%;
-        transition: all 0.35s ease-in-out;
-        -moz-transition: all 0.35s ease-in-out;
-        -webkit-transition: all 0.35s ease-in-out;
-        -o-transition: all 0.35s ease-in-out;
-        -ms-transition: all 0.35s ease-in-out;
-      }
-
-.port-filter-light ul li a {
-  background: #f2f2f2;
-  color: #404040; }
-  .port-filter-light ul li a:after {
-    border-color: #fff transparent; }
-  .port-filter-light ul li a:hover, .port-filter-light ul li a:focus {
-    text-decoration: none;
-    background: #173e43;
-    color: #f2f2f2; }
-  .port-filter-light ul li a:hover:after, .port-filter-light ul li a:focus:after {
-    border-color: #173e43 transparent;
-    opacity: 1;
-  }
-
-/* Projects on hover */
+.grid {
+	padding: 0;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: height, width;
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+		.grid-item {
+			border: none;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+	}
+}
 .item-wrap {
-  margin-bottom: 10px; }
-
+	margin-bottom: 10px;
+}
 figure {
-  position: relative;
-  overflow: hidden;
-  text-align: center; }
-  figure img {
-    position: relative;
-    opacity: 1.0; }
-  figure figcaption {
-    padding: 1.0em;
-    color: #fff;
-    text-transform: uppercase;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
-    figure figcaption > .fig-description a {
-      z-index: 1000;
-      text-indent: 200%;
-      white-space: nowrap;
-      font-size: 0; }
-    figure figcaption:before, figure figcaption:after {
-      pointer-events: none; }
-  figure figcaption,
-  figure figcaption > a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-  figure h3 {
-    word-spacing: -0.15em;
-    font-family: "Montserrat", sans-serif; }
-    figure h3 span {
-      font-family: "Montserrat", sans-serif; }
-  figure h3, figure p {
-    margin: 0; }
-  figure p {
-    letter-spacing: 1px;
-    font-size: 68.5%;
-  }
-
-figure.effect-goliath.misted-guava {
-  background: #f86584;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	img {
+		position: relative;
+		opacity: 1.0;
+	}
+	figcaption {
+		padding: 1.0em;
+		color: $white;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include backface-visibility($visibility)
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&:before {
+			pointer-events: none;
+		}
+		&:after {
+			pointer-events: none;
+		}
+		> a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		> .fig-description a {
+			z-index: 1000;
+			text-indent: 200%;
+			white-space: nowrap;
+			font-size: 0;
+		}
+	}
+	h3 {
+		word-spacing: -0.15em;
+		font-family: $font_0, $font_1;
+		margin: 0;
+		span {
+			font-family: $font_0, $font_1;
+		}
+	}
+	p {
+		margin: 0;
+		letter-spacing: 1px;
+		font-size: 68.5%;
+	}
+	&.effect-goliath {
+		&.misted-guava {
+			background: $color_brink_pink_approx;
+		}
+		&.dusted-lemon {
+			background: $color_golden_glow_approx;
+		}
+		&.seaweed {
+			background: $color_te_papa_green_approx;
+		}
+		&.succulent {
+			background: $color_ming_approx;
+		}
+		&.aqua {
+			background: $color_keppel_approx;
+		}
+		&.eggplant {
+			background: $color_cosmic_approx;
+		}
+		.popup-call {
+			position: absolute;
+			top: 30px;
+			right: 40px;
+			z-index: 1001;
+			opacity: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: opacity 0.5s ease-in-out;
+			a {
+				&:hover {
+					text-decoration: none;
+				}
+				&:focus {
+					text-decoration: none;
+				}
+				i {
+					color: $white;
+					//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+					transition: color 0.5s ease-in-out;
+					&:hover {
+						color: $color_gravel_approx;
+					}
+				}
+				i::before {
+					font-size: 40px;
+					margin-left: 2px;
+				}
+			}
+		}
+		figcaption {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			text-align: left;
+			font-size: 12px;
+			.fig-description {
+				position: absolute;
+				left: 40px;
+				right: 40px;
+				bottom: 30px;
+			}
+			a {
+				color: $white;
+				font-size: 11px;
+				line-height: 20px;
+			}
+			span {
+				position: relative;
+				margin-right: 2px;
+			}
+		}
+		img {
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: transform 3.5s;
+			max-width: none;
+			width: calc(100% +0px);
+			opacity: 1;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: opacity 0.5s, transform 5.5s;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0px, 0, 0) scale(1.12);
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+		}
+		h3 {
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: transform 3.5s;
+			font-family: $font_0, $font_1;
+			color: $white;
+			text-transform: uppercase;
+			font-size: 21px;
+			opacity: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: opacity 0.5s, transform 0.5s;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0, 0, 0);
+			&:before {
+				position: absolute;
+				content: " ";
+				bottom: -5px;
+				width: 0;
+				border-bottom: 1px dotted $concrete;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.6s;
+				//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+				transition-delay: 0.3s;
+			}
+		}
+		p {
+			margin-top: 7px;
+			color: $white;
+			text-transform: none;
+			font-family: $font_3, $font_1;
+			font-size: 13px;
+			opacity: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: opacity 0.5s, transform 0.5s;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0, 0, 0);
+		}
+		&:hover {
+			.popup-call {
+				opacity: 1;
+			}
+			img {
+				opacity: 0.1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(0, 0, 0) scale(1);
+			}
+			h3 {
+				opacity: 1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(0, 0, 0);
+				&:before {
+					width: 100%;
+					//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+					transition: all 0.6s;
+				}
+			}
+			p {
+				width: 100%;
+				opacity: 1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
 }
-
-figure.effect-goliath.dusted-lemon {
-  background: #fae596;
+#homesection {
+	h3 {
+		margin: 0;
+	}
+	.m-details {
+		p {
+			margin: 0 0 5px 0;
+		}
+		i::before {
+			font-size: 32px;
+			color: $color_radical_red_approx;
+			line-height: 32px;
+			margin-left: 14px;
+		}
+		.quote {
+			margin: 14px 0;
+			padding-left: 18px;
+			border-left: 2px solid $color_brink_pink_approx;
+			h5 {
+				padding-top: 4px;
+				margin: 0;
+				line-height: 1.3em;
+			}
+		}
+	}
+	.pro-experience {
+		.experience {
+			overflow: hidden;
+			position: relative;
+			ul {
+				margin-bottom: 18px;
+        li.position strong {
+          color: #efce4a !important;
+        }
+			}
+		}
+		li {
+			&.date {
+				margin-bottom: 0;
+				background: $color_trendy_pink_approx;
+				color: $white;
+				position: relative;
+				display: block;
+				font-weight: 400;
+				line-height: 1.2em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.35s ease-in-out;
+			}
+			&.company {
+				display: block;
+				a {
+					font-size: 16px;
+					font-weight: bold;
+					color: $white;
+					//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+					transition: all 0.35s ease-in-out;
+					&:hover {
+						opacity: .5;
+					}
+				}
+			}
+			&.position {
+				margin: 0;
+				display: block;
+				color: $white;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: $white;
+			&:hover {
+				text-decoration: none;
+				color: $white;
+				i::before {
+					opacity: .5;
+				}
+			}
+			&:focus {
+				text-decoration: none;
+				color: $white;
+			}
+			i::before {
+				font-size: 32px;
+				color: $white;
+				line-height: 32px;
+				margin-left: 0 !important;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.35s ease-in-out;
+			}
+		}
+	}
+	.circle-skills .progressbar {
+		margin: 16px;
+		.circle {
+			text-align: left;
+			color: $white;
+			h4 {
+				margin-top: 24px;
+			}
+			p {
+				line-height: 1.3em;
+				color: $white;
+			}
+			div {
+				margin-left: 28px;
+				text-align: left;
+			}
+		}
+	}
+	.personal .box {
+		margin: 0 0 14px 0;
+		display: block;
+		clear: both;
+		.one {
+			padding: 0 8px 0 0;
+			color: $color_gravel_approx;
+			font-weight: 700;
+			margin-right: 0;
+			display: inline-block;
+			z-index: 2;
+			p {
+				margin: 0;
+			}
+		}
+		.two {
+			padding: 0 8px 0 0;
+			display: inline-block;
+			color: $color_chicago_approx;
+			position: relative;
+			p {
+				margin: 0;
+			}
+		}
+	}
+	.clients a {
+		img {
+			opacity: .4;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.35s ease-in-out;
+		}
+		&:hover img {
+			opacity: 1;
+		}
+	}
 }
-
-figure.effect-goliath.seaweed {
-  background: #173e43;
+.inner-content {
+	.inner-section {
+		padding: 30px 50px;
+	}
+	.inner-block {
+		padding: 0 50px;
+	}
 }
-
-figure.effect-goliath.succulent {
-  background: #2b747d;
+#resume {
+	background-color: $white;
+	min-height: 500px;
+	#m-details {
+		p {
+			margin: 0 0 5px 0;
+		}
+		i::before {
+			font-size: 32px;
+			color: $color_radical_red_approx;
+			line-height: 32px;
+			margin-left: 0;
+		}
+		.quote {
+			margin: 14px 0;
+			padding-left: 18px;
+			border-left: 2px solid $color_radical_red_approx;
+			h5 {
+				padding-top: 4px;
+				margin: 0;
+				line-height: 1.3em;
+			}
+		}
+	}
 }
-
-figure.effect-goliath.aqua {
-  background: #3fb0ac;
+#portfolio {
+	background-color: $white;
+	min-height: 500px;
 }
-
-figure.effect-goliath.eggplant {
-  background: #734663;
+#contacts {
+	background-color: $white;
+	min-height: 500px;
+	#contacts-data p {
+		line-height: 2em;
+	}
 }
-
-  figure.effect-goliath .popup-call {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    z-index: 1001;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out; }
-    figure.effect-goliath .popup-call a:hover, figure.effect-goliath .popup-call a:focus {
-      text-decoration: none; }
-    figure.effect-goliath .popup-call a i {
-      color: #fff;
-      transition: color 0.5s ease-in-out;
-      -moz-transition: color 0.5s ease-in-out;
-      -webkit-transition: color 0.5s ease-in-out;
-      -o-transition: color 0.5s ease-in-out;
-      -ms-transition: color 0.5s ease-in-out; }
-      figure.effect-goliath .popup-call a i::before {
-        font-size: 40px;
-        margin-left: 2px; }
-      figure.effect-goliath .popup-call a i:hover {
-        color: #4a4a4a; }
-  figure.effect-goliath figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    font-size: 12px; }
-    figure.effect-goliath figcaption .fig-description {
-      position: absolute;
-      left: 40px;
-      right: 40px;
-      bottom: 30px; }
-    figure.effect-goliath figcaption a {
-      color: #fff;
-      font-size: 11px;
-      line-height: 20px; }
-    figure.effect-goliath figcaption span {
-      position: relative;
-      margin-right: 2px; }
-  figure.effect-goliath img, figure.effect-goliath h3 {
-    -webkit-transition: -webkit-transform 3.5s;
-    transition: transform 3.5s; }
-  figure.effect-goliath img {
-    max-width: none;
-    width: -webkit-calc(100% + 0px);
-    width: calc(100% + 0px);
-    opacity: 1;
-    -webkit-transition: opacity 0.5s, -webkit-transform 5.5s;
-    transition: opacity 0.5s, transform 5.5s;
-    -webkit-transform: translate3d(0px, 0, 0) scale(1.12);
-    transform: translate3d(0px, 0, 0) scale(1.12);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
-  figure.effect-goliath h3 {
-    font-family: "Montserrat", sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 21px;
-    opacity: 0;
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, transform 0.5s;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-    figure.effect-goliath h3:before {
-      position: absolute;
-      content: " ";
-      bottom: -5px;
-      width: 0;
-      border-bottom: 1px dotted #f2f2f2;
-      -webkit-transition: all 0.6s;
-      -moz-transition: all 0.6s;
-      transition: all 0.6s;
-      transition-delay: 0.3s; }
-  figure.effect-goliath p {
-    margin-top: 7px;
-    color: #fff;
-    text-transform: none;
-    font-family: "Raleway", sans-serif;
-    font-size: 13px;
-    opacity: 0;
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.35s;
-    transition: opacity 0.5s, transform 0.5s;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  figure.effect-goliath:hover .popup-call {
-    opacity: 1; }
-  figure.effect-goliath:hover img {
-    opacity: 0.1;
-    -webkit-transform: translate3d(0, 0, 0) scale(1);
-    transform: translate3d(0, 0, 0) scale(1); }
-  figure.effect-goliath:hover h3 {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-    figure.effect-goliath:hover h3:before {
-      width: 100%;
-      -webkit-transition: all 0.6s;
-      -moz-transition: all 0.6s;
-      transition: all 0.6s; }
-  figure.effect-goliath:hover p {
-    width: 100%;
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-.captions:hover img {
-  opacity: 0.7 !important;
+#feedback {
+	background-color: $white;
+	min-height: 500px;
+	.feedback {
+		.wpcf7-form {
+			.left-field {
+				float: left;
+				width: calc(50% - 5px);
+			}
+			.right-field {
+				float: right;
+				width: calc(50% - 5px);
+			}
+			input[type="text"] {
+				padding: 12px 15px;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 1px 3px $black_7, 0 0 0 2px transparent inset;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				margin: 0 0 10px;
+				max-width: 100%;
+				vertical-align: baseline;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.5em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all .5s ease;
+			}
+			input[type="email"] {
+				padding: 12px 15px;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 1px 3px $black_7, 0 0 0 2px transparent inset;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				margin: 0 0 10px;
+				max-width: 100%;
+				vertical-align: baseline;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.5em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all .5s ease;
+			}
+			input[type="password"] {
+				padding: 12px 15px;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 1px 3px $black_7, 0 0 0 2px transparent inset;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				margin: 0 0 10px;
+				max-width: 100%;
+				vertical-align: baseline;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.5em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all .5s ease;
+			}
+			input[type="search"] {
+				padding: 12px 15px;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 1px 3px $black_7, 0 0 0 2px transparent inset;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				margin: 0 0 10px;
+				max-width: 100%;
+				vertical-align: baseline;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.5em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all .5s ease;
+			}
+			input[type="url"] {
+				padding: 12px 15px;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 1px 3px $black_7, 0 0 0 2px transparent inset;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				margin: 0 0 10px;
+				max-width: 100%;
+				vertical-align: baseline;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.5em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all .5s ease;
+			}
+			textarea {
+				padding: 12px 15px;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 1px 3px $black_7, 0 0 0 2px transparent inset;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				margin: 0 0 10px;
+				max-width: 100%;
+				vertical-align: baseline;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.5em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all .5s ease;
+			}
+			input[type="submit"] {
+				width: auto;
+			}
+			span.wpcf7-form-control-wrap {
+				position: relative;
+			}
+		}
+		#form-messages .alert {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.feedback-light {
+		input[type="text"] {
+			color: $color_chicago_approx;
+			background-color: $white !important;
+		}
+		input[type="email"] {
+			color: $color_chicago_approx;
+			background-color: $white !important;
+		}
+		input[type="password"] {
+			color: $color_chicago_approx;
+			background-color: $white !important;
+		}
+		input[type="search"] {
+			color: $color_chicago_approx;
+			background-color: $white !important;
+		}
+		input[type="url"] {
+			color: $color_chicago_approx;
+			background-color: $white !important;
+		}
+		textarea {
+			color: $color_chicago_approx;
+			background-color: $white !important;
+		}
+	}
 }
-
-/*------------------------------------------------------------------
-[Homepage Sections]
-------------------------------------------------------------------*/
-
-#homesection h3 {
-  margin: 0; }
-#homesection .circle-skills .progressbar {
-  margin: 16px; }
-  #homesection .circle-skills .progressbar .circle {
-    text-align: left;
-    color: #fff; }
-    #homesection .circle-skills .progressbar .circle h4 {
-      margin-top: 24px; }
-    #homesection .circle-skills .progressbar .circle p {
-      line-height: 1.3em;
-      color: #fff; }
-    #homesection .circle-skills .progressbar .circle div {
-      margin-left: 28px;
-      text-align: left; }
-#homesection .m-details p {
-  margin: 0 0 5px 0; }
-#homesection .m-details i::before {
-  font-size: 32px;
-  color: #fa455f;
-  line-height: 32px;
-  margin-left: 14px; }
-#homesection .m-details .quote {
-  margin: 14px 0;
-  padding-left: 18px;
-  border-left: 2px solid #f86584; }
-  #homesection .m-details .quote h5 {
-    padding-top: 4px;
-    margin: 0;
-    line-height: 1.3em; }
-#homesection .personal .box {
-  margin: 0 0 14px 0;
-  display: block;
-  clear: both; }
-  #homesection .personal .box .one, #homesection .personal .box .two {
-    padding: 0 8px 0 0; }
-    #homesection .personal .box .one p, #homesection .personal .box .two p {
-      margin: 0; }
-  #homesection .personal .box .one {
-    color: #4a4a4a;
-    font-weight: 700;
-    margin-right: 0;
-    display: inline-block;
-    z-index: 2; }
-  #homesection .personal .box .two {
-    display: inline-block;
-    color: #5d5d5d;
-    position: relative; }
-#homesection .pro-experience .experience {
-  overflow: hidden;
-  position: relative; }
-  #homesection .pro-experience .experience ul {
-    margin-bottom: 18px; }
-#homesection .pro-experience li.date {
-  margin-bottom: 0;
-  background: #9260a2;
-  color: #fff;
-  position: relative;
-  display: block;
-  font-weight: 400;
-  line-height: 1.2em;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out; }
-#homesection .pro-experience li.company {
-  display: block; }
-  #homesection .pro-experience li.company a {
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    -ms-transition: all 0.35s ease-in-out; }
-    #homesection .pro-experience li.company a:hover {
-      opacity: .5; }
-#homesection .pro-experience li.position {
-  margin: 0 0 0 0;
-  display: block;
-  color: #fff; }
-#homesection .pro-experience a, #homesection .pro-experience a:hover, #homesection .pro-experience a:focus {
-  text-decoration: none;
-  color: #fff; }
-#homesection .pro-experience a i::before {
-  font-size: 32px;
-  color: #fff;
-  line-height: 32px;
-  margin-left: 0 !important;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out; }
-#homesection .pro-experience a:hover i::before {
-  opacity: .5; }
-#homesection .clients a img {
-  opacity: .4;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out; }
-#homesection .clients a:hover img {
-  opacity: 1; }
-
-/*------------------------------------------------------------------
-[Inner Pages Sections]
-------------------------------------------------------------------*/
-
-.inner-content .inner-section {
-  padding: 30px 50px;
+#blog {
+	background-color: $white;
+	min-height: 500px;
+	.item-wrap {
+		margin-bottom: 10px;
+		figure {
+			text-align: left;
+			.popup-call {
+				position: absolute;
+				z-index: 10;
+				top: 5px;
+				opacity: 0;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.5s ease-in-out;
+				a i:before {
+					font-size: 38px;
+					color: $white;
+				}
+			}
+			p {
+				font-size: 13px;
+			}
+			img {
+				margin-bottom: 24px;
+			}
+			figcaption {
+				padding: 0;
+				position: relative;
+				color: $color_stack_approx;
+				text-transform: none;
+				a {
+					color: $color_cape_cod_approx;
+					&:hover {
+						color: $color_radical_red_approx;
+						text-decoration: none;
+					}
+					&:focus {
+						color: $color_radical_red_approx;
+						text-decoration: none;
+					}
+				}
+				.post-meta {
+					text-transform: uppercase;
+					color: $color_stack_approx;
+					font-size: 11px;
+					span {
+						margin-right: 3px;
+					}
+				}
+				.post-header {
+					text-transform: uppercase;
+					h5 {
+						font-size: 15px;
+						letter-spacing: 2px;
+						line-height: 23px;
+						font-weight: 600;
+						margin-top: 5px;
+						margin-bottom: 14px;
+					}
+				}
+				.post-entry {
+					margin-bottom: 21px;
+				}
+				.post-tag {
+					color: $color_stack_approx;
+					text-transform: uppercase;
+					font-size: 13px;
+					span {
+						margin-right: 10px;
+						letter-spacing: 1px;
+					}
+				}
+				.post-more-link {
+					font-size: 11px;
+					font-weight: 600;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					line-height: 22px;
+					a i {
+						margin-left: 5px;
+						//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: all 0.25s ease 0s;
+					}
+				}
+			}
+			&:hover .popup-call {
+				opacity: 1;
+			}
+		}
+	}
+	.grid .row .grid-item {
+		border: none;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-bottom: 48px;
+	}
 }
-
-.inner-content .inner-block {
-  padding: 0 50px;
-}
-
-#resume,
-#portfolio,
-#contacts,
-#feedback,
-#blog,
 #blogpost {
-  background-color: #fff;
-  min-height: 500px;
+	background-color: $white;
+	min-height: 500px;
+	.post-meta {
+		text-transform: uppercase;
+		color: $color_stack_approx;
+		font-size: 13px;
+		span {
+			margin-right: 3px;
+		}
+	}
+	.post-tag {
+		color: $color_stack_approx;
+		text-transform: uppercase;
+		font-size: 13px;
+		margin-top: 8px;
+		span {
+			margin-right: 10px;
+			letter-spacing: 1px;
+		}
+	}
+	hr {
+		margin-bottom: 45px;
+	}
+	#comments {
+		img {
+			width: 64px;
+			height: 64px;
+		}
+		.media {
+			margin-top: 40px;
+		}
+		.post-author {
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 600;
+		}
+	}
 }
-
-#resume #m-details p {
-  margin: 0 0 5px 0;
-}
-
-#resume #m-details i::before {
-  font-size: 32px;
-  color: #fa455f;
-  line-height: 32px;
-  margin-left: 0;
-}
-
-#resume #m-details .quote {
-  margin: 14px 0;
-  padding-left: 18px;
-  border-left: 2px solid #fa455f;
-}
-
-#resume #m-details .quote h5 {
-  padding-top: 4px;
-  margin: 0;
-  line-height: 1.3em;
-}
-
-#contacts #contacts-data p {
-  line-height: 2em;
-}
-
-#feedback .feedback .wpcf7-form span.wpcf7-form-control-wrap {
-  position: relative;
-}
-
-#feedback .feedback .wpcf7-form .left-field {
-  float: left;
-}
-
-#feedback .feedback .wpcf7-form .right-field {
-  float: right;
-}
-
-#feedback .feedback .wpcf7-form .left-field, #feedback .feedback .wpcf7-form .right-field {
-  width: calc(50% - 5px);
-}
-
-#feedback .feedback .wpcf7-form input[type="text"], #feedback .feedback .wpcf7-form input[type="email"], #feedback .feedback .wpcf7-form input[type="password"], #feedback .feedback .wpcf7-form input[type="search"], #feedback .feedback .wpcf7-form input[type="url"], #feedback .feedback .wpcf7-form textarea {
-  padding: 12px 15px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 0 0 2px transparent inset;
-  box-sizing: border-box;
-  margin: 0 0 10px;
-  max-width: 100%;
-  vertical-align: baseline;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.5em;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#feedback .feedback .wpcf7-form input[type="submit"] {
-  width: auto;
-}
-
-#feedback .feedback #form-messages .alert {
-  border-radius: 0;
-}
-
-#feedback .feedback-light input[type="text"],
-#feedback .feedback-light input[type="email"],
-#feedback .feedback-light input[type="password"],
-#feedback .feedback-light input[type="search"],
-#feedback .feedback-light input[type="url"],
-#feedback .feedback-light textarea {
-  color: #5d5d5d;
-  background-color: #fff !important;
-}
-
-#blog .grid .row .grid-item {
-  border: none;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 48px; }
-#blog .item-wrap {
-  margin-bottom: 10px; }
-  #blog .item-wrap figure {
-    text-align: left; }
-    #blog .item-wrap figure .popup-call {
-      position: absolute;
-      z-index: 10;
-      top: 5px;
-      opacity: 0;
-      transition: all 0.5s ease-in-out;
-      -moz-transition: all 0.5s ease-in-out;
-      -webkit-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out;
-      -ms-transition: all 0.5s ease-in-out; }
-      #blog .item-wrap figure .popup-call a i:before {
-        font-size: 38px;
-        color: #fff; }
-    #blog .item-wrap figure:hover .popup-call {
-      opacity: 1; }
-    #blog .item-wrap figure p {
-      font-size: 13px; }
-    #blog .item-wrap figure img {
-      margin-bottom: 24px; }
-    #blog .item-wrap figure figcaption {
-      padding: 0;
-      position: relative;
-      color: #8e8e8e;
-      text-transform: none; }
-      #blog .item-wrap figure figcaption a {
-        color: #404040; }
-        #blog .item-wrap figure figcaption a:hover, #blog .item-wrap figure figcaption a:focus {
-          color: #fa455f;
-          text-decoration: none; }
-      #blog .item-wrap figure figcaption .post-meta {
-        text-transform: uppercase;
-        color: #8e8e8e;
-        font-size: 11px; }
-        #blog .item-wrap figure figcaption .post-meta span {
-          margin-right: 3px; }
-      #blog .item-wrap figure figcaption .post-header {
-        text-transform: uppercase; }
-        #blog .item-wrap figure figcaption .post-header h5 {
-          font-size: 15px;
-          letter-spacing: 2px;
-          line-height: 23px;
-          font-weight: 600;
-          margin-top: 5px;
-          margin-bottom: 14px; }
-      #blog .item-wrap figure figcaption .post-entry {
-        margin-bottom: 21px; }
-      #blog .item-wrap figure figcaption .post-tag {
-        color: #8e8e8e;
-        text-transform: uppercase;
-        font-size: 13px; }
-        #blog .item-wrap figure figcaption .post-tag span {
-          margin-right: 10px;
-          letter-spacing: 1px; }
-      #blog .item-wrap figure figcaption .post-more-link {
-        font-size: 11px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: 22px; }
-        #blog .item-wrap figure figcaption .post-more-link a i {
-          margin-left: 5px;
-          transition: all 0.25s ease 0s;
-          -o-transition: all 0.25s ease 0s;
-          -moz-transition: all 0.25s ease 0s;
-          -webkit-transition: all 0.25s ease 0s; }
-
-#blogpost .post-meta {
-  text-transform: uppercase;
-  color: #8e8e8e;
-  font-size: 13px; }
-  #blogpost .post-meta span {
-    margin-right: 3px; }
-#blogpost .post-tag {
-  color: #8e8e8e;
-  text-transform: uppercase;
-  font-size: 13px;
-  margin-top: 8px; }
-  #blogpost .post-tag span {
-    margin-right: 10px;
-    letter-spacing: 1px; }
-#blogpost hr {
-  margin-bottom: 45px; }
-#blogpost #comments img {
-  width: 64px;
-  height: 64px; }
-#blogpost #comments .media {
-  margin-top: 40px; }
-#blogpost #comments .post-author {
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 600; }
-
-/*------------------------------------------------------------------
-[Footer]
-------------------------------------------------------------------*/
-
 footer {
-  padding-bottom: 18px !important;
-  padding-top: 21px !important;
-  margin-bottom: 0;
-  color: #a7a7a7;
+	padding-bottom: 18px !important;
+	padding-top: 21px !important;
+	margin-bottom: 0;
+	color: $color_shady_lady_approx;
+	input {
+		border-color: $color_chicago_approx;
+		margin-bottom: 8px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 2px;
+	}
+	h4 {
+		color: $color_shady_lady_approx;
+	}
+	p {
+		margin-top: 4px;
+		font-size: 12px;
+		color: $color_shady_lady_approx;
+	}
+	a {
+		text-decoration: none;
+		font-size: 13px;
+		color: $color_shady_lady_approx;
+		&:hover {
+			text-decoration: none;
+			i::before {
+				opacity: 1;
+			}
+		}
+		&:focus {
+			text-decoration: none;
+		}
+		i::before {
+			color: $white;
+			font-size: 32px !important;
+			margin: 0 0 0 0 !important;
+			opacity: .2;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.35s ease-in-out;
+		}
+	}
+	.cv-link a {
+		display: inline-block;
+		padding: 4px 8px 4px 0;
+		margin-bottom: 4px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		color: $color_shady_lady_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.35s ease-in-out;
+		&:hover {
+			color: $white;
+		}
+		&:focus {
+			color: $white;
+		}
+		i {
+			margin-right: 4px;
+			padding-top: 3px;
+		}
+		i::before {
+			font-size: 14px !important;
+		}
+	}
+	.copyrights p {
+		font-size: 12px;
+		color: $color_stack_approx;
+	}
 }
-
-footer .cv-link a {
-  display: inline-block;
-  padding: 4px 8px 4px 0;
-  margin-bottom: 4px;
-  border-radius: 4px;
-  color: #a7a7a7;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out;
+.bouncy.cd-intro-content {
+	animation-name: cd-bounce-rotate;
+	animation-duration: 0.5s;
+	h2 {
+		animation-name: cd-bounce-right;
+		animation-duration: 1.5s;
+	}
 }
-
-footer .cv-link a:hover,
-footer .cv-link a:focus {
-  color: #fff;
+.video.cd-intro-content svg {
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	bottom: auto;
+	right: auto;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0.8;
+	&.svg-mask {
+		display: none;
+	}
 }
-
-footer .cv-link a i {
-  margin-right: 4px;
-  padding-top: 3px;
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
 }
-
-footer .cv-link a i::before {
-  font-size: 14px !important;
+.row-no-padding [class*="col-"] {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
-
-footer input {
-  border-color: #5d5d5d;
-  margin-bottom: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 2px;
+.respon-wrap img {
+	max-width: 100% !important;
+	height: auto;
+	display: block;
 }
-
-footer h4 {
-  color: #a7a7a7;
+#back-top a {
+	background: $color_cape_cod_approx image-$url_6 no-repeat 50% 50%;
+	border: 1px solid $concrete;
+	bottom: 60px;
+	display: block;
+	height: 40px;
+	position: fixed;
+	right: 30px;
+	width: 40px;
+	z-index: 10;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.35s ease-in-out;
+	&:hover {
+		background: $color_radical_red_approx image-$url_6 no-repeat 50% 50%;
+		border-color: $color_radical_red_approx;
+	}
 }
-
-footer p {
-  margin-top: 4px;
-  font-size: 12px;
-  color: #a7a7a7;
+.hvr-sweep-to-bottom:before {
+	height: 120px;
+	background: $black_20;
 }
-
-footer a:hover,
-footer a:focus {
-  text-decoration: none;
+.hvr-sweep-to-right:before {
+	height: 120px;
+	background: $white_10;
 }
-
-footer a {
-  text-decoration: none;
-  font-size: 13px;
-  color: #a7a7a7;
+.no-js .cd-words-wrapper b {
+	opacity: 0;
+	&.is-visible {
+		opacity: 1;
+	}
 }
-
-footer a i::before {
-  color: #fff;
-  font-size: 32px !important;
-  margin: 0 0 0 0 !important;
-  opacity: .2;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out;
+.cd-headline.clip {
+	span {
+		display: inline-block;
+		padding: .2em 0;
+	}
+	.cd-words-wrapper {
+		overflow: hidden;
+		vertical-align: top;
+	}
+	.cd-words-wrapper::after {
+		content: '';
+		position: absolute;
+		top: 6px;
+		right: 0;
+		width: 2px;
+		height: 80%;
+		background-color: $color_chicago_approx;
+	}
+	b {
+		opacity: 0;
+		&.is-visible {
+			opacity: 1;
+		}
+	}
 }
-
-footer a:hover i::before {
-  opacity: 1;
+.bg-light .counts {
+	color: $concrete;
 }
-
-footer .copyrights p {
-  font-size: 12px;
-  color: #8e8e8e;
+.bg-dark .counts {
+	color: $concrete;
+}
+.port-filter ul {
+	list-style: none;
+	padding: 0;
+	li {
+		display: inline-block;
+		a {
+			position: relative;
+			padding: 12px 24px;
+			margin-right: 1px;
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 1px;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.35s ease-in-out;
+			&:after {
+				content: '';
+				position: absolute;
+				border-style: solid;
+				border-width: 8px 8px 0;
+				opacity: 0;
+				display: block;
+				width: 0;
+				z-index: 1;
+				margin-left: -8px;
+				bottom: -8px;
+				left: 50%;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.35s ease-in-out;
+			}
+		}
+	}
+}
+.port-filter-light ul li a {
+	background: $concrete;
+	color: $color_cape_cod_approx;
+	&:after {
+		border-color: $white transparent;
+	}
+	&:hover {
+		text-decoration: none;
+		background: $color_te_papa_green_approx;
+		color: $concrete;
+		&:after {
+			border-color: $color_te_papa_green_approx transparent;
+			opacity: 1;
+		}
+	}
+	&:focus {
+		text-decoration: none;
+		background: $color_te_papa_green_approx;
+		color: $concrete;
+		&:after {
+			border-color: $color_te_papa_green_approx transparent;
+			opacity: 1;
+		}
+	}
+}
+.captions:hover img {
+	opacity: 0.7 !important;
 }
