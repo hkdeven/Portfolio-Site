@@ -33,14 +33,16 @@
     }
     h5 {
       font-weight: 700;
+      padding-top:40px;
     }
-    .inner-section {
+    .inner-content .inner-section {
       padding-top: 0 !important;
     }
     .side {
       float: left;
       width: 15%;
       margin-top:10px;
+      font-size:17px !important;
     }
     .middle {
       margin-top:10px;
@@ -49,6 +51,9 @@
     }
     .right {
       text-align: right;
+      color: #5da94c;
+      font-size:16px !important;
+      font-weight: 500;
     }
     .bar-container {
       width: 100%;
@@ -57,9 +62,29 @@
       color: white;
     }
     .bar-9 {
+      width: 90%;
+      height: 18px;
+      background: linear-gradient(190deg,#8ec182,#5ba849);
+    }
+    .bar-8 {
+      width: 80%;
+      height: 18px;
+      background: linear-gradient(190deg,#8ec182,#5ba849);
+    }
+    .bar-7 {
       width: 70%;
       height: 18px;
-      background-color: #4CAF50;
+      background: linear-gradient(190deg,#8ec182,#5ba849);
+    }
+    .bar-5 {
+      width: 50%;
+      height: 18px;
+      background: linear-gradient(190deg,#8ec182,#5ba849);
+    }
+    .bar-4 {
+      width: 40%;
+      height: 18px;
+      background: linear-gradient(190deg,#8ec182,#5ba849);
     }
   }
 }
