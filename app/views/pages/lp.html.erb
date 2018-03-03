@@ -1,0 +1,289 @@
+<!-- Intro Header -->
+
+<div id="feedback" class="inner-content">
+
+    <section id="page-title" class="inner-section inner-page-color">
+       <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+          <h2 class="font-accident-two-normal uppercase">Launch Potato</h2>
+          <h5 class="font-accident-one-bold hovercolor uppercase">Junior Front End Developer Application</h5>
+          <p class="small font-color-medium">
+            Hi, how are you?
+          </p>
+        </div>
+
+        <!-- Application Questionnaire -->
+        <div class="dividewhite1"></div>
+        <section id="questionnaire" class="inner-section">
+          <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+            <h5 class="uppercase">1. A video in which you explain why you're qualified for this role.</h5>
+          </div>
+          <hr />
+
+          <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+            <h5 class="uppercase">2. Links to your public code repository (GitHub, Bitbucket etc) and/or links to your portfolio</h5>
+          </div>
+          <hr />
+
+          <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+            <h5 class="uppercase">3. Provide several big chucks of your favorite code & why you like it.</h5>
+          </div>
+          <hr />
+
+          <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+            <h5 class="uppercase">4. Rank yourself 0-10 (0 being “no experience”, 10 being “expert”) on your skillset with the following:</h5>
+          </div>
+          <hr />
+
+          * HTML5
+
+          * CSS3
+
+          * Javascript
+
+          * Advanced CSS animation
+
+          * Python
+
+          * Photoshop
+
+          <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
+            <h5 class="uppercase">5. Describe a recent technical challenge you experienced and how you solved it.</h5>
+          </div>
+          <hr />
+          <p>
+            My current employer has been working with a dev agency to create a proprietary web app that allows our customers to build, design, and purchase their own steel buildings without the need to speak with a live person.  It's built with React, Mobx, Three.js, Node, Stripe, and various other APIs.  I work intermittently on this project, mainly to keep tabs on the dev agency, but also on the the code base too.
+          </p>
+          <p>
+            As you can imagine, our sales department hasn't been too keen on this idea as they believe it might take away leads they would have otherwise gotten on their own. So one day it was decided that we needed a version of this application devoid of all pricing and checkout screens.  This new version would be used on our company website while the version with pricing would continue being used in our marketing efforts elsewhere.  The dev agency provided an expensive eight-week proposal to create and deploy what essentially amounted to a replica of what we have already.
+          </p>
+          <p>
+            It was handed off to me to complete or find an alternative, faster solution.  My solution: We were concerned about a handful of UI elements being visible to users from a single source/link.  So, I decided to use soem simple Javascript to parse the url string and hide or show these elements based on whether or not certain variables were present.
+          </p>
+          <p>
+            We ended up taking this a step further elsewhere: On our main quote form, for building requests that are under 1,000 sqft, we decided to redirect them to this builder application and show a pre-rendered building that matched the specs they provided on their quote form simply by passing those values into the redirect url strings.  Now, our sales team no longer have to service these smaller building requests, which have a significantly lower chance of closing compared with larger buildings.  A win-win all around!
+          </p>
+          <p>
+            A sample of the JS I used to parse the url and alter the view:
+            <code>
+// Parse URL string
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) {
+            return pair[1];
+        }
+    }
+}
+
+// Assign values from URL string to variables
+function togglePriceView() {
+    // Get variable value from URL string
+    var value = getQueryVariable("get");
+
+    // If url is NOT /?get=quote/, hide price and checkout button from view
+    if (value != "quote") {
+        document.getElementById('priceSection').style.display ='none';
+        document.getElementsByClassName('get-this-building')[0].style.display = 'none';
+        document.getElementById('saveMyBuilding').style.float = 'right';
+    }
+}
+</code>
+          </p>
+        </section>
+
+    </section>
+
+<!-- Contact Links -->
+
+   <section id="contacts-data" class="inner-block inner-page-color">
+      <div class="container-fluid skin">
+         <div class="row">
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="10">
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Location:</span></div>
+                  <div class="col-sm-10"><p class="small">Fort Lauderdale, FL USA</p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Phone:</span></div>
+                  <div class="col-sm-10"><p class="small">+1.954.348.7293</p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Skype:</span></div>
+                  <div class="col-sm-10"><p class="small">@deven.blackburn</p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Email:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="email:deven@makecodenotwar.co" target="_blank">deven@makecodenotwar.co</a></p></div>
+               </div>
+            </div>
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="10">
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Twitter:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://twitter.com/makecodenotwar" target="_blank">twitter.com/makecodenotwar</a></p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Facbook:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://www.facebook.com/makecodenotwar" target="_blank">facebook.com/makecodenotwar</a></p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Linkedin:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://www.linkedin.com/in/devenblackburn" target="_blank">linkedin.com/in/devenblackburn</a></p></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"><span class="font-accident-two-bold uppercase">Github:</span></div>
+                  <div class="col-sm-10"><p class="small"><a href="https://github.com/hkdeven" target="_blank">github.com/hkdeven</a></p></div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </section>
+
+   <div class="dividewhite1"></div>
+
+    <!-- Testmonials -->
+
+      <section id="testmonials" class="inner-section skin">
+         <div class="container-fluid nopadding">
+           <div class="dividewhite2"></div>
+
+            <div class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
+               <h3 class="font-accident-two-normal uppercase text-center">Testmonials</h3>
+               <h5 class="font-accident-one-bold uppercase hovercolor text-center">Just how amazing is Deven to work with?</h5>
+               <div class="dividewhite1"></div>
+               <p class="small font-color-medium text-center">
+                  Well you don't have to take my word for it.  See what past colleagues and clients have to say about my work ethic.
+               </p>
+            </div>
+
+            <div class="dividewhite3"></div>
+
+            <!-- Offset col -->
+            <div class="col-md-2 col-lg-2">&nbsp;</div>
+            <div class="row">
+              <div class="col-md-8 col-lg-8 wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
+                 <div class="row">
+                    <div class="col-xs-3">
+                      <img src="https://s3-us-west-2.amazonaws.com/fortlauderdaletech.org/testimonial-potato.jpg" alt="Mr Potato Hedde" class="img-responsive img-circle author-userpic">
+                   </div>
+                   <div class="col-xs-9">
+                      <h5 class="font-accident-one-bold text-left uppercase">Mr. Potato Head</h5>
+                      <p class="small hovercolor"><b>Founder and CEO</b><br> Idaho Potato Commission (IPC)</p>
+                      <p class="text-left small">
+                        "Deven and I worked together when he was but a wee spud and I can say unequivocally, that he helped me see the world through different eyes."
+                      </p>
+                    </div>
+                 </div>
+                 <div class="divider-dynamic"></div>
+              </div>
+            </div>
+
+            <!-- Offset col -->
+            <div class="col-md-2 col-lg-2">&nbsp;</div>
+            <div class="row">
+              <div class="col-md-8 col-lg-8 wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
+                 <div class="row">
+                    <div class="col-xs-3">
+                      <img src="<%= asset_path "testimonial-richard.jpg" %>" alt="Richard Gray" class="img-responsive img-circle author-userpic">
+                   </div>
+                   <div class="col-xs-9">
+                      <h5 class="font-accident-one-bold text-left uppercase">Richard Gray</h5>
+                      <p class="small hovercolor"><b>Managing Director</b><br> Greater Fort Lauderdale Convention & Visitors Bureau</p>
+                      <p class="text-left small">"I have worked with Deven for many years in my capacity as Vice Chairman of IGLTA. Deven is personable, pro-active and a team player who goes out of his way to support his team. Any company would be lucky to have him."
+                      </p>
+                    </div>
+                 </div>
+                 <div class="divider-dynamic"></div>
+              </div>
+            </div>
+
+            <!-- Offset col -->
+            <div class="col-md-2 col-lg-2">&nbsp;</div>
+
+            <div class="row">
+
+              <div class="col-md-8 col-lg-8 wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
+                  <div class="row">
+                     <div class="col-xs-3">
+                       <img src="<%= asset_path "testimonial-deb.png" %>" alt="Deborah Sas" class="img-responsive img-circle author-userpic">
+                    </div>
+                    <div class="col-xs-9">
+                       <h5 class="font-accident-one-bold text-left uppercase">Deborah Sas</h5>
+                       <p class="small hovercolor"><b>Senior Director</b><br> MCI USA</p>
+                       <p class="text-left small">"Deven is one of the best employees I've had a chance to work with to date. He is always professional regardless of the challenge ahead, extremely organized and the first to suggest solutions. I would hire him in a heartbeat."</p>
+                     </div>
+                  </div>
+                  <div class="divider-dynamic"></div>
+               </div>
+
+               <!-- Offset col -->
+               <div class="col-md-2 col-lg-2">&nbsp;</div>
+
+               <div class="row">
+
+               <div class="col-md-8 col-lg-8 wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
+                  <div class="row">
+                     <div class="col-xs-3">
+                       <img src="<%= asset_path "testimonial-loann.jpg" %>" alt="LoAnn Halden" class="img-responsive img-circle author-userpic">
+                    </div>
+                    <div class="col-xs-9">
+                       <h5 class="font-accident-one-bold text-left uppercase">LoAnn Halden</h5>
+                       <p class="small hovercolor"><b>Communications Director</b><br> IGLTA, Inc.</p>
+                       <p class="text-left small">"Deven and I worked side by side at IGLTA for almost seven years and he was my most dedicated and intuitive collaborator. We created marketing materials for print and web on a shoestring, and it was his design savvy that made them soar. I can only imagine how far he'll go now with his Wyncode experience!"</p>
+                     </div>
+                  </div>
+                  <div class="divider-dynamic"></div>
+               </div>
+               </div>
+
+               <!-- Offset col -->
+               <div class="col-md-2 col-lg-2">&nbsp;</div>
+
+               <div class="row">
+
+               <div class="col-md-8 col-lg-8 wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
+                  <div class="row">
+                     <div class="col-xs-3">
+                       <img src="<%= asset_path "testimonial-matt.png" %>" alt="Matt Skallerud" class="img-responsive img-circle author-userpic">
+                    </div>
+                    <div class="col-xs-9">
+                       <h5 class="font-accident-one-bold text-left uppercase">Matt Skallerud</h5>
+                       <p class="small hovercolor"><b>President</b><br> Pink Banana Media</p>
+                       <p class="text-left small">"Deven is excellent to work with... very conscientious about his work and very detail oriented, making working with him a pleasure. He was also very adept at solving tasks and challenges sent his way, whether they were administrative in nature or technical as related to some sort of social media marketing outreach or website update."</p>
+                     </div>
+                  </div>
+                  <div class="divider-dynamic"></div>
+               </div>
+               </div>
+
+              <!-- Offset col -->
+              <div class="col-md-2 col-lg-2">&nbsp;</div>
+
+              <div class="row">
+
+              <div class="col-md-8 col-lg-8 wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
+                     <div class="row">
+                        <div class="col-xs-3">
+                          <img src="<%= asset_path "testimonial-johnt.jpg" %>" alt="John Tanzella" class="img-responsive img-circle author-userpic">
+                       </div>
+                       <div class="col-xs-9">
+                          <h5 class="font-accident-one-bold text-left uppercase">John Tanzella</h5>
+                          <p class="small hovercolor"><b>President & CEO</b><br> IGLTA, Inc.</p>
+                          <p class="text-left small">"I worked with Deven for over seven years.  He was a hard worker, detail oriented, very organized, and a staunch professional.  A solid asset to any company.  I wish him all the best!"</p>
+                        </div>
+                     </div>
+                     <div class="divider-dynamic"></div>
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="dividewhite3"></div>
+
+         </div>
+      </section>
+
+   </div>
+</div>
