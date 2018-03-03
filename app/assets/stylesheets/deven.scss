@@ -19,6 +19,7 @@
   }
   hr {
     border-top: 1px solid #9e9e9e2e;
+    margin-bottom: 20px !important;
   }
   #questionnaire {
     margin: 0 40px;
@@ -37,6 +38,10 @@
     h5 {
       font-weight: 700;
       padding-top:40px;
+      color: #303030b3;
+    }
+    h5.first {
+      padding-top: 0;
     }
     .inner-content .inner-section {
       padding-top: 0 !important;
@@ -51,6 +56,7 @@
       width: 15%;
       margin-top:10px;
       font-size:17px !important;
+      padding-left: 20px;
     }
     .middle {
       margin-top:10px;
@@ -62,6 +68,7 @@
       color: #5da94c;
       font-size:16px !important;
       font-weight: 500;
+      padding-right: 20px;
     }
     .bar-container {
       width: 100%;
@@ -98,6 +105,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #lp-yeah-you-know-me.inner-content .inner-section {
+    padding: 30px 10px !important;
+  }
   #lp-yeah-you-know-me {
     .insertLogo {
       background: transparent;
@@ -109,6 +119,7 @@
       }
       .side, .middle, .right {
         width: 100%;
+        padding:5px;
       }
       .right {
         font-size:10px;
