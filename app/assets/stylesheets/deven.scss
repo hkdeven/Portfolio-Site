@@ -25,6 +25,9 @@
     a {
       color: #f86584 !important;
     }
+    p.small a {
+      color: #5ba849 !important;
+    }
     p {
       font-size: 17px;
       line-height: 23px !important;
@@ -37,6 +40,11 @@
     }
     .inner-content .inner-section {
       padding-top: 0 !important;
+    }
+    .skin {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .side {
       float: left;
@@ -98,6 +106,12 @@
       margin: 0;
       p {
         margin-left: 0 !important;
+      }
+      .side, .middle, .right {
+        width: 100%;
+      }
+      .right {
+        font-size:10px;
       }
     }
   }
