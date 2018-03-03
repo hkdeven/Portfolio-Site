@@ -5,26 +5,42 @@
 /*------------------------------------------------------------------
 [LP Style]
 ------------------------------------------------------------------*/
-
-#questionnaire {
-  margin: 0 40px;
-  a {
-    color: #f86584 !important;
+#lp-yeah-you-know-me {
+  .insertLogo {
+    background: url(https://cdn.launchpotato.com/images/2016/09/25/launchpotato-logo-green.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
   }
-  p {
-    font-size: 17px;
-    line-height: 23px !important;
-    text-align: left;
-    margin: 0 0 15px 25px !important;
-  }
-  h5 {
-    font-weight: 700;
+  #questionnaire {
+    margin: 0 40px;
+    a {
+      color: #f86584 !important;
+    }
+    p {
+      font-size: 17px;
+      line-height: 23px !important;
+      text-align: left;
+      margin: 0 0 15px 25px !important;
+    }
+    h5 {
+      font-weight: 700;
+    }
   }
 }
 
-#contacts-data {
-  padding-top: 0;
-  padding-bottom: 25px;
+@media only screen and (max-width: 700px) {
+  #lp-yeah-you-know-me {
+    .insertLogo {
+      background: #;
+    }
+    #questionnaire {
+      margin: 0;
+      p {
+        margin-left: 0 !important;
+      }
+    }
+  }
 }
 
 
@@ -739,6 +755,9 @@ button, input, select, textarea {
     margin: 14px 0;
     padding-left: 0 !important;
     border-left: none !important; }
+
+  #homesection .m-details .quote a {
+    color: #3fb0ac !important; }
 
   .progressbar {
     width: 100% !important; }
