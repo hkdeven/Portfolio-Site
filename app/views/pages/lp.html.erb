@@ -31,66 +31,41 @@
 
           <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
             <h5 class="uppercase">4. Rank yourself 0-10 (0 being “no experience”, 10 being “expert”) on your skillset with the following:</h5>
+            <hr />
+            <ul>
+              <li>HTML5</li>
+
+              <li>CSS3</li>
+
+              <li>Javascript</li>
+
+              <li>Advanced CSS animation</li>
+
+              <li>Python</li>
+
+              <li>Photoshop</li>
+            </ul>
           </div>
-          <hr />
-
-          * HTML5
-
-          * CSS3
-
-          * Javascript
-
-          * Advanced CSS animation
-
-          * Python
-
-          * Photoshop
-
           <div class="container-fluid nopadding wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="10">
             <h5 class="uppercase">5. Describe a recent technical challenge you experienced and how you solved it.</h5>
+            <hr />
+            <p>
+              My current employer has been working with a dev agency to create a proprietary web app that allows our customers to build, design, and purchase their own steel buildings without the need to speak with a live person.  It's built with React, Mobx, Three.js, Node, Stripe, and various other APIs.  I work intermittently on this project, mainly to keep tabs on the dev agency, but also on the the code base too.
+            </p>
+            <p>
+              As you can imagine, our sales department hasn't been too keen on this idea as they believe it might take away leads they would have otherwise gotten on their own. So one day it was decided that we needed a version of this application devoid of all pricing and checkout screens.  This new version would be used on our company website while the version with pricing would continue being used in our marketing efforts elsewhere.  The dev agency provided an expensive eight-week proposal to create and deploy what essentially amounted to a replica of what we have already.
+            </p>
+            <p>
+              It was handed off to me to complete or find an alternative, faster solution.  My solution: We were concerned about a handful of UI elements being visible to users from a single source/link.  So, I decided to use soem simple Javascript to parse the url string and hide or show these elements based on whether or not certain variables were present.
+            </p>
+            <p>
+              We ended up taking this a step further elsewhere: On our main quote form, for building requests that are under 1,000 sqft, we decided to redirect them to this builder application and show a pre-rendered building that matched the specs they provided on their quote form simply by passing those values into the redirect url strings.  Now, our sales team no longer have to service these smaller building requests, which have a significantly lower chance of closing compared with larger buildings.  A win-win all around!
+            </p>
+            <p>
+              A sample of the JS I used to parse the url and alter the view:<br>
+              <script src="https://gist.github.com/hkdeven/db896b15d82306668cf91c2bd12fe9c1.js"></script>
+            </p>
           </div>
-          <hr />
-          <p>
-            My current employer has been working with a dev agency to create a proprietary web app that allows our customers to build, design, and purchase their own steel buildings without the need to speak with a live person.  It's built with React, Mobx, Three.js, Node, Stripe, and various other APIs.  I work intermittently on this project, mainly to keep tabs on the dev agency, but also on the the code base too.
-          </p>
-          <p>
-            As you can imagine, our sales department hasn't been too keen on this idea as they believe it might take away leads they would have otherwise gotten on their own. So one day it was decided that we needed a version of this application devoid of all pricing and checkout screens.  This new version would be used on our company website while the version with pricing would continue being used in our marketing efforts elsewhere.  The dev agency provided an expensive eight-week proposal to create and deploy what essentially amounted to a replica of what we have already.
-          </p>
-          <p>
-            It was handed off to me to complete or find an alternative, faster solution.  My solution: We were concerned about a handful of UI elements being visible to users from a single source/link.  So, I decided to use soem simple Javascript to parse the url string and hide or show these elements based on whether or not certain variables were present.
-          </p>
-          <p>
-            We ended up taking this a step further elsewhere: On our main quote form, for building requests that are under 1,000 sqft, we decided to redirect them to this builder application and show a pre-rendered building that matched the specs they provided on their quote form simply by passing those values into the redirect url strings.  Now, our sales team no longer have to service these smaller building requests, which have a significantly lower chance of closing compared with larger buildings.  A win-win all around!
-          </p>
-          <p>
-            A sample of the JS I used to parse the url and alter the view:
-            <code>
-// Parse URL string
-function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-        if (pair[0] == variable) {
-            return pair[1];
-        }
-    }
-}
-
-// Assign values from URL string to variables
-function togglePriceView() {
-    // Get variable value from URL string
-    var value = getQueryVariable("get");
-
-    // If url is NOT /?get=quote/, hide price and checkout button from view
-    if (value != "quote") {
-        document.getElementById('priceSection').style.display ='none';
-        document.getElementsByClassName('get-this-building')[0].style.display = 'none';
-        document.getElementById('saveMyBuilding').style.float = 'right';
-    }
-}
-</code>
-          </p>
         </section>
 
     </section>
@@ -138,7 +113,6 @@ function togglePriceView() {
             </div>
          </div>
       </div>
-
    </section>
 
    <div class="dividewhite1"></div>
