@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'blog', to: 'pages#blog'
   get 'resume', to: 'pages#resume'
   get 'demos', to: 'pages#demos'
+  get 'lp' to: 'pages#lp'
   resources :articles do
     resources :commments
   end
