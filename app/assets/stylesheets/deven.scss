@@ -122,7 +122,7 @@
     margin: 20px auto 45px !important;
     text-align: center;
     display: inherit;
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
     background: #5ba849;
     min-width: 25%;
@@ -135,6 +135,20 @@
       -webkit-transform: translateY(-10px);
       transform: translateY(-10px);
       box-shadow: 0px 40px 29px -19px rgba(102, 172, 100, 0.9);
+    }
+    a.sample {
+      display: inherit;
+      text-align: center;
+      font-size: 15px;
+      color: #353535cf;
+      margin: auto;
+      max-width: 175px;
+      border-bottom: 1px solid #35353563;
+      transition: all 0.4s ease;
+      &:hover {
+        color:#5ba849;
+        border-bottom: 1px solid #5ba849;;
+      }
     }
   }
 }
