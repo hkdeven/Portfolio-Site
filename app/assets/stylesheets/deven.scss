@@ -119,7 +119,7 @@
     }
   }
   a.interview-button {
-    margin: 20px auto 45px !important;
+    margin: 20px auto 15px;
     text-align: center;
     display: inherit;
     font-size: 30px;
@@ -141,10 +141,11 @@
     display: inherit;
     text-align: center;
     font-size: 15px;
-    color: #353535cf;
+    color: #3535356b;
     margin: auto;
-    max-width: 175px;
-    border-bottom: 1px solid #35353563;
+    margin-bottom: 30px;
+    max-width: 267px;
+    border-bottom: 1px solid #35353538;
     transition: all 0.4s ease;
     &:hover {
       color:#5ba849;
@@ -795,6 +796,11 @@ button, input, select, textarea {
 /*------------------------------------------------------------------
 [Media Queries]
 ------------------------------------------------------------------*/
+@media (max-width: 1450px) {
+  #blog .grid .row .grid-item {
+    min-height: 673px;
+  }
+}
 
 @media (max-width: 1200px) {
   .boxed .content-wrap {
@@ -802,6 +808,12 @@ button, input, select, textarea {
   }
   footer {
     margin: 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  #blog .grid .row .grid-item {
+    min-height: 591px;
   }
 }
 
@@ -923,7 +935,7 @@ button, input, select, textarea {
   .media-body, .media-left, .media-right {
     display: initial; } }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   h5 {
     letter-spacing: 0; }
 
@@ -1842,7 +1854,7 @@ figure.effect-goliath.eggplant {
   border: none;
   padding-right: 15px;
   padding-left: 15px;
-  margin-bottom: 48px; }
+  min-height: 755px; }
 #blog .item-wrap {
   margin-bottom: 10px; }
   #blog .item-wrap figure {
