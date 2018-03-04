@@ -29,16 +29,23 @@
       background-color: #f7f7f7;
       border: 1px solid transparent;
       transition: all .5s;
-      &:hover {
+      a:hover {
         transform:scale(2);
       }
     }
     .panel-default {
       border-color: transparent;
       transition: all .5s;
-      &:hover {
+      a:hover .panel-default {
         transform:scale(2);
       }
+    }
+    a.accordion-toggle {
+      transition: all .5s;
+    }
+    a.accordion-toggle:hover .panel-default,
+    a.accordion-toggle:hover .panel {
+      transform:scale(2);
     }
     .codeLove {
       margin-bottom: 20px;
