@@ -49,21 +49,6 @@
     p.small a {
       color: #5ba849 !important;
     }
-    a.interview-button {
-      padding:15px 25px;
-      background: #5ba849;
-      font-size: 20px;
-      line-height: 25px;
-      color: #fff;
-      box-shadow: 0px 3px 0px 0px #66ac64;
-      border-radius: 5px;
-      transition: all 0.4s ease;
-      &:hover {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-        box-shadow: 0px 40px 29px -19px rgba(102, 172, 100, 0.9);
-      }
-    }
     p {
       font-size: 17px;
       line-height: 23px !important;
@@ -131,6 +116,25 @@
       width: 40%;
       height: 18px;
       background: linear-gradient(190deg,#8ec182,#5ba849);
+    }
+  }
+  a.interview-button {
+    margin: 20px auto 45px !important;
+    text-align: center;
+    display: inherit;
+    font-size: 40px;
+    color: #fff;
+    background: #5ba849;
+    min-width: 25%;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0px 0px #1a6318de;
+    transition: all 0.4s ease;
+    &:hover {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+      box-shadow: 0px 40px 29px -19px rgba(102, 172, 100, 0.9);
     }
   }
 }
