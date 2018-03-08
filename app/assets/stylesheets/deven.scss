@@ -136,10 +136,23 @@
     border-radius: 5px;
     box-shadow: 0px 5px 0px 0px #1a6318de;
     transition: all 0.4s ease;
+    animation: anim 2s ease-in infinite;
     &:hover {
       -webkit-transform: translateY(-10px);
       transform: translateY(-10px);
       box-shadow: 0px 40px 29px -19px rgba(102, 172, 100, 0.9);
+    }
+  }
+  /*Attention Whore Annimation*/
+  @keyframes anim {
+    5% {
+      transform: scale(1.1, 0.9);
+    }
+    10% {
+      transform: scale(0.9, 1.1) translateY(-0.5rem);
+    }
+    15% {
+      transform: scale(1);
     }
   }
   a.sample-response {
